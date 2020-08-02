@@ -23,7 +23,11 @@ which in its turn requires Python/PIP 3.7 (not 3.8!).
 
 
 ## Converting BioBERT (TensorFlow) to ONNX
-
+First make sure to install tf2onnx
+```
+pip install -U tf2onnx
+```
+Then convert your (exported) TensorFlow-model.
 ```
 python -m tf2onnx.convert --saved-model ./PATH_TO_MODEL_DIR/ --output ./OUT_PATH/model_name.onnx
 ```
