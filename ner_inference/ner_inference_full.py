@@ -7,13 +7,15 @@ import onnxruntime
 import tokenization
 
 
-def create_session(model_path: str):
+def create_session(model_path: str) -> onnxruntime.InferenceSession:
     # Allow caller to use symlink to model
     if os.path.islink(model_path):
         model_path = os.readlink(model_path)
 
-    print("Loading model:\n  {}\n".format(model_path))
-    return onnxruntime.InferenceSession(model_path)
+    print("Loading model:\n  {}".format(model_path))
+    session = onnxruntime.InferenceSession(model_path)
+    print("Done.\n")
+    return session
 
 
 def load_sequences(path: str):
@@ -22,7 +24,7 @@ def load_sequences(path: str):
             yield line
 
 
-def parse_sequence(sequence):
+def parse_sequence(sequence: str):
     tokenized_sequence = tokenizer.tokenize(sequence)
     tokenized_sequence.insert(0, '[CLS]')
     tokenized_sequence.append('[SEP]')
@@ -50,7 +52,7 @@ def parse_sequence(sequence):
         # We probably should exclude the sequence padding from the attention-mask
         attention_mask.append(0)
 
-    return token_type_ids, attention_mask, input_ids, label_ids
+    return tokenized_sequence, token_type_ids, attention_mask, input_ids, label_ids
 
 
 tokenizer = tokenization.FullTokenizer(
@@ -63,15 +65,18 @@ onnxruntime.set_default_logger_severity(3)
 
 session = create_session("biobert_ner.onnx")
 
-with open("pred_labels.txt", "w") as out:
+with open("predicted_labels.txt", "w") as out:
     i = 0
-    for sequence in load_sequences("processed_data.txt"):
-        if i % 10 == 0:
+    for sequence in load_sequences("data_proc.txt"):
+        if i > 100:
+            break
+
+        if i % 5 == 0:
             sys.stdout.write("\rHandled %d sequences" % i)
             sys.stdout.flush()
         i += 1
 
-        token_type_ids, attention_mask, input_ids, label_ids = parse_sequence(
+        tokenized_sequence, token_type_ids, attention_mask, input_ids, label_ids = parse_sequence(
             sequence)
 
         _, out_2, _ = session.run([], {
@@ -81,7 +86,9 @@ with open("pred_labels.txt", "w") as out:
             "label_ids_1:0": np.array([0], dtype=np.int32)}
         )
 
-        pred_labels = out_2[0]
-        for index in pred_labels:
-            out.write(label_ids[index] + " ")
-        out.write("\n")
+        labels = []
+        for index in out_2[0]:
+            labels.append(label_ids[index])
+
+        for token, label in zip(tokenized_sequence, labels):
+            out.write("{} {}\n".format(token, label))

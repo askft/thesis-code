@@ -3,16 +3,16 @@
 import json
 
 
-def main(input_path, output_path):
+def main(labels_path, tokens_path, output_path):
     sentences = list()
 
-    with open(input_path, "r") as f:
-        lines = f.readlines()
-        xs = map(lambda line: line.split(" "), lines)
+    with open(labels_path, "r") as labels_file, open(tokens_path, "r") as tokens_file:
+        labels = labels_file.readlines()
+        tokens = tokens_file.readlines()
 
         sentence = list()
 
-        for token, label in xs:
+        for label, token in zip(labels, tokens):
             label = label.strip()
             token = token.strip()
 
@@ -93,7 +93,8 @@ def co_occurrence_extractor(sentence):
 
 
 if __name__ == '__main__':
-    input_path = "predicted_labels.txt"
+    labels_path = "label_test.txt"
+    tokens_path = "token_test.txt"
     output_path = "data.json"
 
-    main(input_path, output_path)
+    main(labels_path, tokens_path, output_path)
