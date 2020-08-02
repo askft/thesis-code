@@ -1,8 +1,10 @@
+import os
 import numpy as np
 import tokenization
 import tensorflow as tf
 import onnxruntime
 from onnxruntime import ExecutionMode, InferenceSession, SessionOptions
+
 
 # import BertTokenizer.from_pretrained("bert-base-uncased") # Return to this if everything goes to shit
 tokenizer = tokenization.FullTokenizer(
@@ -45,8 +47,15 @@ while len(input_ids) < max_seq_length:
     # We probably should exclude the sequence padding from the attention-mask
     attention_mask.append(0)
 
+model_path = "biobert_ner.onnx"
 
-session = onnxruntime.InferenceSession("biobert_ner.onnx")
+# Allow caller to use symlink to model
+if os.path.islink(model_path):
+    model_path = os.readlink(model_path)
+
+print("Loading model:\n  {}\n".format(model_path))
+session = onnxruntime.InferenceSession(model_path)
+
 out_1, out_2, out_3 = session.run([], {
     "segment_ids_1:0": np.array([token_type_ids], dtype=np.int32),
     "input_mask_1_raw_output___9:0": np.array([attention_mask], dtype=np.int32),

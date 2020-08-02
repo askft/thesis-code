@@ -131,3 +131,6 @@ dmypy.json
 # OS X
 .DS_Store
 
+# Other
+.vscode
+ner_inference/biobert_ner.onnx
