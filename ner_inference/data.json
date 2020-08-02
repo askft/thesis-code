@@ -1,0 +1,93 @@
+[
+    {
+        "entities": [
+            "5-fluorouracil",
+            "5-fu"
+        ],
+        "text": "from 1986 to 1998, 29 cancer patients who had 32 episodes of transient hyperammonemic encephalopathy related to continuous infusion of 5-fluorouracil (5-fu) were identified."
+    },
+    {
+        "entities": [
+            "ammonium",
+            "5-fu"
+        ],
+        "text": "higher plasma ammonium levels and more rapid onset of hyperammonemia were seen in 18 patients with bacterial infections (p = 0. 003 and 0. 0006, respectively) and in nine patients receiving high daily doses (2600 or 1800 mg / m2) of 5-fu (p = 0. 0001 and < 0. 0001, respectively)."
+    },
+    {
+        "entities": [
+            "quinine",
+            "4-aminopyridine"
+        ],
+        "text": "the effects of quinine and 4-aminopyridine on conditioned place preference and changes in motor activity induced by morphine in rats."
+    },
+    {
+        "entities": [
+            "potassium",
+            "quinine",
+            "4-aminopyridine",
+            "morphine"
+        ],
+        "text": "the effects of two unselective potassium (k (+)-) channel blockers, quinine (12. 5, 25 and 50 mg / kg) and 4-aminopyridine (1 and 2 mg / kg), on conditioned place preference and biphasic changes in motor activity induced by morphine (10 mg / kg) were tested in wistar rats."
+    },
+    {
+        "entities": [
+            "quinine",
+            "calcium",
+            "4-aminopyridine"
+        ],
+        "text": "quinine is known to block voltage -, calcium-and atp-sensitive k (+)-channels while 4-aminopyridine is known to block voltage-sensitive k (+)-channels."
+    },
+    {
+        "entities": [
+            "quinine",
+            "morphine",
+            "4-aminopyridine"
+        ],
+        "text": "in the counterbalanced method, quinine atten ##uated morphine-induced place preference, whereas 4-aminopyridine was ineffective."
+    },
+    {
+        "entities": [
+            "morphine",
+            "morphine"
+        ],
+        "text": "in the motor activity test measured with an animex-activity meter neither of the k (+)-channel blockers affected morphine-induced hypoactivity, but both k (+)-channel blockers prevented morphine-induced secondary hyperactivity."
+    },
+    {
+        "entities": [
+            "quinine",
+            "4-aminopyridine",
+            "morphine"
+        ],
+        "text": "these results suggest the involvement of quinine-sensitive but not 4-aminopyridine-sensitive k (+)-channels in morphine reward."
+    },
+    {
+        "entities": [
+            "morphine",
+            "morphine",
+            "quinine",
+            "4-aminopyridine"
+        ],
+        "text": "it is also suggested that the blockade of k (+)-channels sensitive to these blockers is not sufficient to prevent morphine-induced hypoactivity whereas morphine-induced hyperactivity seems to be connected to both quinine-and 4-aminopyridine-sensitive k (+)-channels."
+    },
+    {
+        "entities": [
+            "nociceptin",
+            "nociceptin"
+        ],
+        "text": "on the other hand, nocistatin is recently isolated from the same precursor as nociceptin and blocks nociceptin-induced allodynia and hyperalgesia."
+    },
+    {
+        "entities": [
+            "belgium",
+            "meloxicam"
+        ],
+        "text": "recently introduced in belgium, meloxicam is the first nonsteroidal antiinflammatory drug with selective action on the inducible form of cyclooxygenase 2."
+    },
+    {
+        "entities": [
+            "remoxipride",
+            "remoxipride"
+        ],
+        "text": "induction of apoptosis by remoxipride metabolites in hl60 and cd34 + / cd19-human bone marrow progenitor cells: potential relevance to remoxipride-induced aplastic anemia."
+    }
+]

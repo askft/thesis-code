@@ -6,35 +6,35 @@ import numpy as np
 import onnxruntime
 import tokenization
 
+from typing import List, NamedTuple
+
 
 def create_session(model_path: str) -> onnxruntime.InferenceSession:
     # Allow caller to use symlink to model
     if os.path.islink(model_path):
         model_path = os.readlink(model_path)
-
     print("Loading model:\n  {}".format(model_path))
     session = onnxruntime.InferenceSession(model_path)
     print("Done.\n")
     return session
 
 
-def load_sequences(path: str):
-    with open(path, "r") as f:
-        for line in f:
-            yield line
+class SequenceParseResult(NamedTuple):
+    tokens: List[str]
+    token_type_ids: List[int]
+    attention_mask: List[int]
+    input_ids: List[int]
 
 
-def parse_sequence(sequence: str):
-    tokenized_sequence = tokenizer.tokenize(sequence)
-    tokenized_sequence.insert(0, '[CLS]')
-    tokenized_sequence.append('[SEP]')
+def parse_sequence(tokenizer, sequence) -> SequenceParseResult:
+    tokens = tokenizer.tokenize(sequence)
+    tokens.insert(0, '[CLS]')
+    tokens.append('[SEP]')
 
     # Could be 0 or 1, not sure which index is *supposed* to represent a first segment
-    token_type_ids = [0]*len(tokenized_sequence)
-    input_ids = tokenizer.convert_tokens_to_ids(tokenized_sequence)
-    # Not sure if label_ids should be padded to sequence length or not
-    label_ids = ["[PAD]", "B", "I", "O", "X", "[CLS]", "[SEP]"]
-    attention_mask = [1]*len(tokenized_sequence)
+    token_type_ids = [0]*len(tokens)
+    input_ids = tokenizer.convert_tokens_to_ids(tokens)
+    attention_mask = [1]*len(tokens)
     attention_mask[0] = 0
 
     # Default for our model
@@ -52,43 +52,54 @@ def parse_sequence(sequence: str):
         # We probably should exclude the sequence padding from the attention-mask
         attention_mask.append(0)
 
-    return tokenized_sequence, token_type_ids, attention_mask, input_ids, label_ids
+    return SequenceParseResult(
+        tokens=tokens,
+        token_type_ids=token_type_ids,
+        attention_mask=attention_mask,
+        input_ids=input_ids,
+    )
 
 
-tokenizer = tokenization.FullTokenizer(
-    vocab_file="biobert_vocab.txt",
-    do_lower_case=True
-)
+def main():
+    tokenizer = tokenization.FullTokenizer(
+        vocab_file="biobert_vocab.txt",
+        do_lower_case=True
+    )
 
-# Might want to re-check this if issues arise
-onnxruntime.set_default_logger_severity(3)
+    onnxruntime.set_default_logger_severity(3)
+    session = create_session("biobert_ner.onnx")
 
-session = create_session("biobert_ner.onnx")
+    label_names = ["[PAD]", "B", "I", "O", "X", "[CLS]", "[SEP]"]
 
-with open("predicted_labels.txt", "w") as out:
-    i = 0
-    for sequence in load_sequences("data_proc.txt"):
-        if i > 100:
-            break
+    print("Writing results to ./predicted_labels.txt ...")
+    with open("predicted_labels.txt", "w") as out:
+        i = 0
+        for sequence in open("data_proc.txt", "r"):
+            if i > 50:
+                break
 
-        if i % 5 == 0:
-            sys.stdout.write("\rHandled %d sequences" % i)
+            sys.stdout.write("\rHandled %d sequences ... " % i)
             sys.stdout.flush()
-        i += 1
+            i += 1
 
-        tokenized_sequence, token_type_ids, attention_mask, input_ids, label_ids = parse_sequence(
-            sequence)
+            r = parse_sequence(tokenizer, sequence)
 
-        _, out_2, _ = session.run([], {
-            "segment_ids_1:0": np.array([token_type_ids], dtype=np.int32),
-            "input_mask_1_raw_output___9:0": np.array([attention_mask], dtype=np.int32),
-            "input_ids_1:0": np.array([input_ids], dtype=np.int32),
-            "label_ids_1:0": np.array([0], dtype=np.int32)}
-        )
+            _, out_2, _ = session.run([], {
+                "segment_ids_1:0": np.array([r.token_type_ids], dtype=np.int32),
+                "input_mask_1_raw_output___9:0": np.array([r.attention_mask], dtype=np.int32),
+                "input_ids_1:0": np.array([r.input_ids], dtype=np.int32),
+                "label_ids_1:0": np.array([0], dtype=np.int32)}
+            )
 
-        labels = []
-        for index in out_2[0]:
-            labels.append(label_ids[index])
+            labels = []
 
-        for token, label in zip(tokenized_sequence, labels):
-            out.write("{} {}\n".format(token, label))
+            for index in out_2[0]:
+                labels.append(label_names[index])
+
+            for token, label in zip(r.tokens, labels):
+                out.write("{} {}\n".format(token, label))
+    print("Done.")
+
+
+if __name__ == "__main__":
+    main()

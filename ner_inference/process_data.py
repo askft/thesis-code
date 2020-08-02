@@ -17,7 +17,7 @@ def main(fin, fout):
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: python process_data.py input output")
+        print("usage: python process_data.py input output")
         sys.exit(1)
     fin, fout = sys.argv[1], sys.argv[2]
     main(fin, fout)
