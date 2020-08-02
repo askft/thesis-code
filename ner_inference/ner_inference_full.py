@@ -4,7 +4,7 @@ import os
 import sys
 import numpy as np
 import onnxruntime
-import tokenization
+import tokenization as t10n
 
 from typing import List, NamedTuple
 
@@ -26,7 +26,7 @@ class SequenceParseResult(NamedTuple):
     input_ids: List[int]
 
 
-def parse_sequence(tokenizer, sequence) -> SequenceParseResult:
+def parse_sequence(tokenizer: t10n.FullTokenizer, sequence: str) -> SequenceParseResult:
     tokens = tokenizer.tokenize(sequence)
     tokens.insert(0, '[CLS]')
     tokens.append('[SEP]')
@@ -61,7 +61,7 @@ def parse_sequence(tokenizer, sequence) -> SequenceParseResult:
 
 
 def main():
-    tokenizer = tokenization.FullTokenizer(
+    tokenizer = t10n.FullTokenizer(
         vocab_file="biobert_vocab.txt",
         do_lower_case=True
     )
@@ -98,6 +98,7 @@ def main():
 
             for token, label in zip(r.tokens, labels):
                 out.write("{} {}\n".format(token, label))
+
     print("Done.")
 
 
