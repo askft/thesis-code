@@ -1,10 +1,11 @@
+# coding=utf-8
+
 import os
 import numpy as np
 import tokenization
 import tensorflow as tf
 import onnxruntime
 from onnxruntime import ExecutionMode, InferenceSession, SessionOptions
-
 
 # import BertTokenizer.from_pretrained("bert-base-uncased") # Return to this if everything goes to shit
 tokenizer = tokenization.FullTokenizer(
