@@ -37,3 +37,7 @@ Then convert your (exported) TensorFlow model:
 ```
 python -m tf2onnx.convert --saved-model ./PATH_TO_MODEL_DIR/ --output ./OUT_PATH/model_name.onnx
 ```
+
+## Creating a symlink to a model
+
+```ln -s [absolute path to model] [path to link]```
