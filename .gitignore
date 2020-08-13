@@ -128,9 +128,10 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# OS X
+# Misc
 .DS_Store
-
-# Other
 .vscode
+
+# Symlinks
 ner_inference/biobert_ner.onnx
+export_scibert/model_dir
