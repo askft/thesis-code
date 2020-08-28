@@ -1,14 +1,6 @@
 import os
 import torch
-from transformers import BertTokenizer, BertModel
-# import torch.nn as nn
-# import torch.optim as optim
-# import numpy as np
-# import pandas as pd   # Not needed, can we remove?
-# from tqdm import tqdm # Needed but not imported
-
-# MODEL_PATH = './hf/'
-# MODEL_NAME = 'pytorch_model.bin'
+from transformers import BertTokenizer, BertForSequenceClassification
 
 
 def get_real_link(model_dir: str) -> str:
@@ -22,64 +14,59 @@ model_dir = get_real_link("./model_dir")  # Arg is either a path or a symlink
 
 device = torch.device('cpu')
 
-# Can't get any model-type to load it correctly. Tried the following:
-#  - BertModel
-#  - BertForTokenClassification
-#  - AutoModel
-#  - AutoModelForTokenClassification
-# According to SciBERT themselves, AutoModel should be used
-
 vocab_path = os.path.join("/", model_dir, "vocab.txt")
 tokenizer = BertTokenizer.from_pretrained(vocab_path)
-model = BertModel.from_pretrained(model_dir)
+
+model = BertForSequenceClassification.from_pretrained(
+    model_dir,
+    output_hidden_states=True,
+    output_attentions=True
+)
 
 model.to(device)
 model.eval()
 
-text = "Down-regulation of << prostate-specific antigen >> (PSA) expression, an AR-target gene, by [[ estramustine ]] and bicalutamide was accompanied by the blockade of the mutated androgen receptor."
-tokenized_non_padded = tokenizer.tokenize(text)
-encoded_non_padded = tokenizer.encode(tokenized_non_padded)
-
-while len(encoded_non_padded) < 128:
-    encoded_non_padded.append(0)
-
-encoded_padded = encoded_non_padded.copy()
-
-att_mask = []
-for i in range(128):
-    if encoded_non_padded[i] != 0:
-        att_mask.append(1)
-    else:
-        att_mask.append(0)
-
-
-# for reading
-print("\nParameter names with the string 'embeddings' in them:")
-for name, _ in model.named_parameters():
-    if "embeddings" in name:
-        print("  " + name)
-
-prediction_layer = torch.nn.Linear(768, 13)
-
-we = [0]*128
-pe = [0]*128
-tt = [0]*128
-ii = [108]*128
-am = [1]*128
-
-input_ids = torch.tensor([encoded_padded])
-attention_mask = torch.tensor([att_mask])
-word_embeddings = torch.tensor([we])
-position_embeddings = torch.tensor([pe])
-token_type_ids = torch.tensor([tt])
-
-# Seem to be the accepted keyword arguments for the forward-function
 with torch.no_grad():
-    out_1, out_2 = model.forward(
+
+    text = "The current study evaluates the effects of a selective << COX-2 >> inhibitor ([[ SC-236 ]]) on renal function in cirrhotic rats with ascites."
+    tokenized_non_padded = tokenizer.tokenize(text)
+    encoded_non_padded = tokenizer.encode(tokenized_non_padded)
+
+    while len(encoded_non_padded) < 128:
+        encoded_non_padded.append(0)
+
+    encoded_padded = encoded_non_padded.copy()
+
+    att_mask = []
+    for i in range(128):
+        if encoded_non_padded[i] != 0:
+            att_mask.append(1)
+        else:
+            att_mask.append(0)
+
+    # for reading
+    # for name, param in model.named_parameters():
+    #    if "embeddings" in name:
+    #        print(name)
+
+    # These layers are probably untrained, so makes no sense to use them really
+    # prediction_layer = torch.nn.Linear(768, 1)
+    # sigmoid_layer = torch.nn.Sigmoid()
+
+    input_ids = torch.tensor([encoded_padded])
+    attention_mask = torch.tensor([att_mask])
+    position_embeddings = torch.tensor([[0]*128])
+    token_type_ids = torch.tensor([[0]*128])
+
+    # logits, hidden_states could be another naming for the output
+    _, hidden_states, attentions = model(
         input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
 
-print("\n**** OUTPUT ****")
-logits = prediction_layer(out_1)
-preds = torch.softmax(logits, dim=1)
-preds_max = torch.argmax(preds, dim=1)
-print(preds_max)
+    print("\n", "length of hidden_states: ", len(hidden_states), "\n")
+    for lbl in hidden_states:
+        print(lbl[0][0][0])
+
+    #torch.onnx.export(model, input_ids, "scibert.onnx")
+
+    #logs = prediction_layer(pooled_output)
+    #print(torch.softmax(logs, dim=1))
