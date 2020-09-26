@@ -1,3 +1,7 @@
+# https://neo4j.com/developer/cypher/
+# https://neo4j.com/docs/cypher-refcard/current/
+# https://neo4j.com/docs/cypher-manual/current/clauses/match/
+
 def add_relation(tx, p1, p2, r):
     tx.run("""MERGE (a:Protein {name: $p1})""", p1=p1)
     tx.run("""MERGE (b:Protein {name: $p2})""", p2=p2)
