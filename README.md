@@ -23,7 +23,6 @@ pip install -r requirements.txt
 It's important to get this right, since BERT requires TensorFlow 1.15,
 which in its turn requires Python/pip 3.7 (not 3.8).
 
-
 ## Converting BioBERT (TensorFlow) to ONNX
 
 First make sure to install `tf2onnx`:
@@ -40,4 +39,4 @@ python -m tf2onnx.convert --saved-model ./PATH_TO_MODEL_DIR/ --output ./OUT_PATH
 
 ## Creating a symlink to a model
 
-```ln -s [absolute path to model] [path to link]```
+`ln -s [absolute path to model] [path to link]`
