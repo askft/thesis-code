@@ -1,0 +1,36 @@
+[
+    {
+        "text": "X chobits Y, but Z does not interact with either X nor Y.",
+        "entities": ["x", "y", "z"],
+        "relations": [
+            {"type": "chobitor",    "src": "x", "dst": "y"},
+            {"type": "none",        "src": "x", "dst": "z"},
+            {"type": "none",        "src": "y", "dst": "x"},
+            {"type": "none",        "src": "y", "dst": "z"},
+            {"type": "no relation", "src": "z", "dst": "x"},
+            {"type": "no relation", "src": "z", "dst": "y"}
+        ]
+    },
+]
+
+RELATIONS NAMES
+id  name
+—————————————
+1   inhibitor
+2   zonker
+3   bonker
+4   honker
+5   chonker
+
+
+ENTITY IDs
+name  id
+—————————
+xa    1
+x     1
+y     2
+z     3
+zonk  3
+
+
+--> database
