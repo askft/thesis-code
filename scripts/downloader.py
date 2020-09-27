@@ -76,11 +76,14 @@ def append_json(path: str, new_data: dict):
         f.write(json.dumps(data, indent=2, ensure_ascii=False))
 
 
-def main(input_file: str, output_file: str, batch_size: int):
+def run(input_file: str, output_file: str, batch_size: int):
     os.makedirs("json", exist_ok=True)
     os.makedirs("tmp", exist_ok=True)
 
-    article_list(input_file, output_file, batch_size)
+    try:
+        article_list(input_file, output_file, batch_size)
+    except KeyboardInterrupt:
+        pass
 
     shutil.rmtree("tmp")
 
@@ -110,14 +113,14 @@ if __name__ == "__main__":
         except ValueError:
             sys.exit("error: batch_size must be an integer")
 
-    output_file = "outpuuut.json"
+    output_file = "outpuuuuut.json"
 
     print("input_file  = {}".format(input_file))
     print("output_file = {}".format(output_file))
     print("batch_size  = {}".format(batch_size))
     print()
 
-    main(
+    run(
         input_file=input_file,
         output_file=output_file,
         batch_size=batch_size

@@ -1,0 +1,7 @@
+{
+  "downloader": {
+    "input_path": "scripts_todo/example.txt",
+    "output_path": "dl_out.txt",
+    "batch_size": 400
+  }
+}
