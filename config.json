@@ -1,13 +1,7 @@
 {
   "downloader": {
-<<<<<<< HEAD
-    "input_path": "scripts_todo/example.txt",
-    "output_path": "dl_out.txt",
-    "batch_size": 400
-=======
     "input_path": "data/input/example_pmid_list.txt",
     "output_path": "data/output/example_pmid_list.json",
     "batch_size": 4
->>>>>>> dcb6279d4427b2b9b457fa9aa1786a135bed7dba
   }
 }
