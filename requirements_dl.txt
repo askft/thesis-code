@@ -1,2 +1,2 @@
-pubmed-parser==0.2.2
+pubmed-parser
 requests
