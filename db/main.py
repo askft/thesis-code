@@ -1,3 +1,5 @@
+# coding=utf-8
+
 import random
 import sqlite3
 from neo4j import GraphDatabase

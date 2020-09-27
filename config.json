@@ -1,7 +1,7 @@
 {
   "downloader": {
-    "input_path": "data/input/example_pmid_list.txt",
-    "output_path": "data/output/example_pmid_list.json",
+    "input_path": "data/example_pmid_list.txt",
+    "output_path": "data/example_pmid_list.json",
     "batch_size": 4
   }
 }

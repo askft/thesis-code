@@ -49,10 +49,10 @@ def download_data(api_url: str):
     if res.status_code != 200:
         raise requests.HTTPError(res.reason)
 
-    with open("tmp/medline.xml", "w") as f:
+    with open("{}/medline.xml".format(tmp_dir), "w") as f:
         f.write(res.text)
 
-    medline_json_list = pp.parse_medline_xml("tmp/medline.xml")
+    medline_json_list = pp.parse_medline_xml("{}/medline.xml".format(tmp_dir))
 
     # Map PMID to article
     new_data = {}
@@ -77,15 +77,17 @@ def append_json(path: str, new_data: dict):
 
 
 def run(input_file: str, output_file: str, batch_size: int):
-    os.makedirs("json", exist_ok=True)
-    os.makedirs("tmp", exist_ok=True)
+    os.makedirs(tmp_dir, exist_ok=True)
 
     try:
         article_list(input_file, output_file, batch_size)
     except KeyboardInterrupt:
         pass
 
-    shutil.rmtree("tmp")
+    shutil.rmtree(tmp_dir)
+
+
+tmp_dir = "tmp_dir_dl"
 
 
 """
@@ -101,19 +103,19 @@ TODO: Specify output file when calling arguments.
 """
 if __name__ == "__main__":
 
-    if len(sys.argv) < 2 or len(sys.argv) > 3:
-        sys.exit("usage: {} input_path [batch_size]".format(sys.argv[0]))
+    if len(sys.argv) < 3 or len(sys.argv) > 4:
+        sys.exit(
+            "usage: {} input_path output_path [batch_size]".format(sys.argv[0]))
 
     input_file = sys.argv[1]
+    output_file = sys.argv[2]
     batch_size = 400
 
-    if len(sys.argv) == 3:
+    if len(sys.argv) == 4:
         try:
-            batch_size = int(sys.argv[2])
+            batch_size = int(sys.argv[3])
         except ValueError:
             sys.exit("error: batch_size must be an integer")
-
-    output_file = "outpuuuuut.json"
 
     print("input_file  = {}".format(input_file))
     print("output_file = {}".format(output_file))

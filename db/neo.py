@@ -1,3 +1,5 @@
+# coding=utf-8
+
 # https://neo4j.com/developer/cypher/
 # https://neo4j.com/docs/cypher-refcard/current/
 # https://neo4j.com/docs/cypher-manual/current/clauses/match/
