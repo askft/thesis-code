@@ -40,3 +40,6 @@ python -m tf2onnx.convert --saved-model ./PATH_TO_MODEL_DIR/ --output ./OUT_PATH
 ## Creating a symlink to a model
 
 `ln -s [absolute path to model] [path to link]`
+
+## Download
+**[BioBERT-Base fine-tuned ONNX-model](https://drive.google.com/drive/folders/1neThCq4MqFPd0133WDDC4MYUycE84fT7?usp=sharing)** - fine-tuned on BC5CDR-chem dataset
