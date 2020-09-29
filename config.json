@@ -6,7 +6,7 @@
   },
   "ner": {
     "input_path": "data/sentences_done.json",
-    "output_path": "data/ner_done.json",
+    "output_path": "data/ner_done.txt",
     "model_dir": "models/biobert/",
     "model_name": "biobert_ner.onnx",
     "model_vocab": "vocab.txt",
@@ -15,7 +15,6 @@
   "co-occurrence": {
     "input_path": "data/ner_done.json",
     "output_path": "data/filtered_data.json"
-
   },
   "re": {
     "input_path": "data/filtered_data.json",
