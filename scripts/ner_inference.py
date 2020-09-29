@@ -18,6 +18,8 @@ class NERInferenceSession:
         self.vocab_path = os.path.join(model_dir, model_vocab)
         self.labels = labels
         self.tokenizer = BertTokenizer.from_pretrained(self.vocab_path)
+        self.session = self.create_session()
+        onnxruntime.set_default_logger_severity(3)
 
     def create_session(self) -> onnxruntime.InferenceSession:
         # Allow caller to use symlink to model
@@ -51,10 +53,6 @@ class NERInferenceSession:
         input_ids = np.array(encoded["input_ids"].numpy(), dtype=np.int32)
         label_ids = np.array([0], dtype=np.int32)
 
-        # Default for our model
-        # TODO: Remove? It's unused.
-        max_seq_length = 128
-
         return {
             "tokens": tokens,
             "token_type_ids": token_type_ids,
@@ -63,40 +61,22 @@ class NERInferenceSession:
             "label_ids": label_ids
         }
 
-    def predict(self, input_path: str, output_path: str):
-        print("\nInit NER-inference")
-        onnxruntime.set_default_logger_severity(3)
-        session = self.create_session()
+    def predict(self, sequence: str):
 
-        print("\nRunning predictions")
+        encodings = self.encode_sequence(sequence)
 
-        print("Predicted labels will be written to " + output_path)
-        with open(output_path, "w") as out, open(input_path, "r") as in_data:
-            input = json.loads(in_data.read())
-            i = 0
-            for sequence in input:
-                if i > 50:
-                    break
+        _, logits, _ = self.session.run([], {
+            "segment_ids_1:0": encodings["token_type_ids"],
+            "input_mask_1_raw_output___9:0": encodings["attention_mask"],
+            "input_ids_1:0": encodings["input_ids"],
+            "label_ids_1:0": encodings["label_ids"]}
+        )
 
-                encodings = self.encode_sequence(input[sequence])
+        pred_labels = []
 
-                _, logits, _ = session.run([], {
-                    "segment_ids_1:0": encodings["token_type_ids"],
-                    "input_mask_1_raw_output___9:0": encodings["attention_mask"],
-                    "input_ids_1:0": encodings["input_ids"],
-                    "label_ids_1:0": encodings["label_ids"]}
-                )
+        for index in logits[0]:
+            pred_labels.append(self.labels[index])
 
-                pred_labels = []
+        for token, label in zip(encodings["tokens"], pred_labels):
+            print("{} {}\n".format(token, label))
 
-                for index in logits[0]:
-                    pred_labels.append(self.labels[index])
-
-                for token, label in zip(encodings["tokens"], pred_labels):
-                    out.write("{} {}\n".format(token, label))
-
-                i += 1
-                sys.stdout.write("\rHandled %d sequences ... " % i)
-                sys.stdout.flush()
-
-        print("Prediction done")

@@ -23,7 +23,7 @@ if __name__ == "__main__":
     with open(dl_config["output_path"], "r") as f, open(ner_config["input_path"], "w") as g:
         full_articles = json.loads(f.read())
         sentences = {}
-        for id in full_articles:
+        for i, id in enumerate(full_articles):
             sentences[id] = full_articles[id]["abstract"]
 
         g.write(json.dumps(sentences))
@@ -36,6 +36,5 @@ if __name__ == "__main__":
     )
 
     ner_session.predict(
-        ner_config["input_path"],
-        ner_config["output_path"],
+        "Alexander is a soy lover"
     )
