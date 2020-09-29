@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
         g.write(json.dumps(sentences))
 
-    ner_session = ner = NERInferenceSession(ner_config["model_dir"], ner_config["model_name"], ner_config["labels"], ner_config["input_path"], ner_config["output_path"])
-    ner_session.predict()
+    ner_session = NERInferenceSession(ner_config["model_dir"], ner_config["model_name"], ner_config["model_vocab"],
+                                    ner_config["labels"], ner_config["input_path"], ner_config["output_path"])
 
     

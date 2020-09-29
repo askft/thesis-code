@@ -22,6 +22,6 @@
     "output_path": "data/relations.json",
     "model_dir": "models/scibert/",
     "model_name": "pytorch_model.bin",
-    "vocab_name": "vocab.txt"
+    "model_vocab": "vocab.txt"
   }
 }

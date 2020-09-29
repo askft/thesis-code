@@ -12,9 +12,9 @@ from typing import List, NamedTuple
 
 class NERInferenceSession:
 
-    def __init__(self, model_dir, model_name, labels, input_path, out_path):
+    def __init__(self, model_dir, model_name, model_vocab, labels, input_path, out_path):
         self.model_path = os.path.join(model_dir, model_name)
-        self.vocab_path = os.path.join(model_dir, "vocab.txt")
+        self.vocab_path = os.path.join(model_dir, model_vocab)
         self.labels = labels
         self.input_path = input_path
         self.out_path = out_path
