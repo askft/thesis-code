@@ -23,5 +23,5 @@ db-controller.py
 
 COMMAND         ARGUMENTS       DESCRIPTION
 --rebuild_db    True, False     Send old and new data through pipeline to rebuild database
---clear_db      True, False	    Clear database before building new data
---take_metrics  True, False	    Take metrics from NER, Co-occurrence filter and RE (if possible)
+--clear_db      True, False     Clear database before building new data
+--take_metrics  True, False     Take metrics from NER, Co-occurrence filter and RE (if possible)
