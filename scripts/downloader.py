@@ -93,11 +93,9 @@ tmp_dir = "tmp_dir_dl"
 """
 ———————————————————————————————————————————————————————————————————————————————
 Get research paper abstracts from list of PMIDs.
-
 Arguments:
     input_file - path to .txt file with list of newline-separated PMIDs.
     batch_size - how many articles to download each API call (default: 10).
-
 TODO: Specify output file when calling arguments.
 ———————————————————————————————————————————————————————————————————————————————
 """

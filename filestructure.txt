@@ -13,9 +13,9 @@ db-controller.py
 ./client
 
 ./data
-    sentences-done.json	# Sentences ready for NER:				            {"text", "pmid"}
+    sentences-done.json		# Sentences ready for NER:				            {"text", "pmid"}
     ner-done.json		# Sentences with extracted entities			        {"text", "pmid", "entities"}
-    co-filtered.json	# Sentences after filtered by co-occurrence filter	{"text", "pmid", "entities", "hasCooccurrence"}
+    co-filtered.json		# Sentences after filtered by co-occurrence filter	{"text", "pmid", "entities", "hasCooccurrence"}
     relations.json		# Extracted relations					            {"text", "pmid", "entities", "relation"}
     metrics.json		# Metrics for each step if available			    {"ner", "re", "co-occurrence filter"}
 

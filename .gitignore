@@ -135,3 +135,6 @@ dmypy.json
 # Symlinks
 ner_inference/biobert_ner.onnx
 export_scibert/model_dir
+
+# Model folder
+models/

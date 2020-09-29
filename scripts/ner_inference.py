@@ -2,23 +2,22 @@
 
 import os
 import sys
+import json
 import numpy as np
 import onnxruntime
-import tokenization as t10n
+from scripts import tokenization as t10n
 from transformers import BertTokenizer
 import torch
 from typing import List, NamedTuple
 
 class NERInferenceSession:
 
-    def __init__(self, model_dir, labels, in_dir, out_dir):
-        self.model_path = os.path.join(model_dir, "biobert_ner.onnx")
+    def __init__(self, model_dir, model_name, labels, input_path, out_path):
+        self.model_path = os.path.join(model_dir, model_name)
         self.vocab_path = os.path.join(model_dir, "vocab.txt")
         self.labels = labels
-        self.in_dir = in_dir
-        if not os.path.exists(out_dir):
-            os.makedirs(out_dir)
-        self.out_path = os.path.join(out_dir, "pred_labels.txt")
+        self.input_path = input_path
+        self.out_path = out_path
 
         self.tokenizer = tokenizer = BertTokenizer.from_pretrained(self.vocab_path)
 
@@ -75,17 +74,14 @@ class NERInferenceSession:
         print("\nRunning predictions")
 
         print("Predicted labels will be written to " + self.out_path)
-        with open(self.out_path, "w") as out:
+        with open(self.out_path, "w") as out, open(self.input_path, "r") as in_data:
+            input = json.loads(in_data.read())
             i = 0
-            for sequence in open("data_proc.txt", "r"):
+            for sequence in input:
                 if i > 50:
                     break
 
-                sys.stdout.write("\rHandled %d sequences ... " % i)
-                sys.stdout.flush()
-                i += 1
-
-                encodings = self.encode_sequence(sequence)
+                encodings = self.encode_sequence(input[sequence])
 
                 _, logits, _ = session.run([], {
                     "segment_ids_1:0": encodings["token_type_ids"],
@@ -101,5 +97,9 @@ class NERInferenceSession:
 
                 for token, label in zip(encodings["tokens"], pred_labels):
                     out.write("{} {}\n".format(token, label))
+
+                i += 1
+                sys.stdout.write("\rHandled %d sequences ... " % i)
+                sys.stdout.flush()
 
         print("Prediction done")
