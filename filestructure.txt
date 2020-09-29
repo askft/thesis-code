@@ -13,16 +13,15 @@ db-controller.py
 ./client
 
 ./data
-    sentences-done.json		# Sentences ready for NER:				            {"text", "pmid"}
-    ner-done.json		# Sentences with extracted entities			        {"text", "pmid", "entities"}
-    co-filtered.json		# Sentences after filtered by co-occurrence filter	{"text", "pmid", "entities", "hasCooccurrence"}
-    relations.json		# Extracted relations					            {"text", "pmid", "entities", "relation"}
-    metrics.json		# Metrics for each step if available			    {"ner", "re", "co-occurrence filter"}
+    sentences_done.json	# Sentences ready for NER                           {"text", "pmid"}
+    ner_done.json       # Sentences with extracted entities                 {"text", "pmid", "entities"}
+    co_filtered.json    # Sentences after filtered by co-occurrence filter  {"text", "pmid", "entities", "hasCooccurrence"}
+    relations.json      # Extracted relations                               {"text", "pmid", "entities", "relation"}
+    metrics.json        # Metrics for each step if available                {"ner", "re", "co-occurrence filter"}
 
 
 
-command         arguments       description
-
+COMMAND         ARGUMENTS       DESCRIPTION
 --rebuild_db    True, False     Send old and new data through pipeline to rebuild database
 --clear_db      True, False	    Clear database before building new data
 --take_metrics  True, False	    Take metrics from NER, Co-occurrence filter and RE (if possible)
