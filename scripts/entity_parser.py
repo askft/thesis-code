@@ -56,7 +56,7 @@ def detokenize(token_label_pairs):
 
 
 def co_occurrence_extractor(label_word_pairs):
-    words = []
+    entities = []
     entity = ""
     in_entity = False
 
@@ -74,12 +74,12 @@ def co_occurrence_extractor(label_word_pairs):
                 # TODO: format inside of entity e.g. " , ", " - ", etc.
                 entity = entity.replace(' - ', '-')
                 entity = entity.replace(' , ', ',')
-                words.append(entity)
+                entities.append(entity)
                 entity = ''
 
     return {
-        "hasCoOccurrence": len(words) >= 2,
-        "entities": words,
+        "hasCoOccurrence": len(entities) >= 2,
+        "entities": entities,
         "text": " ".join(list(map(lambda t: t[1], label_word_pairs))).
         replace(" .", ".").
         replace(" ,", ",").
