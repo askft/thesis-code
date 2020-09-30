@@ -66,9 +66,6 @@ if __name__ == "__main__":
 
             x = co_occurrence_extractor(detokenize(token_label_pairs))
 
-            if not x["hasCoOccurrence"]:
-                x["entities"] = []
-
             articles[pmid]["sentences"][i]["entities"] = x["entities"]
             articles[pmid]["sentences"][i]["text_new"] = x["text"]
 
