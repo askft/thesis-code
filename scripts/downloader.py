@@ -10,18 +10,18 @@ import sys
 from typing import Any, List
 
 
-def make_batches(xs: List[Any], size: int):
+def _make_batches(xs: List[Any], size: int):
     for i in range(0, len(xs), size):
         yield xs[i:i+size]
 
 
-def article_list(input_file: str, output_file: str, batch_size: int):
+def _run(input_file: str, output_file: str, batch_size: int):
     lines = []
     for line in open(input_file, "r"):
         lines.append(line.strip())
 
     pmid_batches = []
-    for batch in make_batches(lines, batch_size):
+    for batch in _make_batches(lines, batch_size):
         pmid_batches.append(batch)
 
     i = 0
@@ -31,28 +31,28 @@ def article_list(input_file: str, output_file: str, batch_size: int):
         n += len(pmid_batch)
         print("Downloading and saving batch {}...".format(i))
 
-        api_url = build_api_url(pmid_batch, retmode="xml")
-        new_data = download_data(api_url)
-        append_json(output_file, new_data)
+        api_url = _build_api_url(pmid_batch, retmode="xml")
+        new_data = _download_data(api_url)
+        _append_json(output_file, new_data)
 
         print("Saved {}/{} articles so far.\n".format(n, len(lines)))
 
 
-def build_api_url(pmid_list: List[str], retmode="xml"):
+def _build_api_url(pmid_list: List[str], retmode="xml"):
     return ("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
             "?db=pubmed&id={}&retmode={}&rettype=abstract"
             ).format(",".join(pmid_list), retmode)
 
 
-def download_data(api_url: str):
+def _download_data(api_url: str):
     res = requests.get(api_url)
     if res.status_code != 200:
         raise requests.HTTPError(res.reason)
 
-    with open("{}/medline.xml".format(tmp_dir), "w") as f:
+    with open("{}/medline.xml".format(_tmp_dir), "w") as f:
         f.write(res.text)
 
-    medline_json_list = pp.parse_medline_xml("{}/medline.xml".format(tmp_dir))
+    medline_json_list = pp.parse_medline_xml("{}/medline.xml".format(_tmp_dir))
 
     # Map PMID to article
     new_data = {}
@@ -62,7 +62,7 @@ def download_data(api_url: str):
     return new_data
 
 
-def append_json(path: str, new_data: dict):
+def _append_json(path: str, new_data: dict):
     if not os.path.isfile(path):
         with open(path, "w", encoding="utf-8") as f:
             f.write("{}")
@@ -76,18 +76,18 @@ def append_json(path: str, new_data: dict):
         f.write(json.dumps(data, indent=2, ensure_ascii=False))
 
 
+_tmp_dir = "tmp_dir_dl"
+
+
 def run(input_file: str, output_file: str, batch_size: int):
-    os.makedirs(tmp_dir, exist_ok=True)
+    os.makedirs(_tmp_dir, exist_ok=True)
 
     try:
-        article_list(input_file, output_file, batch_size)
+        _run(input_file, output_file, batch_size)
     except KeyboardInterrupt:
         pass
 
-    shutil.rmtree(tmp_dir)
-
-
-tmp_dir = "tmp_dir_dl"
+    shutil.rmtree(_tmp_dir)
 
 
 """

@@ -1,19 +1,17 @@
 # coding=utf-8
 
 import os
-import sys
-import json
 import numpy as np
 import onnxruntime
 from scripts import tokenization as t10n
 from transformers import BertTokenizer
 import torch
-from typing import List, NamedTuple
+from typing import List
 
 
 class NERInferenceSession:
 
-    def __init__(self, model_dir, model_name, model_vocab, labels):
+    def __init__(self, model_dir: str, model_name: str, model_vocab: str, labels: List[str]):
         self.model_path = os.path.join(model_dir, model_name)
         self.vocab_path = os.path.join(model_dir, model_vocab)
         self.labels = labels
@@ -62,7 +60,6 @@ class NERInferenceSession:
         }
 
     def predict(self, sequence: str):
-
         encodings = self.encode_sequence(sequence)
 
         _, logits, _ = self.session.run([], {
@@ -72,11 +69,15 @@ class NERInferenceSession:
             "label_ids_1:0": encodings["label_ids"]}
         )
 
-        pred_labels = []
+        predicted_labels = []
 
         for index in logits[0]:
-            pred_labels.append(self.labels[index])
+            predicted_labels.append(self.labels[index])
 
-        for token, label in zip(encodings["tokens"], pred_labels):
-            print("{} {}\n".format(token, label))
+        token_label_pairs = []
 
+        for token, label in zip(encodings["tokens"], predicted_labels):
+            # print("{} {}\n".format(token, label))
+            token_label_pairs.append((token, label))
+
+        return token_label_pairs

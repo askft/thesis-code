@@ -22,22 +22,37 @@
     "country": "Netherlands",
     "sentences": [
       {
-        "text": "The iso-cytochromes c from baker's yeast: iso-1 methylated and unmethylated forms and iso-2 have been purified and their stabilities towards denaturants compared to that of horse heart cytochrome c. Thermal, acid and guanidinium hydrochloride denaturations were followed using fluorescence emission of their tryptophan 59 and/or the absorbance in the Soret region as the physical parameters."
+        "text": "The iso-cytochromes c from baker's yeast: iso-1 methylated and unmethylated forms and iso-2 have been purified and their stabilities towards denaturants compared to that of horse heart cytochrome c. Thermal, acid and guanidinium hydrochloride denaturations were followed using fluorescence emission of their tryptophan 59 and/or the absorbance in the Soret region as the physical parameters.",
+        "entities": [
+          "guanidinium hydrochloride",
+          "tryptophan"
+        ],
+        "text_new": "[CLS] the iso-cytochromes c from baker ' s yeast: iso-1 methylated and unmethylated forms and iso-2 have been purified and their stabilities towards denaturants compared to that of horse heart cytochrome c. thermal, acid and guanidinium hydrochloride denaturations were followed using fluorescence emission of their tryptophan 59 and / or the absorbance in the soret region as the physical parameters. [SEP]"
       },
       {
-        "text": "Very few differences could be evidenced among the ferricytochromes investigated in this study insofar as the acid denaturations are concerned."
+        "text": "Very few differences could be evidenced among the ferricytochromes investigated in this study insofar as the acid denaturations are concerned.",
+        "entities": [],
+        "text_new": "[CLS] very few differences could be evidenced among the ferricytochromes investigated in this study insofar as the acid denaturations are concerned. [SEP]"
       },
       {
-        "text": "This is to be contrasted with the conclusions of the thermal and guanidinium hydrochloride denaturations studies which clearly showed the ferricytochrome from horse heart to be much more stable than those from baker's yeast."
+        "text": "This is to be contrasted with the conclusions of the thermal and guanidinium hydrochloride denaturations studies which clearly showed the ferricytochrome from horse heart to be much more stable than those from baker's yeast.",
+        "entities": [],
+        "text_new": "[CLS] this is to be contrasted with the conclusions of the thermal and guanidinium hydrochloride denaturations studies which clearly showed the ferricytochrome from horse heart to be much more stable than those from baker ' s yeast. [SEP]"
       },
       {
-        "text": "No appreciable differences could be measured among the methylated and unmethylated forms of iso-1 cytochrome c nor among iso-1 and iso-2 cytochromes from baker's yeast."
+        "text": "No appreciable differences could be measured among the methylated and unmethylated forms of iso-1 cytochrome c nor among iso-1 and iso-2 cytochromes from baker's yeast.",
+        "entities": [],
+        "text_new": "[CLS] no appreciable differences could be measured among the methylated and unmethylated forms of iso-1 cytochrome c nor among iso-1 and iso-2 cytochromes from baker ' s yeast. [SEP]"
       },
       {
-        "text": "Our results suggest that a stabilizing effect of methylation on the tridimensional structure of ferricytochrome c must probably be discarded."
+        "text": "Our results suggest that a stabilizing effect of methylation on the tridimensional structure of ferricytochrome c must probably be discarded.",
+        "entities": [],
+        "text_new": "[CLS] our results suggest that a stabilizing effect of methylation on the tridimensional structure of ferricytochrome c must probably be discarded. [SEP]"
       },
       {
-        "text": "Other possible physiological roles of methylation are suggested taking into account the relative instability of ascomycetes's cytochromes as compared to mammalian ones."
+        "text": "Other possible physiological roles of methylation are suggested taking into account the relative instability of ascomycetes's cytochromes as compared to mammalian ones.",
+        "entities": [],
+        "text_new": "[CLS] other possible physiological roles of methylation are suggested taking into account the relative instability of ascomycetes ' s cytochromes as compared to mammalian ones. [SEP]"
       }
     ]
   },
@@ -64,34 +79,57 @@
     "country": "England",
     "sentences": [
       {
-        "text": "Nucleic acids derived from microorganisms are powerful triggers for innate immune responses."
+        "text": "Nucleic acids derived from microorganisms are powerful triggers for innate immune responses.",
+        "entities": [],
+        "text_new": "[CLS] nucleic acids derived from microorganisms are powerful triggers for innate immune responses. [SEP]"
       },
       {
-        "text": "Proteins called RNA and DNA sensors detect foreign nucleic acids and, in mammalian cells, include RIG-I, cGAS, and AIM2."
+        "text": "Proteins called RNA and DNA sensors detect foreign nucleic acids and, in mammalian cells, include RIG-I, cGAS, and AIM2.",
+        "entities": [],
+        "text_new": "[CLS] proteins called rna and dna sensors detect foreign nucleic acids and, in mammalian cells, include rig-i, cgas, and aim2. [SEP]"
       },
       {
-        "text": "On binding to nucleic acids, these proteins initiate signaling cascades that activate host defense responses."
+        "text": "On binding to nucleic acids, these proteins initiate signaling cascades that activate host defense responses.",
+        "entities": [],
+        "text_new": "[CLS] on binding to nucleic acids, these proteins initiate signaling cascades that activate host defense responses. [SEP]"
       },
       {
-        "text": "An important aspect of this defense program is the production of cytokines such as type I interferons and IL-1β."
+        "text": "An important aspect of this defense program is the production of cytokines such as type I interferons and IL-1β.",
+        "entities": [],
+        "text_new": "[CLS] an important aspect of this defense program is the production of cytokines such as type i interferons and il-1β. [SEP]"
       },
       {
-        "text": "Studies conducted over recent years have revealed that nucleic acid sensors also activate programmed cell death pathways as an innate immune response to infection."
+        "text": "Studies conducted over recent years have revealed that nucleic acid sensors also activate programmed cell death pathways as an innate immune response to infection.",
+        "entities": [],
+        "text_new": "[CLS] studies conducted over recent years have revealed that nucleic acid sensors also activate programmed cell death pathways as an innate immune response to infection. [SEP]"
       },
       {
-        "text": "Indeed, RNA and DNA sensors induce apoptosis, pyroptosis, and necroptosis."
+        "text": "Indeed, RNA and DNA sensors induce apoptosis, pyroptosis, and necroptosis.",
+        "entities": [],
+        "text_new": "[CLS] indeed, rna and dna sensors induce apoptosis, pyroptosis, and necroptosis. [SEP]"
       },
       {
-        "text": "Cell death via these pathways prevents replication of pathogens by eliminating the infected cell and additionally contributes to the release of cytokines and inflammatory mediators."
+        "text": "Cell death via these pathways prevents replication of pathogens by eliminating the infected cell and additionally contributes to the release of cytokines and inflammatory mediators.",
+        "entities": [],
+        "text_new": "[CLS] cell death via these pathways prevents replication of pathogens by eliminating the infected cell and additionally contributes to the release of cytokines and inflammatory mediators. [SEP]"
       },
       {
-        "text": "Interestingly, recent evidence suggests that programmed cell death triggered by nucleic acid sensors plays an important role in a number of noninfectious pathologies."
+        "text": "Interestingly, recent evidence suggests that programmed cell death triggered by nucleic acid sensors plays an important role in a number of noninfectious pathologies.",
+        "entities": [],
+        "text_new": "[CLS] interestingly, recent evidence suggests that programmed cell death triggered by nucleic acid sensors plays an important role in a number of noninfectious pathologies. [SEP]"
       },
       {
-        "text": "In addition to nonself DNA and RNA from microorganisms, nucleic acid sensors also recognize endogenous nucleic acids, for example when cells are damaged by genotoxic agents and in certain autoinflammatory diseases."
+        "text": "In addition to nonself DNA and RNA from microorganisms, nucleic acid sensors also recognize endogenous nucleic acids, for example when cells are damaged by genotoxic agents and in certain autoinflammatory diseases.",
+        "entities": [
+          "nucleic acid",
+          "nucleic acids"
+        ],
+        "text_new": "[CLS] in addition to nonself dna and rna from microorganisms, nucleic acid sensors also recognize endogenous nucleic acids, for example when cells are damaged by genotoxic agents and in certain autoinflammatory diseases. [SEP]"
       },
       {
-        "text": "This review article summarizes current knowledge on the links between nucleic acid sensing and cell death and explores important open questions for future studies in this area."
+        "text": "This review article summarizes current knowledge on the links between nucleic acid sensing and cell death and explores important open questions for future studies in this area.",
+        "entities": [],
+        "text_new": "[CLS] this review article summar ##izes current knowledge on the links between nucleic acid sensing and cell death and explores important open questions for future studies in this area. [SEP]"
       }
     ]
   },
@@ -118,28 +156,44 @@
     "country": "Korea (South)",
     "sentences": [
       {
-        "text": "Cell death is now reclassified into several types based on the mechanisms and morphologic phenotype."
+        "text": "Cell death is now reclassified into several types based on the mechanisms and morphologic phenotype.",
+        "entities": [],
+        "text_new": "[CLS] cell death is now reclassified into several types based on the mechanisms and morphologic phenotype. [SEP]"
       },
       {
-        "text": "Understanding of such classifications offers insights into the pathogenesis of liver disease, as well as diagnostic or therapeutic implications."
+        "text": "Understanding of such classifications offers insights into the pathogenesis of liver disease, as well as diagnostic or therapeutic implications.",
+        "entities": [],
+        "text_new": "[CLS] understanding of such classifications offers insights into the pathogenesis of liver disease, as well as diagnostic or therapeutic implications. [SEP]"
       },
       {
-        "text": "Apoptosis is recognized relatively easily due to its unique morphology, but lytic cell death may occur in the form of accidental necrosis, mitochondria permeability transition-driven necrosis, necroptosis, pyroptosis, ferroptosis, and parthanatos."
+        "text": "Apoptosis is recognized relatively easily due to its unique morphology, but lytic cell death may occur in the form of accidental necrosis, mitochondria permeability transition-driven necrosis, necroptosis, pyroptosis, ferroptosis, and parthanatos.",
+        "entities": [],
+        "text_new": "[CLS] apoptosis is recognized relatively easily due to its unique morphology, but lytic cell death may occur in the form of accidental necrosis, mitochondria permeability transition-driven necrosis, necroptosis, pyroptosis, ferroptosis, and parthanatos. [SEP]"
       },
       {
-        "text": "The cell may be engulfed by neighboring cells due to a loss of integrin signaling or cancer cell competition by entosis, a type of cell death."
+        "text": "The cell may be engulfed by neighboring cells due to a loss of integrin signaling or cancer cell competition by entosis, a type of cell death.",
+        "entities": [],
+        "text_new": "[CLS] the cell may be engulfed by neighboring cells due to a loss of integrin signaling or cancer cell competition by entosis, a type of cell death. [SEP]"
       },
       {
-        "text": "The classification also includes mechanistically termed cell death such as autophagy-dependent cell death and lysosome-dependent cell death."
+        "text": "The classification also includes mechanistically termed cell death such as autophagy-dependent cell death and lysosome-dependent cell death.",
+        "entities": [],
+        "text_new": "[CLS] the classification also includes mechanistically termed cell death such as autophagy-dependent cell death and lysosome-dependent cell death. [SEP]"
       },
       {
-        "text": "These different types of cell death may occur uniquely in certain liver diseases but may coexist in the evolution of the disease."
+        "text": "These different types of cell death may occur uniquely in certain liver diseases but may coexist in the evolution of the disease.",
+        "entities": [],
+        "text_new": "[CLS] these different types of cell death may occur uniquely in certain liver diseases but may coexist in the evolution of the disease. [SEP]"
       },
       {
-        "text": "They occur in parenchymal and non-parenchymal liver cells, as well as inflammatory cells, causing distinct pathologic consequences."
+        "text": "They occur in parenchymal and non-parenchymal liver cells, as well as inflammatory cells, causing distinct pathologic consequences.",
+        "entities": [],
+        "text_new": "[CLS] they occur in parenchymal and non-parenchymal liver cells, as well as inflammatory cells, causing distinct pathologic consequences. [SEP]"
       },
       {
-        "text": "This review briefly covers the recently revised classifications of cell death and discusses their relevance to liver diseases of different etiologies."
+        "text": "This review briefly covers the recently revised classifications of cell death and discusses their relevance to liver diseases of different etiologies.",
+        "entities": [],
+        "text_new": "[CLS] this review briefly covers the recently revised classifications of cell death and discusses their relevance to liver diseases of different etiologies. [SEP]"
       }
     ]
   },
@@ -166,40 +220,64 @@
     "country": "Switzerland",
     "sentences": [
       {
-        "text": "Diabetic cardiomyopathy (DCM) is a chronic complication of diabetes mellitus, characterized by abnormalities of myocardial structure and function."
+        "text": "Diabetic cardiomyopathy (DCM) is a chronic complication of diabetes mellitus, characterized by abnormalities of myocardial structure and function.",
+        "entities": [],
+        "text_new": "[CLS] diabetic cardiomyopathy (dcm) is a chronic complication of diabetes mellitus, characterized by abnormalities of myocardial structure and function. [SEP]"
       },
       {
-        "text": "Researches on the models of type 1 and type 2 diabetes mellitus as well as the application of genetic engineering technology help in understanding the molecular mechanism of DCM."
+        "text": "Researches on the models of type 1 and type 2 diabetes mellitus as well as the application of genetic engineering technology help in understanding the molecular mechanism of DCM.",
+        "entities": [],
+        "text_new": "[CLS] researches on the models of type 1 and type 2 diabetes mellitus as well as the application of genetic engineering technology help in understanding the molecular mechanism of dcm. [SEP]"
       },
       {
-        "text": "DCM has multiple hallmarks, including hyperglycemia, insulin resistance, increased free radical production, lipid peroxidation, mitochondrial dysfunction, endothelial dysfunction, and cell death."
+        "text": "DCM has multiple hallmarks, including hyperglycemia, insulin resistance, increased free radical production, lipid peroxidation, mitochondrial dysfunction, endothelial dysfunction, and cell death.",
+        "entities": [],
+        "text_new": "[CLS] dcm has multiple hallmarks, including hyperglycemia, insulin resistance, increased free radical production, lipid peroxidation, mitochondrial dysfunction, endothelial dysfunction, and cell death. [SEP]"
       },
       {
-        "text": "Essentially, cell death is considered to be the terminal pathway of cardiomyocytes during DCM."
+        "text": "Essentially, cell death is considered to be the terminal pathway of cardiomyocytes during DCM.",
+        "entities": [],
+        "text_new": "[CLS] essentially, cell death is considered to be the terminal pathway of cardiomyocytes during dcm. [SEP]"
       },
       {
-        "text": "Morphologically, cell death can be classified into four different forms: apoptosis, autophagy, necrosis, and entosis."
+        "text": "Morphologically, cell death can be classified into four different forms: apoptosis, autophagy, necrosis, and entosis.",
+        "entities": [],
+        "text_new": "[CLS] morphologically, cell death can be classified into four different forms: apoptosis, autophagy, necrosis, and entosis. [SEP]"
       },
       {
-        "text": "Apoptosis, as type I cell death, is the fastest form of cell death and mainly occurs depending on the caspase proteolytic cascade."
+        "text": "Apoptosis, as type I cell death, is the fastest form of cell death and mainly occurs depending on the caspase proteolytic cascade.",
+        "entities": [],
+        "text_new": "[CLS] apoptosis, as type i cell death, is the fastest form of cell death and mainly occurs depending on the caspase proteolytic cascade. [SEP]"
       },
       {
-        "text": "Autophagy, as type II cell death, is a degradation process to remove damaged proteins, dysfunctional organelles and commences by the formation of autophagosome."
+        "text": "Autophagy, as type II cell death, is a degradation process to remove damaged proteins, dysfunctional organelles and commences by the formation of autophagosome.",
+        "entities": [],
+        "text_new": "[CLS] autophagy, as type ii cell death, is a degradation process to remove damaged proteins, dysfunctional organelles and commences by the formation of autophagosome. [SEP]"
       },
       {
-        "text": "Necrosis is type III cell death, which contains a great diversity of cell death processes, such as necroptosis and pyroptosis."
+        "text": "Necrosis is type III cell death, which contains a great diversity of cell death processes, such as necroptosis and pyroptosis.",
+        "entities": [],
+        "text_new": "[CLS] necrosis is type iii cell death, which contains a great diversity of cell death processes, such as necroptosis and pyroptosis. [SEP]"
       },
       {
-        "text": "Entosis is type IV cell death, displaying \"cell-in-cell\" cytological features and requires the engulfing cells to execute."
+        "text": "Entosis is type IV cell death, displaying \"cell-in-cell\" cytological features and requires the engulfing cells to execute.",
+        "entities": [],
+        "text_new": "[CLS] entosis is type iv cell death, displaying \" cell-in-cell \" cytological features and requires the engulfing cells to execute. [SEP]"
       },
       {
-        "text": "There are also some other types of cell death such as ferroptosis, parthanatos, netotic cell death, lysosomal dependent cell death, alkaliptosis or oxeiptosis, which are possibly involved in DCM."
+        "text": "There are also some other types of cell death such as ferroptosis, parthanatos, netotic cell death, lysosomal dependent cell death, alkaliptosis or oxeiptosis, which are possibly involved in DCM.",
+        "entities": [],
+        "text_new": "[CLS] there are also some other types of cell death such as ferroptosis, parthanatos, netotic cell death, lysosomal dependent cell death, alkaliptosis or oxeiptosis, which are possibly involved in dcm. [SEP]"
       },
       {
-        "text": "Drugs or compounds targeting the signals involved in cell death have been used in clinics or experiments to treat DCM."
+        "text": "Drugs or compounds targeting the signals involved in cell death have been used in clinics or experiments to treat DCM.",
+        "entities": [],
+        "text_new": "[CLS] drugs or compounds targeting the signals involved in cell death have been used in clinics or experiments to treat dcm. [SEP]"
       },
       {
-        "text": "This review briefly summarizes the mechanisms and implications of cell death in DCM, which is beneficial to improve the understanding of cell death in DCM and may propose novel and ideal strategies in future."
+        "text": "This review briefly summarizes the mechanisms and implications of cell death in DCM, which is beneficial to improve the understanding of cell death in DCM and may propose novel and ideal strategies in future.",
+        "entities": [],
+        "text_new": "[CLS] this review briefly summarizes the mechanisms and implications of cell death in dcm, which is beneficial to improve the understanding of cell death in dcm and may propose novel and ideal strategies in future. [SEP]"
       }
     ]
   },
@@ -226,31 +304,49 @@
     "country": "United States",
     "sentences": [
       {
-        "text": "Autophagy is intricately linked with many intracellular signaling pathways, particularly nutrient-sensing mechanisms and cell death signaling cascades."
+        "text": "Autophagy is intricately linked with many intracellular signaling pathways, particularly nutrient-sensing mechanisms and cell death signaling cascades.",
+        "entities": [],
+        "text_new": "[CLS] autophagy is intricately linked with many intracellular signaling pathways, particularly nutrient-sensing mechanisms and cell death signaling cascades. [SEP]"
       },
       {
-        "text": "In cancer, the roles of autophagy are context dependent."
+        "text": "In cancer, the roles of autophagy are context dependent.",
+        "entities": [],
+        "text_new": "[CLS] in cancer, the roles of autophagy are context dependent. [SEP]"
       },
       {
-        "text": "Tumor cell-intrinsic effects of autophagy can be both tumor suppressive and tumor promotional."
+        "text": "Tumor cell-intrinsic effects of autophagy can be both tumor suppressive and tumor promotional.",
+        "entities": [],
+        "text_new": "[CLS] tumor cell-intrinsic effects of autophagy can be both tumor suppressive and tumor promotional. [SEP]"
       },
       {
-        "text": "Autophagy can therefore not only activate and inhibit cell death, but also facilitate the switch between cell death mechanisms."
+        "text": "Autophagy can therefore not only activate and inhibit cell death, but also facilitate the switch between cell death mechanisms.",
+        "entities": [],
+        "text_new": "[CLS] autophagy can therefore not only activate and inhibit cell death, but also facilitate the switch between cell death mechanisms. [SEP]"
       },
       {
-        "text": "Moreover, autophagy can play opposing roles in the tumor microenvironment via non-cell-autonomous mechanisms."
+        "text": "Moreover, autophagy can play opposing roles in the tumor microenvironment via non-cell-autonomous mechanisms.",
+        "entities": [],
+        "text_new": "[CLS] moreover, autophagy can play opposing roles in the tumor microenvironment via non-cell-autonomous mechanisms. [SEP]"
       },
       {
-        "text": "Preclinical data support a tumor-promotional role of autophagy in established tumors and during cancer therapy; this has led to the launch of dozens of clinical trials targeting autophagy in multiple cancer types."
+        "text": "Preclinical data support a tumor-promotional role of autophagy in established tumors and during cancer therapy; this has led to the launch of dozens of clinical trials targeting autophagy in multiple cancer types.",
+        "entities": [],
+        "text_new": "[CLS] preclinical data support a tumor-promotional role of autophagy in established tumors and during cancer therapy; this has led to the launch of dozens of clinical trials targeting autophagy in multiple cancer types. [SEP]"
       },
       {
-        "text": "However, many questions remain: which tumors and genetic backgrounds are the most sensitive to autophagy inhibition, and which therapies should be combined with autophagy inhibitors?"
+        "text": "However, many questions remain: which tumors and genetic backgrounds are the most sensitive to autophagy inhibition, and which therapies should be combined with autophagy inhibitors?",
+        "entities": [],
+        "text_new": "[CLS] however, many questions remain: which tumors and genetic backgrounds are the most sensitive to autophagy inhibition, and which therapies should be combined with autophagy inhibitors? [SEP]"
       },
       {
-        "text": "Additionally, since cancer cells are under selective pressure and are prone to adaptation, particularly after treatment, it is unclear if and how cells adapt to autophagy inhibition."
+        "text": "Additionally, since cancer cells are under selective pressure and are prone to adaptation, particularly after treatment, it is unclear if and how cells adapt to autophagy inhibition.",
+        "entities": [],
+        "text_new": "[CLS] additionally, since cancer cells are under selective pressure and are prone to adaptation, particularly after treatment, it is unclear if and how cells adapt to autophagy inhibition. [SEP]"
       },
       {
-        "text": "Here we review recent literature addressing these issues."
+        "text": "Here we review recent literature addressing these issues.",
+        "entities": [],
+        "text_new": "[CLS] here we review recent literature addressing these issues. [SEP]"
       }
     ]
   }
