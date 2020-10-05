@@ -1,5 +1,6 @@
 {
   "downloader": {
+    "active": false,
     "input_path": "data/example_pmid_list.txt",
     "output_path": "data/example_pmid_list.json",
     "batch_size": 4

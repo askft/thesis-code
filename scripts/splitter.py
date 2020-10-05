@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# coding=utf-8
 # https://stackoverflow.com/a/31505798
 
 import re
