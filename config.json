@@ -1,13 +1,14 @@
 {
   "downloader": {
-    "active": false,
+    "ignore": true,
     "input_path": "data/example_pmid_list.txt",
     "output_path": "data/example_pmid_list.json",
     "batch_size": 4
   },
   "ner": {
+    "ignore": true,
     "input_path": "data/sentences_done.json",
-    "output_path": "data/ner_done.txt",
+    "output_path": "data/ner_done.json",
     "model_dir": "models/biobert/",
     "model_name": "biobert_ner.onnx",
     "model_vocab": "vocab.txt",
