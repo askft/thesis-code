@@ -81,6 +81,9 @@ def ner(ner_config: dict):
 
 
 if __name__ == "__main__":
+
+    print("Please see config.json for configuration!")
+
     with open("config.json", "r") as f:
         config = json.loads(f.read())
 
