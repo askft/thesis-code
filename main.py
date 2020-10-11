@@ -25,7 +25,7 @@ def run_download(dl_config: dict, ignore: bool):
     print("Finished running downloader script.")
 
 
-def sentencer(sentencer_config: dict, ignore: bool) -> dict:
+def run_sentencer(sentencer_config: dict, ignore: bool) -> dict:
     if ignore:
         print("Ignoring script: sentencer.")
         return {}
@@ -157,7 +157,7 @@ if __name__ == "__main__":
     print()
 
     # Extract sentences from each article.
-    sentencer(config["sentencer"], ignore=ignore["sentencer"])
+    run_sentencer(config["sentencer"], ignore=ignore["sentencer"])
     print()
 
     # Run NER inference on each sentence for each article.
