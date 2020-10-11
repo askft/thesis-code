@@ -1,28 +1,38 @@
 {
+  "ignore": {
+    "downloader": true,
+    "sentencer": true,
+    "ner": false,
+    "re": false,
+    "analysis": false
+  },
   "downloader": {
-    "ignore": true,
     "input_path": "data/example_pmid_list.txt",
     "output_path": "data/example_pmid_list.json",
     "batch_size": 4
   },
+  "sentencer": {
+    "input_path": "data/pmid-covid-set.json",
+    "output_path": "data/pmid-covid-set-sentences.json"
+  },
   "ner": {
-    "ignore": true,
-    "input_path": "data/sentences_done.json",
-    "output_path": "data/ner_done.json",
+    "input_path": "data/pmid-covid-set-sentences.json",
+    "output_path": "data/pmid-covid-set-ner-done.json",
     "model_dir": "models/biobert/",
     "model_name": "biobert_ner.onnx",
     "model_vocab": "vocab.txt",
-    "labels": ["[PAD]", "B", "I", "O", "X", "[CLS]", "[SEP]"]
-  },
-  "co-occurrence": {
-    "input_path": "data/ner_done.json",
-    "output_path": "data/filtered_data.json"
+    "labels": ["[PAD]", "B", "I", "O", "X", "[CLS]", "[SEP]"],
+    "clear_old_results": true,
+    "article_limit": 50
   },
   "re": {
-    "input_path": "data/filtered_data.json",
-    "output_path": "data/relations.json",
+    "input_path": "data/pmid-covid-set-ner-done.json",
+    "output_path": "data/pmid-covid-set-re-done.json",
     "model_dir": "models/scibert/",
     "model_name": "pytorch_model.bin",
     "model_vocab": "vocab.txt"
+  },
+  "analysis": {
+    "input_path": "data/pmid-covid-set-ner-done.json"
   }
 }

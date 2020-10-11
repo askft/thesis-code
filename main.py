@@ -2,22 +2,37 @@
 
 import json
 import os
+
 from scripts import downloader
+from scripts import splitter
+from scripts import analysis
+from scripts import util
 from scripts.ner_inference import NERInferenceSession
-from scripts.splitter import split_into_sentences
 from scripts.entity_parser import co_occurrence_extractor, detokenize
 
 
-def download(dl_config: dict):
+def run_download(dl_config: dict, ignore: bool):
+    if ignore:
+        print("Ignoring script: downloader.")
+        return
+
+    print("Running downloader script.")
     downloader.run(
         input_file=dl_config["input_path"],
         output_file=dl_config["output_path"],
         batch_size=dl_config["batch_size"],
     )
+    print("Finished running downloader script.")
 
 
-def sentences_from_text(input_path: str, output_path: str) -> dict:
-    with open(input_path, "r") as f:
+def sentencer(sentencer_config: dict, ignore: bool) -> dict:
+    if ignore:
+        print("Ignoring script: sentencer.")
+        return {}
+
+    print("Running sentencer script.")
+
+    with open(sentencer_config["input_path"], "r") as f:
         full_articles = json.loads(f.read())
 
     articles = {}
@@ -28,17 +43,25 @@ def sentences_from_text(input_path: str, output_path: str) -> dict:
             "title": article["title"],
             "sentences": list(map(
                 lambda sentence: {"text": sentence},
-                split_into_sentences(article["abstract"])
+                splitter.split_into_sentences(article["abstract"])
             ))
         }
 
-    with open(output_path, "w") as f:
+    with open(sentencer_config["output_path"], "w") as f:
         f.write(json.dumps(articles, indent=2, ensure_ascii=False))
+
+    print("Finished running sentencer script.")
 
     return articles
 
 
-def ner(ner_config: dict):
+def run_ner(ner_config: dict, ignore: bool):
+
+    if ignore:
+        print("Ignoring script: NER.")
+        return
+
+    print("Running NER script.")
 
     with open(ner_config["input_path"], "r") as f:
         articles = json.loads(f.read())
@@ -52,83 +75,101 @@ def ner(ner_config: dict):
     )
     print("Created NER session.")
 
-    # Temporary: shorten number of articles to n ————————
-    a = {}
-    i = 0
-    n = 25
-    for pmid in articles:
-        if i >= n:
-            break
-        a[pmid] = articles[pmid]
-        i += 1
-    articles = a
-    # ———————————————————————————————————————————————————
+    # For experimentation: limit number of articles to process (and to output)
+    limit = ner_config["article_limit"]
+    if limit > 0:
+        print(f"Limiting NER to {limit} articles.")
+        a = {}
+        i = 0
+        for pmid in articles:
+            if i >= limit:
+                break
+            a[pmid] = articles[pmid]
+            i += 1
+        articles = a
 
-    for pmid in articles:
+    if ner_config.get("clear_old_results", True):
+        os.remove(ner_config["output_path"])
 
+    # Becuase we want to save the result periodically.
+    batch_index = 0
+    batch_size = 30
+
+    # Run prediction on each sentence in each article.
+    for pmid in articles:
+        if batch_index > batch_size:
+            util.append_to_json_file(ner_config["output_path"], articles)
+            batch_index = 0
         sentences = articles[pmid]["sentences"]
-
         for i, sentence in enumerate(sentences):
             token_label_pairs = ner_session.predict(sentence["text"])
-
             x = co_occurrence_extractor(detokenize(token_label_pairs))
-
             articles[pmid]["sentences"][i]["entities"] = x["entities"]
             articles[pmid]["sentences"][i]["text_new"] = x["text"]
+        batch_index += 1
 
-    with open(ner_config["output_path"], "w") as f:
-        f.write(json.dumps(articles, indent=2, ensure_ascii=False))
+    util.append_to_json_file(ner_config["output_path"], articles)
+
+    print("Finished running NER script.")
+
+
+def run_re(re_config: dict, ignore: bool):
+    if ignore:
+        print("Ignoring script: RE.")
+        return
+
+    print("Running RE script.")
+    # TODO
+    print("Finished running RE script.")
+
+
+def run_analysis(analysis_config: dict, ignore: bool):
+    if ignore:
+        print("Ignoring script: analysis.")
+        return
+
+    print("Running analysis script.")
+
+    with open(analysis_config["input_path"], "r") as f:
+        articles = json.loads(f.read())
+
+    analysis.run(articles)
+
+    print("Finished running analysis script.")
 
 
 if __name__ == "__main__":
-
     print("Please see config.json for configuration!")
 
     with open("config.json", "r") as f:
         config = json.loads(f.read())
 
+    print("Loaded config:")
+    print(json.dumps(config, indent=2, ensure_ascii=False))
+    print()
+
     os.makedirs("data", exist_ok=True)
 
-    dl_config = config["downloader"]
-    ner_config = config["ner"]
+    ignore = config["ignore"]
 
-    # ——————————————————————————————————————————————————————————————————————————
+    # Download articles from the PubMed API.
+    run_download(config["downloader"], ignore=ignore["downloader"])
+    print()
 
-    if dl_config["ignore"]:
-        print("Ignoring downloader script.")
-    else:
-        print("Running downloader script.")
-        download(dl_config)
-        print("Finished running downloader script.")
+    # Extract sentences from each article.
+    sentencer(config["sentencer"], ignore=ignore["sentencer"])
+    print()
 
-    # ——————————————————————————————————————————————————————————————————————————
+    # Run NER inference on each sentence for each article.
+    run_ner(config["ner"], ignore=ignore["ner"])
+    print()
 
-    print("Converting sentences.")
-    _ = sentences_from_text(
-        input_path="data/pmid-covid-set.json",  # dl_config["output_path"],
-        output_path="data/sentences_done.json",  # actually doesn't matter now
-    )
-    print("Finished converting sentences.")
+    # Run relationship extraction
+    run_re(config["re"], ignore=ignore["re"])
+    print()
 
-    # ——————————————————————————————————————————————————————————————————————————
-
-    if ner_config["ignore"]:
-        print("Ignoring NER script.")
-    else:
-        print("Running NER script.")
-        ner(ner_config)
-        print("Finished running NER script.")
-
-    # ——————————————————————————————————————————————————————————————————————————
-
-    print("Running analysis script.")
-    from scripts import analysis
-    with open(ner_config["output_path"], "r") as f:
-        articles = json.loads(f.read())
-    analysis.run(articles)
-    print("Finished running analysis script.")
-
-    # with open("data/main_out.json", "w") as f:
-    #     f.write(json.dumps(articles, indent=2, ensure_ascii=False))
+    # Run analysis on the entities that were found by NER.
+    run_analysis(config["analysis"], ignore=ignore["analysis"])
+    print()
 
     print("Program finished successfully.")

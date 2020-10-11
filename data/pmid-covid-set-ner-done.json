@@ -1,0 +1,2229 @@
+{
+  "32995559": {
+    "title": "The Avon Longitudinal Study of Parents and Children - A resource for COVID-19 research: Questionnaire data capture May-July 2020.",
+    "sentences": [
+      {
+        "text": "The Avon Longitudinal Study of Parents and Children (ALSPAC) is a prospective population-based cohort study which recruited pregnant women in 1990-1992 and has followed these women, their partners and their offspring ever since.",
+        "entities": [],
+        "text_new": "[CLS] the a ##von longitudinal study of parents and children (alspac) is a prospective population-based cohort study which recruited pregnant women in 1990-1992 and has followed these women, their partners and their offspring ever since. [SEP]"
+      },
+      {
+        "text": "The study reacted rapidly to the coronavirus disease 2019 (COVID-19) pandemic, deploying an online questionnaire early on during lockdown (from 9 th April to 15 th May).",
+        "entities": [],
+        "text_new": "[CLS] the study reacted rapidly to the coronavirus disease 2019 (covid-19) pandemic, deploying an online questionnaire early on during lockdown (from 9 th april to 15 th may). [SEP]"
+      },
+      {
+        "text": "In late May 2020, a second questionnaire was developed asking about physical and mental health, lifestyle and behaviours, employment and finances.",
+        "entities": [],
+        "text_new": "[CLS] in late may 2020, a second questionnaire was developed asking about physical and mental health, lifestyle and behaviours, employment and finances. [SEP]"
+      },
+      {
+        "text": "The online questionnaire was deployed across the parent and offspring generations between the 26th May and 5 th July 2020.",
+        "entities": [],
+        "text_new": "[CLS] the online questionnaire was deployed across the parent and offspring generations between the 26th may and 5 th july 2020. [SEP]"
+      },
+      {
+        "text": "6482 participants completed the questionnaire (2639 original mothers, 1039 original fathers/partners, 2711 offspring (mean age ~28 years) and 93 partners of offspring).",
+        "entities": [],
+        "text_new": "[CLS] 6482 participants completed the questionnaire (2639 original mothers, 1039 original fathers / partners, 2711 offspring (mean age ~ 28 years) and 93 partners of offspring). [SEP]"
+      },
+      {
+        "text": "1039 new participants who did not respond to the first questionnaire deployed in April completed the second questionnaire.",
+        "entities": [],
+        "text_new": "[CLS] 103 ##9 new participants who did not respond to the first questionnaire deployed in april completed the second questionnaire. [SEP]"
+      },
+      {
+        "text": "A positive COVID-19 test was reported by 36 (0.6%) participants (12 G0 and 24 G1), 91 (1.4%; 35 G0 and 56 G1) reported that they had been told by a doctor they likely had COVID-19 and 838 (13%; 422 G0 and 416 G1) suspected that they have had COVID-19.",
+        "entities": [],
+        "text_new": "[CLS] a positive covid-19 test was reported by 36 (0. 6 %) participants (12 g0 and 24 g1), 91 (1. 4 %; 35 g0 and 56 g1) reported that they had been told by a doctor they likely had covid-19 and 838 (13 %; 422 g0 and 416 g1) suspected that they have had covid-19. [SEP]"
+      },
+      {
+        "text": "The observational data from both COVID questionnaires will be complemented with linkage to health records and results of biological testing as they become available.",
+        "entities": [],
+        "text_new": "[CLS] the observational data from both covid questionnaires will be complemented with linkage to health records and results of biological testing as they become available. [SEP]"
+      },
+      {
+        "text": "In combination, these data may help us identify true cases.",
+        "entities": [],
+        "text_new": "[CLS] in combination, these data may help us identify true cases. [SEP]"
+      },
+      {
+        "text": "Data has been released as an update to the original dataset released in May 2020.",
+        "entities": [],
+        "text_new": "[CLS] data has been released as an update to the original dataset released in may 2020. [SEP]"
+      },
+      {
+        "text": "It comprises: 1) a standard dataset containing all participant responses to both questionnaires with key sociodemographic factors and 2) as a composite release coordinating data from the existing resource, thus enabling bespoke research across all areas supported by the study.",
+        "entities": [],
+        "text_new": "[CLS] it comprises: 1) a standard dataset containing all participant responses to both questionnaires with key sociodemographic factors and 2) as a composite release coordinating data from the existing resource, thus enabling bespoke research across all areas supported by the study. [SEP]"
+      },
+      {
+        "text": "This data note describes the second questionnaire and the data obtained from it.",
+        "entities": [],
+        "text_new": "[CLS] this data note describes the second questionnaire and the data obtained from it. [SEP]"
+      }
+    ]
+  },
+  "32995556": {
+    "title": "Surveillance of endemic human coronaviruses (HCoV-NL63, OC43 and 229E) associated with childhood pneumonia in Kilifi, Kenya.",
+    "sentences": [
+      {
+        "text": "Introduction: Human coronaviruses (HCoVs) circulate endemically in human populations, often with seasonal variation.",
+        "entities": [],
+        "text_new": "[CLS] introduction: human coronaviruses (hcovs) circulate endemically in human populations, often with seasonal variation. [SEP]"
+      },
+      {
+        "text": "We describe the long-term patterns of paediatric disease associated with three of these viruses, HCoV-NL63, OC43 and 229E, in coastal Kenya.",
+        "entities": [],
+        "text_new": "[CLS] we describe the long-term patterns of paediatric disease associated with three of these viruses, hcov-nl63, oc43 and 229e, in coastal kenya. [SEP]"
+      },
+      {
+        "text": "Methods: Continuous surveillance of pneumonia admissions was conducted at the Kilifi county hospital (KCH) located in the northern coastal region of Kenya.",
+        "entities": [],
+        "text_new": "[CLS] methods: continuous surveillance of pneumonia admissions was conducted at the kilifi county hospital (kch) located in the northern coastal region of kenya. [SEP]"
+      },
+      {
+        "text": "Children aged <5 years admitted to KCH with clinically defined syndromic severe or very severe pneumonia were recruited.",
+        "entities": [],
+        "text_new": "[CLS] children aged < 5 years admitted to kch with clinically defined syndromic severe or very severe pneumonia were recruited. [SEP]"
+      },
+      {
+        "text": "Respiratory samples were taken and tested for 15 virus targets, using real-time polymerase chain reaction.",
+        "entities": [],
+        "text_new": "[CLS] respiratory samples were taken and tested for 15 virus targets, using real-time polymerase chain reaction. [SEP]"
+      },
+      {
+        "text": "Unadjusted odds ratios were used to estimate the association between demographic and clinical characteristics and HCoV positivity.",
+        "entities": [],
+        "text_new": "[CLS] unadjusted odds ratios were used to estimate the association between demographic and clinical characteristics and hcov positivity. [SEP]"
+      },
+      {
+        "text": "Results: From 2007 to 2019, we observed 11,445 pneumonia admissions, of which 314 (3.9%) tested positive for at least one of the HCoV types surveyed in the study.",
+        "entities": [],
+        "text_new": "[CLS] results: from 2007 to 2019, we observed 11, 445 pneumonia admissions, of which 314 (3. 9 %) tested positive for at least one of the hcov types surveyed in the study. [SEP]"
+      },
+      {
+        "text": "There were 129 (41.1%) OC43, 99 (31.5%) 229E, 74 (23.6%) NL63 positive cases and 12 (3.8%) cases of HCoV to HCoV coinfection.",
+        "entities": [],
+        "text_new": "[CLS] there were 129 (41. 1 %) oc43, 99 (31. 5 %) 229e, 74 (23. 6 %) nl63 positive cases and 12 (3. 8 %) cases of hcov to hcov coinfection. [SEP]"
+      },
+      {
+        "text": "Among HCoV positive cases, 47% (n=147) were coinfected with other respiratory virus pathogens.",
+        "entities": [],
+        "text_new": "[CLS] among hcov positive cases, 47 % (n = 147) were coinfected with other respiratory virus pathogens. [SEP]"
+      },
+      {
+        "text": "The majority of HCoV cases were among children aged <1 year (66%, n=208), though there was was no change in the proportion infected by age.",
+        "entities": [],
+        "text_new": "[CLS] the majority of hcov cases were among children aged < 1 year (66 %, n = 208), though there was was no change in the proportion infected by age. [SEP]"
+      },
+      {
+        "text": "HCoV-OC43 was predominant of the three HCoV types throughout the surveillance period.",
+        "entities": [],
+        "text_new": "[CLS] hcov-oc43 was predominant of the three hcov types throughout the surveillance period. [SEP]"
+      },
+      {
+        "text": "Evidence for seasonality was not identified.",
+        "entities": [],
+        "text_new": "[CLS] evidence for seasonality was not identified. [SEP]"
+      },
+      {
+        "text": "Conclusions: Overall, 4% of paediatric pneumonia admissions were associated with three endemic HCoVs, with a high proportion of cases co-occurring with another respiratory virus, no clear seasonal pattern, and with the age-distribution of cases following that of pneumonia admissions (i.e. highest in infants).",
+        "entities": [],
+        "text_new": "[CLS] conclusions: overall, 4 % of paediatric pneumonia admissions were associated with three endemic hcovs, with a high proportion of cases co-occurring with another respiratory virus, no clear seasonal pattern, and with the age-distribution of cases following that of pneumonia admissions (i. e. highest in infants). [SEP]"
+      },
+      {
+        "text": "These observations suggest, at most, a small severe disease contribution of endemic HCoVs in this tropical setting and offer insight into their potential future burden and epidemiological characteristics.",
+        "entities": [],
+        "text_new": "[CLS] these observations suggest, at most, a small severe disease contribution of endemic hcovs in this tropical setting and offer insight into their potential future burden and epidemiological characteristics. [SEP]"
+      }
+    ]
+  },
+  "32995555": {
+    "title": "COVID-19 and Guillain-Barre Syndrome: a systematic review of case reports.",
+    "sentences": [
+      {
+        "text": "Background: Guillain-Barre Syndrome (GBS) is a neurological autoimmune disease that can lead to respiratory failure and death.",
+        "entities": [],
+        "text_new": "[CLS] background: guillain-barre syndrome (gbs) is a neurological autoimmune disease that can lead to respiratory failure and death. [SEP]"
+      },
+      {
+        "text": "Whether COVID-19 patients are at high risk of GBS is unknown.",
+        "entities": [
+          "covid"
+        ],
+        "text_new": "[CLS] whether covid-19 patients are at high risk of gbs is unknown. [SEP]"
+      },
+      {
+        "text": "Through a systematic review of case reports, we aimed to summarize the main features of patients with GBS and COVID-19.",
+        "entities": [],
+        "text_new": "[CLS] through a systematic review of case reports, we aimed to summarize the main features of patients with gbs and covid-19. [SEP]"
+      },
+      {
+        "text": "Methods: Without any restrictions, we searched MEDLINE, Embase, Global Health, Scopus, Web of Science and MedXriv (April 23 rd, 2020).",
+        "entities": [],
+        "text_new": "[CLS] methods: without any restrictions, we searched medline, embase, global health, scopus, web of science and medxriv (april 23 rd, 2020). [SEP]"
+      },
+      {
+        "text": "Two reviewers screened and studied titles, abstracts and reports.",
+        "entities": [],
+        "text_new": "[CLS] two reviewers screened and studied titles, abstracts and reports. [SEP]"
+      },
+      {
+        "text": "We extracted information to characterize sociodemographic variables, clinical presentation, laboratory results, treatments and outcomes.",
+        "entities": [],
+        "text_new": "[CLS] we extracted information to characterize sociodemographic variables, clinical presentation, laboratory results, treatments and outcomes. [SEP]"
+      },
+      {
+        "text": "Results: Eight reports (n=12 patients) of GBS and COVID-19 were identified; one was a Miller Fisher case.",
+        "entities": [],
+        "text_new": "[CLS] results: eight reports (n = 12 patients) of gbs and covid-19 were identified; one was a miller fisher case. [SEP]"
+      },
+      {
+        "text": "The age ranged between 23 and 77 years, and there were more men (9/102).",
+        "entities": [],
+        "text_new": "[CLS] the age ranged between 23 and 77 years, and there were more men (9 / 102). [SEP]"
+      },
+      {
+        "text": "GBS symptoms started between 5 and 24 days after those of COVID-19.",
+        "entities": [],
+        "text_new": "[CLS] gbs symptoms started between 5 and 24 days after those of covid-19. [SEP]"
+      },
+      {
+        "text": "The protein levels in cerebrospinal fluid samples ranged between 40 and 193 mg/dl.",
+        "entities": [],
+        "text_new": "[CLS] the protein levels in cerebrospinal fluid samples ranged between 40 and 193 mg / dl. [SEP]"
+      },
+      {
+        "text": "None of the cerebrospinal fluid samples tested positive for COVID-19.",
+        "entities": [],
+        "text_new": "[CLS] none of the cerebrospinal fluid samples tested positive for covid-19. [SEP]"
+      },
+      {
+        "text": "Six patients debuted with ascendant weakness and three with facial weakness.",
+        "entities": [],
+        "text_new": "[CLS] six patients debuted with ascendant weakness and three with facial weakness. [SEP]"
+      },
+      {
+        "text": "Five patients had favourable evolution, four remained with relevant symptoms or required critical care and one died; the Miller Fisher case had successful resolution.",
+        "entities": [],
+        "text_new": "[CLS] five patients had favourable evolution, four remained with relevant symptoms or required critical care and one died; the miller fisher case had successful resolution. [SEP]"
+      },
+      {
+        "text": "Conclusions: GBS is emerging as a disease that may appear in COVID-19 patients.",
+        "entities": [],
+        "text_new": "[CLS] conclusions: gbs is emerging as a disease that may appear in covid-19 patients. [SEP]"
+      },
+      {
+        "text": "Although limited, preliminary evidence appears to suggest that GBS occurs after COVID-19 onset.",
+        "entities": [],
+        "text_new": "[CLS] although limited, preliminary evidence appears to suggest that gbs occurs after covid-19 onset. [SEP]"
+      },
+      {
+        "text": "Practitioners and investigators should have GBS in mind as they look after COVID-19 patients and conduct research on novel aspects of COVID-19.",
+        "entities": [
+          "covid -"
+        ],
+        "text_new": "[CLS] practitioners and investigators should have gbs in mind as they look after covid-19 patients and conduct research on novel aspects of covid-19. [SEP]"
+      },
+      {
+        "text": "Comparison with GBS patients in the context of another viral outbreak (Zika), revealed similarities and differences that deserves further scrutiny and epidemiological studies.",
+        "entities": [],
+        "text_new": "[CLS] comparison with gbs patients in the context of another viral outbreak (zika), revealed similarities and differences that deserves further scrutiny and epidemiological studies. [SEP]"
+      }
+    ]
+  },
+  "33002074": {
+    "title": "Ophthalmological emergencies and the SARS-CoV-2 outbreak.",
+    "sentences": [
+      {
+        "text": "Since the end of 2019, an outbreak of the severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), originating in the Chinese city of Wuhan has spread rapidly worldwide causing thousands of deaths.",
+        "entities": [],
+        "text_new": "[CLS] since the end of 2019, an outbreak of the severe acute respiratory syndrome coronavirus 2 (sars-cov-2), originating in the chinese city of wuhan has spread rapidly worldwide causing thousands of deaths. [SEP]"
+      },
+      {
+        "text": "Coronavirus disease (COVID-19) is supported by SARS-CoV-2 and represents the causative agent of a potentially fatal disease that is of great global public health concern.",
+        "entities": [],
+        "text_new": "[CLS] coronavirus disease (covid-19) is supported by sars-cov-2 and represents the causative agent of a potentially fatal disease that is of great global public health concern. [SEP]"
+      },
+      {
+        "text": "Italy has been the first European country recording an elevated number of infected forcing the Italian Government to call for total lockdown.",
+        "entities": [],
+        "text_new": "[CLS] italy has been the first european country recording an elevated number of infected forcing the italian government to call for total lockdown. [SEP]"
+      },
+      {
+        "text": "The lockdown had the aim to limit the spread of infection through social distancing.",
+        "entities": [],
+        "text_new": "[CLS] the lockdown had the aim to limit the spread of infection through social distancing. [SEP]"
+      },
+      {
+        "text": "The purpose of this study is to analyze how the pandemic has affected the patient's accesses to the Ophthalmological Emergency Department of a tertiary referral center in central-northern Italy, during the lockdown period.",
+        "entities": [],
+        "text_new": "[CLS] the purpose of this study is to analyze how the pandemic has affected the patient ' s accesses to the ophthalmological emergency department of a tertiary referral center in central-northern italy, during the lockdown period. [SEP]"
+      },
+      {
+        "text": "The charts of all patients that came to the Emergency Department during the lockdown period (March 10 -May 4, 2020) have been retrospectively collected and compared with those in the same period of 2019 and the period from 15 January- 9 March 2020.",
+        "entities": [],
+        "text_new": "[CLS] the charts of all patients that came to the emergency department during the lockdown period (march 10-may 4, 2020) have been retrospectively collected and compared with those in the same period of 2019 and the period from 15 january-9 march 2020. [SEP]"
+      },
+      {
+        "text": "A significant reduction of visits during the lockdown has been observed, compared with those of pre-lockdown period (reduction of 65.4%) and with those of the same period of 2019 (reduction of 74.3%).",
+        "entities": [],
+        "text_new": "[CLS] a significant reduction of visits during the lockdown has been observed, compared with those of pre-lockdown period (reduction of 65. 4 %) and with those of the same period of 2019 (reduction of 74. 3 %). [SEP]"
+      },
+      {
+        "text": "Particularly, during the lockdown, minor and not urgency visits decreased whereas the undeferrable urgency ones increased.",
+        "entities": [],
+        "text_new": "[CLS] particularly, during the lockdown, minor and not urgency visits decreased whereas the undeferrable urgency ones increased. [SEP]"
+      },
+      {
+        "text": "These pieces of evidence could be explained by the fear of patients to be infected; but also revealed patients misuse of emergency services.",
+        "entities": [],
+        "text_new": "[CLS] these pieces of evidence could be explained by the fear of patients to be infected; but also revealed patients misuse of emergency services. [SEP]"
+      }
+    ]
+  },
+  "33002052": {
+    "title": "Using a rapid assessment methodology to identify and address immediate needs among low-income households with children during COVID-19.",
+    "sentences": [
+      {
+        "text": "OBJECTIVE Brighter Bites is a school-based health promotion program that delivers fresh produce and nutrition education to low-income children and families.",
+        "entities": [],
+        "text_new": "[CLS] objective brighter bites is a school-based health promotion program that delivers fresh produce and nutrition education to low-income children and families. [SEP]"
+      },
+      {
+        "text": "Due to COVID-19-related school closures, states were under \"shelter in place\" orders, and Brighter Bites administered a rapid assessment survey to identify social needs among their families.",
+        "entities": [
+          "covid-19"
+        ],
+        "text_new": "[CLS] due to covid-19-related school closures, states were under \" shelter in place \" orders, and brighter bites administered a rapid assessment survey to identify social needs among their families. [SEP]"
+      },
+      {
+        "text": "The purpose of this study is to demonstrate the methodology used to identify those with greatest social needs during this time (\"high risk\"), and to describe the response of Brighter Bites to these \"high risk\" families.",
+        "entities": [],
+        "text_new": "[CLS] the purpose of this study is to demonstrate the methodology used to identify those with greatest social needs during this time (\" high risk \"), and to describe the response of brighter bites to these \" high risk \" families. [SEP]"
+      },
+      {
+        "text": "METHODS The rapid assessment survey was collected in April 2020 across Houston, Dallas, Washington DC, and Southwest Florida.",
+        "entities": [],
+        "text_new": "[CLS] methods the rapid assessment survey was collected in april 2020 across houston, dallas, washington dc, and southwest florida. [SEP]"
+      },
+      {
+        "text": "The survey consisted of items on disruption of employment status, financial hardship, food insecurity, perceived health status and sociodemographics.",
+        "entities": [],
+        "text_new": "[CLS] the survey consisted of items on disruption of employment status, financial hardship, food insecurity, perceived health status and sociodemographics. [SEP]"
+      },
+      {
+        "text": "The open-ended question \"Please share your greatest concern at this time, or any other thoughts you would like to share with us\".",
+        "entities": [],
+        "text_new": "[CLS] the open-ended question \" please share your greatest concern at this time, or any other thoughts you would like to share with us \". [SEP]"
+      },
+      {
+        "text": "was asked at the end of each survey to triage \"high risk\" families.",
+        "entities": [],
+        "text_new": "[CLS] was asked at the end of each survey to triage \" high risk \" families. [SEP]"
+      },
+      {
+        "text": "Responses were then used to articulate a response to meet the needs of these high risk families.",
+        "entities": [],
+        "text_new": "[CLS] responses were then used to articulate a response to meet the needs of these high risk families. [SEP]"
+      },
+      {
+        "text": "RESULTS A total of 1048 families completed the COVID-19 rapid response survey, of which 71 families were triaged and classified as \"high risk\" (6.8% of survey respondents).",
+        "entities": [
+          "covid"
+        ],
+        "text_new": "[CLS] results a total of 1048 families completed the covid-19 rapid response survey, of which 71 families were triaged and classified as \" high risk \" (6. 8 % of survey respondents). [SEP]"
+      },
+      {
+        "text": "During this time, 100% of the \"high risk\" participants reported being food insecure, 85% were concerned about their financial stability, 82% concerned about the availability of food, and 65% concerned about the affordability of food.",
+        "entities": [],
+        "text_new": "[CLS] during this time, 100 % of the \" high risk \" participants reported being food insecure, 85 % were concerned about their financial stability, 82 % concerned about the availability of food, and 65 % concerned about the affordability of food. [SEP]"
+      },
+      {
+        "text": "A qualitative analysis of the high-risk group revealed four major themes: fear of contracting COVID19, disruption of employment status, financial hardship, and exacerbated food insecurity.",
+        "entities": [],
+        "text_new": "[CLS] a qualitative analysis of the high-risk group revealed four major themes: fear of contracting covid19, disruption of employment status, financial hardship, and exacerbated food insecurity. [SEP]"
+      },
+      {
+        "text": "In response, Brighter Bites pivoted, created, and deployed a framework to immediately address a variety of social needs among those in the \"high risk\" category.",
+        "entities": [],
+        "text_new": "[CLS] in response, brighter bites pivoted, created, and deployed a framework to immediately address a variety of social needs among those in the \" high risk \" category. [SEP]"
+      },
+      {
+        "text": "Administering a rapid response survey to identify the immediate needs of their families can help social service providers tailor their services to meet the needs of the most vulnerable.",
+        "entities": [],
+        "text_new": "[CLS] administering a rapid response survey to identify the immediate needs of their families can help social service providers tailor their services to meet the needs of the most vulnerable. [SEP]"
+      }
+    ]
+  },
+  "33002041": {
+    "title": "Clinical laboratory parameters associated with severe or critical novel coronavirus disease 2019 (COVID-19): A systematic review and meta-analysis.",
+    "sentences": [
+      {
+        "text": "BACKGROUND To date, several clinical laboratory parameters associated with Coronavirus disease 2019 (COVID-19) severity have been reported.",
+        "entities": [],
+        "text_new": "[CLS] background to date, several clinical laboratory parameters associated with coronavirus disease 2019 (covid-19) severity have been reported. [SEP]"
+      },
+      {
+        "text": "However, these parameters have not been observed consistently across studies.",
+        "entities": [],
+        "text_new": "[CLS] however, these parameters have not been observed consistently across studies. [SEP]"
+      },
+      {
+        "text": "The aim of this review was to assess clinical laboratory parameters which may serve as markers or predictors of severe or critical COVID-19.",
+        "entities": [],
+        "text_new": "[CLS] the aim of this review was to assess clinical laboratory parameters which may serve as markers or predictors of severe or critical covid-19. [SEP]"
+      },
+      {
+        "text": "METHODS AND FINDINGS We conducted a systematic search of MEDLINE, Embase, Web of Science, CINAHL and Google Scholar databases from 2019 through April 18, 2020, and reviewed bibliographies of eligible studies, relevant systematic reviews, and the medRxiv pre-print server.",
+        "entities": [],
+        "text_new": "[CLS] methods and findings we conducted a systematic search of medline, embase, web of science, cinahl and google scholar databases from 2019 through april 18, 2020, and reviewed bibliographies of eligible studies, relevant systematic reviews, and the medrxiv pre-print server. [SEP]"
+      },
+      {
+        "text": "We included hospital-based observational studies reporting clinical laboratory parameters of confirmed cases of COVID-19 and excluded studies having large proportions (>10%) of children and pregnant women.",
+        "entities": [],
+        "text_new": "[CLS] we included hospital-based observational studies reporting clinical laboratory parameters of confirmed cases of covid-19 and excluded studies having large proportions (> 10 %) of children and pregnant women. [SEP]"
+      },
+      {
+        "text": "Two authors independently carried out screening of articles, data extraction and quality assessment.",
+        "entities": [],
+        "text_new": "[CLS] two authors independently carried out screening of articles, data extraction and quality assessment. [SEP]"
+      },
+      {
+        "text": "Meta-analyses were done using random effects model.",
+        "entities": [],
+        "text_new": "[CLS] meta-analyses were done using random effects model. [SEP]"
+      },
+      {
+        "text": "Meta-median difference (MMD) and 95% confidence interval (CI) was calculated for each laboratory parameter.",
+        "entities": [],
+        "text_new": "[CLS] meta-median difference (mmd) and 95 % confidence interval (ci) was calculated for each laboratory parameter. [SEP]"
+      },
+      {
+        "text": "Forty-five studies in 6 countries were included.",
+        "entities": [],
+        "text_new": "[CLS] forty-five studies in 6 countries were included. [SEP]"
+      },
+      {
+        "text": "Compared to non-severe COVID-19 cases, severe or critical COVID-19 was characterised by higher neutrophil count (MMD: 1.23 [95% CI: 0.58 to 1.88] ×109 cells/L), and lower lymphocyte, CD4 and CD8 T cell counts with MMD (95% CI) of -0.39 (-0.47, -0.31) ×109 cells/L, -204.9 (-302.6, -107.1) cells/μl and -123.6 (-170.6, -76.6) cells/μl, respectively.",
+        "entities": [],
+        "text_new": "[CLS] compared to non-severe covid-19 cases, severe or critical covid-19 was characterised by higher neutrophil count (mmd: 1. 23 [ 95 % ci: 0. 58 to 1. 88 ] ×109 cells / l), and lower lymphocyte, cd4 and cd8 t cell counts with mmd (95 % ci) of-0. 39 (-0. 47,-0. 31) ×109 cells / l,-204. 9 (-302. 6,-107. 1) cells / μl and-[SEP]"
+      },
+      {
+        "text": "Other notable results were observed for C-reactive protein (MMD: 36.97 [95% CI: 27.58, 46.35] mg/L), interleukin-6 (MMD: 17.37 [95% CI: 4.74, 30.00] pg/ml), Troponin I (MMD: 0.01 [0.00, 0.02] ng/ml), and D-dimer (MMD: 0.65 [0.45, 0.85] mg/ml).",
+        "entities": [],
+        "text_new": "[CLS] other notable results were observed for c-reactive protein (mmd: 36. 97 [ 95 % ci: 27. 58, 46. 35 ] mg / l), interleukin-6 (mmd: 17. 37 [ 95 % ci: 4. 74, 30. 00 ] pg / ml), troponin i (mmd: 0. 01 [ 0. 00, 0. 02 ] ng / ml), and d-dimer (mmd: 0. 65 [ 0. 45, 0. 85 ] mg / ml). [SEP]"
+      },
+      {
+        "text": "CONCLUSIONS Relative to non-severe COVID-19, severe or critical COVID-19 is characterised by increased markers of innate immune response, decreased markers of adaptive immune response, and increased markers of tissue damage and major organ failure.",
+        "entities": [],
+        "text_new": "[CLS] conclusions relative to non-severe covid-19, severe or critical covid-19 is characterised by increased markers of innate immune response, decreased markers of adaptive immune response, and increased markers of tissue damage and major organ failure. [SEP]"
+      },
+      {
+        "text": "These markers could be used to recognise severe or critical disease and to monitor clinical course of COVID-19.",
+        "entities": [],
+        "text_new": "[CLS] these markers could be used to recognise severe or critical disease and to monitor clinical course of covid-19. [SEP]"
+      }
+    ]
+  },
+  "33002036": {
+    "title": "Estimating the severity of COVID-19: Evidence from the Italian epicenter.",
+    "sentences": [
+      {
+        "text": "We provide results on the level of COVID-19 excess mortality in the Italian region of Lombardy and in the province of Bergamo using official and original data sources.",
+        "entities": [
+          "bergamo"
+        ],
+        "text_new": "[CLS] we provide results on the level of covid-19 excess mortality in the italian region of lombardy and in the province of bergamo using official and original data sources. [SEP]"
+      },
+      {
+        "text": "Since February 2020 Lombardy and in particular the province of Bergamo have been severely hit by the novel COVID-19 infectious disease.",
+        "entities": [],
+        "text_new": "[CLS] since february 2020 lombardy and in particular the province of bergamo have been severely hit by the novel covid-19 infectious disease. [SEP]"
+      },
+      {
+        "text": "Combining official statistics, retrospective data and original data (i.e., obituaries and death notices) we provide a tentative estimate of the number of deaths either directly or indirectly, associated with COVID-19 as well as the total number of persons infected.",
+        "entities": [
+          "covid -"
+        ],
+        "text_new": "[CLS] combining official statistics, retrospective data and original data (i. e., obituaries and death notices) we provide a tentative estimate of the number of deaths either directly or indirectly, associated with covid-19 as well as the total number of persons infected. [SEP]"
+      },
+      {
+        "text": "Our findings suggest that the reported number of deaths attributable to COVID-19 identified by public authorities accounts only for one half of the observed excess mortality between March 2020 and previous years.",
+        "entities": [
+          "covid-19"
+        ],
+        "text_new": "[CLS] our findings suggest that the reported number of deaths attributable to covid-19 identified by public authorities accounts only for one half of the observed excess mortality between march 2020 and previous years. [SEP]"
+      }
+    ]
+  },
+  "33002032": {
+    "title": "In-silico design of a potential inhibitor of SARS-CoV-2 S protein.",
+    "sentences": [
+      {
+        "text": "The SARS-CoV-2 virus has caused a pandemic and is public health emergency of international concern.",
+        "entities": [],
+        "text_new": "[CLS] the sars-cov-2 virus has caused a pandemic and is public health emergency of international concern. [SEP]"
+      },
+      {
+        "text": "As of now, no registered therapies are available for treatment of coronavirus infection.",
+        "entities": [],
+        "text_new": "[CLS] as of now, no registered therapies are available for treatment of coronavirus infection. [SEP]"
+      },
+      {
+        "text": "The viral infection depends on the attachment of spike (S) glycoprotein to human cell receptor angiotensin-converting enzyme 2 (ACE2).",
+        "entities": [
+          "angiotensin"
+        ],
+        "text_new": "[CLS] the viral infection depends on the attachment of spike (s) glycoprotein to human cell receptor angiotensin-converting enzyme 2 (ace2). [SEP]"
+      },
+      {
+        "text": "We have designed a protein inhibitor (ΔABP-D25Y) targeting S protein using computational approach.",
+        "entities": [
+          "δabp-d25y"
+        ],
+        "text_new": "[CLS] we have designed a protein inhibitor (δabp-d25y) targeting s protein using computational approach. [SEP]"
+      },
+      {
+        "text": "The inhibitor consists of two α helical peptides homologues to protease domain (PD) of ACE2.",
+        "entities": [],
+        "text_new": "[CLS] the inhibitor consists of two α helical peptides homologues to protease domain (pd) of ace2. [SEP]"
+      },
+      {
+        "text": "Docking studies and molecular dynamic simulation revealed that the inhibitor binds exclusively at the ACE2 binding site of S protein.",
+        "entities": [
+          "ace2"
+        ],
+        "text_new": "[CLS] docking studies and molecular dynamic simulation revealed that the inhibitor binds exclusively at the ace2 binding site of s protein. [SEP]"
+      },
+      {
+        "text": "The computed binding affinity of the inhibitor is higher than the ACE2 and thus will likely out compete ACE2 for binding to S protein.",
+        "entities": [
+          "ace2",
+          "ace2"
+        ],
+        "text_new": "[CLS] the computed binding affinity of the inhibitor is higher than the ace2 and thus will likely out compete ace2 for binding to s protein. [SEP]"
+      },
+      {
+        "text": "Hence, the proposed inhibitor ΔABP-D25Y could be a potential blocker of S protein and receptor binding domain (RBD) attachment.",
+        "entities": [
+          "δabp-d25y"
+        ],
+        "text_new": "[CLS] hence, the proposed inhibitor δabp-d25y could be a potential blocker of s protein and receptor binding domain (rbd) attachment. [SEP]"
+      }
+    ]
+  },
+  "33001990": {
+    "title": "Ten simple rules for supporting a temporary online pivot in higher education.",
+    "sentences": [
+      {
+        "text": "As continued COVID-19 disruption looks likely across the world, perhaps until 2021, contingency plans are evolving in case of further disruption in the 2020-2021 academic year.",
+        "entities": [],
+        "text_new": "[CLS] as continued covid-19 disruption looks likely across the world, perhaps until 2021, contingency plans are evolving in case of further disruption in the 2020-2021 academic year. [SEP]"
+      },
+      {
+        "text": "This includes delivering face-to-face programs fully online for at least part of the upcoming academic year for new and continuing cohorts.",
+        "entities": [],
+        "text_new": "[CLS] this includes delivering face-to-face programs fully online for at least part of the upcoming academic year for new and continuing cohorts. [SEP]"
+      },
+      {
+        "text": "This temporary pivot will necessitate distance teaching and learning across almost every conceivable pedagogy, from fundamental degrees to professionally accredited ones.",
+        "entities": [],
+        "text_new": "[CLS] this temporary pivot will necess ##itate distance teaching and learning across almost every conceivable pedagogy, from fundamental degrees to professionally accredited ones. [SEP]"
+      },
+      {
+        "text": "Each institution, program, and course will have its own myriad of individualized needs; however, there is a common question that unites us all: how do we provide teaching and assessment to students in a manner that is accessible, fair, equitable, and provides the best learning whilst acknowledging the temporary nature of the pivot?",
+        "entities": [],
+        "text_new": "[CLS] each institution, program, and course will have its own myriad of individualized needs; however, there is a common question that unites us all: how do we provide teaching and assessment to students in a manner that is accessible, fair, equitable, and provides the best learning whilst acknowledging the temporary nature of the pivot? [SEP]"
+      },
+      {
+        "text": "No \"one size fits all\" solution exists, and many of the choices that need to be made will be far from simple; however, this paper provides a starting point and basic principles to facilitate discussions taking place around the globe by balancing what we know from the pedagogy of online learning with the practicalities imposed by this crisis and any future crises.",
+        "entities": [],
+        "text_new": "[CLS] no \" one size fits all \" solution exists, and many of the choices that need to be made will be far from simple; however, this paper provides a starting point and basic principles to facilitate discussions taking place around the globe by balancing what we know from the pedagogy of online learning with the practicalities imposed by this crisis and any future crises. [SEP]"
+      }
+    ]
+  },
+  "33001967": {
+    "title": "Seroprevalence of SARS-CoV-2 antibodies in people with an acute loss in their sense of smell and/or taste in a community-based population in London, UK: An observational cohort study.",
+    "sentences": [
+      {
+        "text": "BACKGROUND Loss of smell and taste are commonly reported symptoms associated with coronavirus disease 2019 (COVID-19); however, the seroprevalence of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) antibodies in people with acute loss of smell and/or taste is unknown.",
+        "entities": [],
+        "text_new": "[CLS] background loss of smell and taste are commonly reported symptoms associated with coronavirus disease 2019 (covid-19); however, the seroprevalence of severe acute respiratory syndrome coronavirus 2 (sars-cov-2) antibodies in people with acute loss of smell and / or taste is unknown. [SEP]"
+      },
+      {
+        "text": "The study aimed to determine the seroprevalence of SARS-CoV-2 antibodies in a community-based population with acute loss of smell and/or taste and to compare the frequency of COVID-19 associated symptoms in participants with and without SARS-CoV-2 antibodies.",
+        "entities": [],
+        "text_new": "[CLS] the study aimed to determine the seroprevalence of sars-cov-2 antibodies in a community-based population with acute loss of smell and / or taste and to compare the frequency of covid-19 associated symptoms in participants with and without sars-cov-2 antibodies. [SEP]"
+      },
+      {
+        "text": "It also evaluated whether smell or taste loss are indicative of COVID-19 infection.",
+        "entities": [],
+        "text_new": "[CLS] it also evaluated whether smell or taste loss are indicative of covid-19 infection. [SEP]"
+      },
+      {
+        "text": "METHODS AND FINDINGS Text messages, sent via primary care centers in London, United Kingdom, invited people with loss of smell and/or taste in the preceding month, to participate.",
+        "entities": [],
+        "text_new": "[CLS] methods and findings text messages, sent via primary care centers in london, united kingdom, invited people with loss of smell and / or taste in the preceding month, to participate. [SEP]"
+      },
+      {
+        "text": "Recruitment took place between 23 April 2020 and 14 May 2020.",
+        "entities": [],
+        "text_new": "[CLS] recruitment took place between 23 april 2020 and 14 may 2020. [SEP]"
+      },
+      {
+        "text": "A total of 590 participants enrolled via a web-based platform and responded to questions about loss of smell and taste and other COVID-19-related symptoms.",
+        "entities": [],
+        "text_new": "[CLS] a total of 590 participants enrolled via a web-based platform and responded to questions about loss of smell and taste and other covid-19-related symptoms. [SEP]"
+      },
+      {
+        "text": "Mean age was 39.4 years (SD ± 12.0) and 69.1% (n = 392) of participants were female.",
+        "entities": [],
+        "text_new": "[CLS] mean age was 39. 4 years (sd ± 12. 0) and 69. 1 % (n = 392) of participants were female. [SEP]"
+      },
+      {
+        "text": "A total of 567 (96.1%) had a telemedicine consultation during which their COVID-19-related symptoms were verified and a lateral flow immunoassay test that detected SARS-CoV-2 immunoglobulin G (IgG) and immunoglobulin M (IgM) antibodies was undertaken under medical supervision.",
+        "entities": [],
+        "text_new": "[CLS] a total of 567 (96. 1 %) had a telemedicine consultation during which their covid-19-related symptoms were verified and a lateral flow immunoassay test that detected sars-cov-2 immunoglobulin g (igg) and immunoglobulin m (igm) antibodies was undertaken under medical supervision. [SEP]"
+      },
+      {
+        "text": "A total of 77.6% of 567 participants with acute smell and/or taste loss had SARS-CoV-2 antibodies; of these, 39.8% (n = 175) had neither cough nor fever.",
+        "entities": [],
+        "text_new": "[CLS] a total of 77. 6 % of 567 participants with acute smell and / or taste loss had sars-cov-2 antibodies; of these, 39. 8 % (n = 175) had neither cough nor fever. [SEP]"
+      },
+      {
+        "text": "New loss of smell was more prevalent in participants with SARS-CoV-2 antibodies, compared with those without antibodies (93.4% versus 78.7%, p < 0.001), whereas taste loss was equally prevalent (90.2% versus 89.0%, p = 0.738).",
+        "entities": [],
+        "text_new": "[CLS] new loss of smell was more prevalent in participants with sars-cov-2 antibodies, compared with those without antibodies (93. 4 % versus 78. 7 %, p < 0. 001), whereas taste loss was equally prevalent (90. 2 % versus 89. 0 %, p = 0. 738). [SEP]"
+      },
+      {
+        "text": "Seropositivity for SARS-CoV-2 was 3 times more likely in participants with smell loss (OR 2.86; 95% CI 1.27-6.36; p < 0.001) compared with those with taste loss.",
+        "entities": [],
+        "text_new": "[CLS] seropositivity for sars-cov-2 was 3 times more likely in participants with smell loss (or 2. 86; 95 % ci 1. 27-6. 36; p < 0. 001) compared with those with taste loss. [SEP]"
+      },
+      {
+        "text": "The limitations of this study are the lack of a general population control group, the self-reported nature of the smell and taste changes, and the fact our methodology does not take into account the possibility that a population subset may not seroconvert to develop SARS-CoV-2 antibodies post-COVID-19.",
+        "entities": [],
+        "text_new": "[CLS] the limitations of this study are the lack of a general population control group, the self-reported nature of the smell and taste changes, and the fact our methodology does not take into account the possibility that a population subset may not seroconvert to develop sars-cov-2 antibodies post-covid-19. [SEP]"
+      },
+      {
+        "text": "CONCLUSIONS Our findings suggest that recent loss of smell is a highly specific COVID-19 symptom and should be considered more generally in guiding case isolation, testing, and treatment of COVID-19.",
+        "entities": [],
+        "text_new": "[CLS] conclusions our findings suggest that recent loss of smell is a highly specific covid-19 symptom and should be considered more generally in guiding case isolation, testing, and treatment of covid-19. [SEP]"
+      },
+      {
+        "text": "TRIALS REGISTRATION ClinicalTrials.gov NCT04377815.",
+        "entities": [],
+        "text_new": "[CLS] trials registration clinicaltrials. gov nct04377815. [SEP]"
+      }
+    ]
+  },
+  "33001876": {
+    "title": "CDC Deployments to State, Tribal, Local, and Territorial Health Departments for COVID-19 Emergency Public Health Response - United States, January 21-July 25, 2020.",
+    "sentences": [
+      {
+        "text": "Coronavirus disease 2019 (COVID-19) is a viral respiratory illness caused by SARS-CoV-2.",
+        "entities": [],
+        "text_new": "[CLS] coronavirus disease 2019 (covid-19) is a viral respiratory illness caused by sars-cov-2. [SEP]"
+      },
+      {
+        "text": "During January 21-July 25, 2020, in response to official requests for assistance with COVID-19 emergency public health response activities, CDC deployed 208 teams to assist 55 state, tribal, local, and territorial health departments.",
+        "entities": [],
+        "text_new": "[CLS] during january 21-july 25, 2020, in response to official requests for assistance with covid-19 emergency public health response activities, cdc deployed 208 teams to assist 55 state, tribal, local, and territorial health departments. [SEP]"
+      },
+      {
+        "text": "CDC deployment data were analyzed to summarize activities by deployed CDC teams in assisting state, tribal, local, and territorial health departments to identify and implement measures to contain SARS-CoV-2 transmission (1).",
+        "entities": [],
+        "text_new": "[CLS] cdc deployment data were analyzed to summarize activities by deployed cdc teams in assisting state, tribal, local, and territorial health departments to identify and implement measures to contain sars-cov-2 transmission (1). [SEP]"
+      },
+      {
+        "text": "Deployed teams assisted with the investigation of transmission in high-risk congregate settings, such as long-term care facilities (53 deployments; 26% of total), food processing facilities (24; 12%), correctional facilities (12; 6%), and settings that provide services to persons experiencing homelessness (10; 5%).",
+        "entities": [],
+        "text_new": "[CLS] deployed teams assisted with the investigation of transmission in high-risk congregate settings, such as long-term care facilities (53 deployments; 26 % of total), food processing facilities (24; 12 %), correctional facilities (12; 6 %), and settings that provide services to persons experiencing homelessness (10; 5 %). [SEP]"
+      },
+      {
+        "text": "Among the 208 deployed teams, 178 (85%) provided assistance to state health departments, 12 (6%) to tribal health departments, 10 (5%) to local health departments, and eight (4%) to territorial health departments.",
+        "entities": [],
+        "text_new": "[CLS] among the 208 deployed teams, 178 (85 %) provided assistance to state health departments, 12 (6 %) to tribal health departments, 10 (5 %) to local health departments, and eight (4 %) to territorial health departments. [SEP]"
+      },
+      {
+        "text": "CDC collaborations with health departments have strengthened local capacity and provided outbreak response support.",
+        "entities": [],
+        "text_new": "[CLS] cdc collaborations with health departments have strengthened local capacity and provided outbreak response support. [SEP]"
+      },
+      {
+        "text": "Collaborations focused attention on health equity issues among disproportionately affected populations (e.g., racial and ethnic minority populations, essential frontline workers, and persons experiencing homelessness) and through a place-based focus (e.g., persons living in rural or frontier areas).",
+        "entities": [],
+        "text_new": "[CLS] collaborations focused attention on health equity issues among disproportionately affected populations (e. g., racial and ethnic minority populations, essential frontline workers, and persons experiencing homelessness) and through a place-based focus (e. g., persons living in rural or frontier areas). [SEP]"
+      },
+      {
+        "text": "These collaborations also facilitated enhanced characterization of COVID-19 epidemiology, directly contributing to CDC data-informed guidance, including guidance for serial testing as a containment strategy in high-risk congregate settings, targeted interventions and prevention efforts among workers at food processing facilities, and social distancing.",
+        "entities": [],
+        "text_new": "[CLS] these collaborations also facilitated enhanced characterization of covid-19 epidemiology, directly contributing to cdc data-informed guidance, including guidance for serial testing as a containment strategy in high-risk congregate settings, targeted interventions and prevention efforts among workers at food processing facilities, and social distancing. [SEP]"
+      }
+    ]
+  },
+  "33001872": {
+    "title": "Changing Age Distribution of the COVID-19 Pandemic - United States, May-August 2020.",
+    "sentences": [
+      {
+        "text": "As of September 21, 2020, the coronavirus disease 2019 (COVID-19) pandemic had resulted in more than 6,800,000 reported U.S. cases and more than 199,000 associated deaths.",
+        "entities": [],
+        "text_new": "[CLS] as of september 21, 2020, the coronavirus disease 2019 (covid-19) pandemic had resulted in more than 6, 800, 000 reported u. s. cases and more than 199, 000 associated deaths. [SEP]"
+      },
+      {
+        "text": "* Early in the pandemic, COVID-19 incidence was highest among older adults (1).",
+        "entities": [],
+        "text_new": "[CLS] * early in the pandemic, covid-19 incidence was highest among older adults (1). [SEP]"
+      },
+      {
+        "text": "CDC examined the changing age distribution of the COVID-19 pandemic in the United States during May-August by assessing three indicators: COVID-19-like illness-related emergency department (ED) visits, positive reverse transcription-polymerase chain reaction (RT-PCR) test results for SARS-CoV-2, the virus that causes COVID-19, and confirmed COVID-19 cases.",
+        "entities": [],
+        "text_new": "[CLS] cdc examined the changing age distribution of the covid-19 pandemic in the united states during may-august by assessing three indicators: covid-19-like illness-related emergency department (ed) visits, positive reverse transcription-polymerase chain reaction (rt-pcr) test results for sars-cov-2, the virus that causes covid-19, and confirmed covid-19 cases. [SEP]"
+      },
+      {
+        "text": "Nationwide, the median age of COVID-19 cases declined from 46 years in May to 37 years in July and 38 in August.",
+        "entities": [],
+        "text_new": "[CLS] nationwide, the median age of covid-19 cases declined from 46 years in may to 37 years in july and 38 in august. [SEP]"
+      },
+      {
+        "text": "Similar patterns were seen for COVID-19-like illness-related ED visits and positive SARS-CoV-2 RT-PCR test results in all U.S. Census regions.",
+        "entities": [],
+        "text_new": "[CLS] similar patterns were seen for covid-19-like illness-related ed visits and positive sars-cov-2 rt-pcr test results in all u. s. census regions. [SEP]"
+      },
+      {
+        "text": "During June-August, COVID-19 incidence was highest in persons aged 20-29 years, who accounted for >20% of all confirmed cases.",
+        "entities": [],
+        "text_new": "[CLS] during june-august, covid-19 incidence was highest in persons aged 20-29 years, who accounted for > 20 % of all confirmed cases. [SEP]"
+      },
+      {
+        "text": "The southern United States experienced regional outbreaks of COVID-19 in June.",
+        "entities": [],
+        "text_new": "[CLS] the southern united states experienced regional outbreaks of covid-19 in june. [SEP]"
+      },
+      {
+        "text": "In these regions, increases in the percentage of positive SARS-CoV-2 test results among adults aged 20-39 years preceded increases among adults aged ≥60 years by an average of 8.7 days (range = 4-15 days), suggesting that younger adults likely contributed to community transmission of COVID-19.",
+        "entities": [],
+        "text_new": "[CLS] in these regions, increases in the percentage of positive sars-cov-2 test results among adults aged 20-39 years preceded increases among adults aged ≥60 years by an average of 8. 7 days (range = 4-15 days), suggesting that younger adults likely contributed to community transmission of covid-19. [SEP]"
+      },
+      {
+        "text": "Given the role of asymptomatic and presymptomatic transmission (2), strict adherence to community mitigation strategies and personal preventive behaviors by younger adults is needed to help reduce their risk for infection and subsequent transmission of SARS-CoV-2 to persons at higher risk for severe illness.",
+        "entities": [],
+        "text_new": "[CLS] given the role of asymptomatic and presymptomatic transmission (2), strict adherence to community mitigation strategies and personal preventive behaviors by younger adults is needed to help reduce their risk for infection and subsequent transmission of sars-cov-2 to persons at higher risk for severe illness. [SEP]"
+      }
+    ]
+  },
+  "33001871": {
+    "title": "Multiple COVID-19 Clusters on a University Campus - North Carolina, August 2020.",
+    "sentences": [
+      {
+        "text": "Preventing transmission of SARS-CoV-2, the virus that causes coronavirus disease 2019 (COVID-19), in institutes of higher education presents a unique set of challenges because of the presence of congregate living settings and difficulty limiting socialization and group gatherings.",
+        "entities": [],
+        "text_new": "[CLS] preventing transmission of sars-cov-2, the virus that causes coronavirus disease 2019 (covid-19), in institutes of higher education presents a unique set of challenges because of the presence of congregate living settings and difficulty limiting socialization and group gatherings. [SEP]"
+      },
+      {
+        "text": "Before August 2020, minimal data were available regarding COVID-19 outbreaks in these settings.",
+        "entities": [],
+        "text_new": "[CLS] before august 2020, minimal data were available regarding covid-19 outbreaks in these settings. [SEP]"
+      },
+      {
+        "text": "On August 3, 2020, university A in North Carolina broadly opened campus for the first time since transitioning to primarily remote learning in March.",
+        "entities": [
+          "carolina"
+        ],
+        "text_new": "[CLS] on august 3, 2020, university a in north carolina broadly opened campus for the first time since transitioning to primarily remote learning in march. [SEP]"
+      },
+      {
+        "text": "Consistent with CDC guidance at that time (1,2), steps were taken to prevent the spread of SARS-CoV-2 on campus.",
+        "entities": [],
+        "text_new": "[CLS] consistent with cdc guidance at that time (1, 2), steps were taken to prevent the spread of sars-cov-2 on campus. [SEP]"
+      },
+      {
+        "text": "During August 3-25, 670 laboratory-confirmed cases of COVID-19 were identified; 96% were among patients aged <22 years.",
+        "entities": [],
+        "text_new": "[CLS] during august 3-25, 670 laboratory-confirmed cases of covid-19 were identified; 96 % were among patients aged < 22 years. [SEP]"
+      },
+      {
+        "text": "Eighteen clusters of five or more epidemiologically linked cases within 14 days of one another were reported; 30% of cases were linked to a cluster.",
+        "entities": [],
+        "text_new": "[CLS] eighteen clusters of five or more epidemiologically linked cases within 14 days of one another were reported; 30 % of cases were linked to a cluster. [SEP]"
+      },
+      {
+        "text": "Student gatherings and congregate living settings, both on and off campus, likely contributed to the rapid spread of COVID-19 within the university community.",
+        "entities": [],
+        "text_new": "[CLS] student gatherings and congregate living settings, both on and off campus, likely contributed to the rapid spread of covid-19 within the university community. [SEP]"
+      },
+      {
+        "text": "On August 19, all university A classes transitioned to online, and additional mitigation efforts were implemented.",
+        "entities": [],
+        "text_new": "[CLS] on august 19, all university a classes transitioned to online, and additional mitigation efforts were implemented. [SEP]"
+      },
+      {
+        "text": "At this point, 334 university A-associated COVID-19 cases had been reported to the local health department.",
+        "entities": [],
+        "text_new": "[CLS] at this point, 334 university a-associated covid-19 cases had been reported to the local health department. [SEP]"
+      },
+      {
+        "text": "The rapid increase in cases within 2 weeks of opening campus suggests that robust measures are needed to reduce transmission at institutes of higher education, including efforts to increase consistent use of masks, reduce the density of on-campus housing, increase testing for SARS-CoV-2, and discourage student gatherings.",
+        "entities": [],
+        "text_new": "[CLS] the rapid increase in cases within 2 weeks of opening campus suggests that robust measures are needed to reduce transmission at institutes of higher education, including efforts to increase consistent use of masks, reduce the density of on-campus housing, increase testing for sars-cov-2, and discourage student gatherings. [SEP]"
+      }
+    ]
+  },
+  "33001869": {
+    "title": "COVID-19 Trends Among School-Aged Children - United States, March 1-September 19, 2020.",
+    "sentences": [
+      {
+        "text": "Approximately 56 million school-aged children (aged 5-17 years) resumed education in the United States in fall 2020.",
+        "entities": [],
+        "text_new": "[CLS] approximately 56 million school-aged children (aged 5-17 years) resumed education in the united states in fall 2020. [SEP]"
+      },
+      {
+        "text": "* Analysis of demographic characteristics, underlying conditions, clinical outcomes, and trends in weekly coronavirus disease 2019 (COVID-19) incidence during March 1-September 19, 2020 among 277,285 laboratory-confirmed cases in school-aged children in the United States might inform decisions about in-person learning and the timing and scaling of community mitigation measures.",
+        "entities": [],
+        "text_new": "[CLS] * analysis of demographic characteristics, underlying conditions, clinical outcomes, and trends in weekly coronavirus disease 2019 (covid-19) incidence during march 1-september 19, 2020 among 277, 285 laboratory-confirmed cases in school-aged children in the united states might inform decisions about in-person learning and the timing and scaling of community mitigation measures. [SEP]"
+      },
+      {
+        "text": "During May-September 2020, average weekly incidence (cases per 100,000 children) among adolescents aged 12-17 years (37.4) was approximately twice that of children aged 5-11 years (19.0).",
+        "entities": [],
+        "text_new": "[CLS] during may-september 2020, average weekly incidence (cases per 100, 000 children) among adolescents aged 12-17 years (37. 4) was approximately twice that of children aged 5-11 years (19. 0). [SEP]"
+      },
+      {
+        "text": "In addition, among school-aged children, COVID-19 indicators peaked during July 2020: weekly percentage of positive SARS-CoV-2 test results increased from 10% on May 31 to 14% on July 5; SARS-CoV-2 test volume increased from 100,081 tests on May 31 to 322,227 on July 12, and COVID-19 incidence increased from 13.8 per 100,000 on May 31 to 37.9 on July 19.",
+        "entities": [],
+        "text_new": "[CLS] in addition, among school-aged children, covid-19 indicators peaked during july 2020: weekly percentage of positive sars-cov-2 test results increased from 10 % on may 31 to 14 % on july 5; sars-cov-2 test volume increased from 100, 081 tests on may 31 to 322, 227 on july 12, and covid-19 incidence increased from 13. 8 per 100, 000 on may 31 to 37. 9 on july 19. [SEP]"
+      },
+      {
+        "text": "During July and August, test volume and incidence decreased then plateaued; incidence decreased further during early September and might be increasing.",
+        "entities": [],
+        "text_new": "[CLS] during july and august, test volume and incidence decreased then plateaued; incidence decreased further during early september and might be increasing. [SEP]"
+      },
+      {
+        "text": "Percentage of positive test results decreased during August and plateaued during September.",
+        "entities": [],
+        "text_new": "[CLS] percentage of positive test results decreased during august and plateaued during september. [SEP]"
+      },
+      {
+        "text": "Underlying conditions were more common among school-aged children with severe outcomes related to COVID-19: among school-aged children who were hospitalized, admitted to an intensive care unit (ICU), or who died, 16%, 27%, and 28%, respectively, had at least one underlying medical condition.",
+        "entities": [
+          "covid-19"
+        ],
+        "text_new": "[CLS] underlying conditions were more common among school-aged children with severe outcomes related to covid-19: among school-aged children who were hospitalized, admitted to an intensive care unit (icu), or who died, 16 %, 27 %, and 28 %, respectively, had at least one underlying medical condition. [SEP]"
+      },
+      {
+        "text": "Schools and communities can implement multiple, concurrent mitigation strategies and tailor communications to promote mitigation strategies to prevent COVID-19 spread.",
+        "entities": [],
+        "text_new": "[CLS] schools and communities can implement multiple, concurrent mitigation strategies and tailor communications to promote mitigation strategies to prevent covid-19 spread. [SEP]"
+      },
+      {
+        "text": "These results can provide a baseline for monitoring trends and evaluating mitigation strategies.",
+        "entities": [],
+        "text_new": "[CLS] these results can provide a baseline for monitoring trends and evaluating mitigation strategies. [SEP]"
+      }
+    ]
+  },
+  "33001436": {
+    "title": "Changes in the status of COVID-19 over time necessitate major changes in academics.",
+    "sentences": []
+  },
+  "33001435": {
+    "title": "Cloud-based framework to mitigate the impact of COVID-19 on seafarers' mental health.",
+    "sentences": []
+  },
+  "33001431": {
+    "title": "Coronavirus variant COVID-19 pandemic: a report to seafarers.",
+    "sentences": [
+      {
+        "text": "We report the current situation regarding the COVID-19 pandemic with particular regard to seafarers and with the indications drawn up by the Centro Internazionale Radio Medico (C.I.R.M.",
+        "entities": [],
+        "text_new": "[CLS] we report the current situation regarding the covid-19 pandemic with particular regard to seafarers and with the indications drawn up by the centro internazionale radio medico (c. i. r. m. [SEP]"
+      },
+      {
+        "text": ") in this regard.",
+        "entities": [],
+        "text_new": "[CLS]) in this regard. [SEP]"
+      }
+    ]
+  },
+  "33001430": {
+    "title": "Wellbeing of a selection of seafarers in Eastern Adriatic Sea during the COVID-19 pandemic 2020.",
+    "sentences": [
+      {
+        "text": "BACKGROUND Work-related stress among seafarers is well known but a suspected excess of work-related stress due to the COVID-19 so far has not been published.",
+        "entities": [
+          "covid-19"
+        ],
+        "text_new": "[CLS] background work-related stress among seafarers is well known but a suspected excess of work-related stress due to the covid-19 so far has not been published. [SEP]"
+      },
+      {
+        "text": "The aim of the study was to evaluate the well- -being of the seafarers during the outbreak of COVID-19 pandemic and their evaluation of the precautions taken by the shipping companies.",
+        "entities": [],
+        "text_new": "[CLS] the aim of the study was to evaluate the well-- being of the seafarers during the outbreak of covid-19 pandemic and their evaluation of the precautions taken by the shipping companies. [SEP]"
+      },
+      {
+        "text": "MATERIALS AND METHODS Seventy-two seafarers completed the General Health Questionnaire (GHQ12) with three extra questions on how the COVID-19 precautions were taken on board.",
+        "entities": [],
+        "text_new": "[CLS] materials and methods seventy-two seafarers completed the general health questionnaire (ghq12) with three extra questions on how the covid-19 precautions were taken on board. [SEP]"
+      },
+      {
+        "text": "RESULTS The mean Likert score was 13.9 for the whole sample, corresponding to \"no problems\" while a subgroup of 40% had mean Likert sum scores of 16.1 (level 15-23) corresponding to \"starting problems\".",
+        "entities": [],
+        "text_new": "[CLS] results the mean likert score was 13. 9 for the whole sample, corresponding to \" no problems \" while a subgroup of 40 % had mean likert sum scores of 16. 1 (level 15-23) corresponding to \" starting problems \". [SEP]"
+      },
+      {
+        "text": "In response to the extra items, 50% of the seafarers did not feel safe doing their job in relation to the epidemic and 60% did not think everything has been done to ensure their health at work in relation to the epidemic.",
+        "entities": [],
+        "text_new": "[CLS] in response to the extra items, 50 % of the seafarers did not feel safe doing their job in relation to the epidemic and 60 % did not think everything has been done to ensure their health at work in relation to the epidemic. [SEP]"
+      },
+      {
+        "text": "Thirty per cent suffered of insomnia to the extent of becoming concerned and 26% had been unhappy and depressed during the latest tours of duty.",
+        "entities": [],
+        "text_new": "[CLS] thirty per cent suffered of insomnia to the extent of becoming concerned and 26 % had been unhappy and depressed during the latest tours of duty. [SEP]"
+      },
+      {
+        "text": "CONCLUSIONS The hypothesis that excess work-related stress has been put on the seafarers in this specific situation was confirmed and calls for prevention.",
+        "entities": [],
+        "text_new": "[CLS] conclusions the hypothesis that excess work-related stress has been put on the seafarers in this specific situation was confirmed and calls for prevention. [SEP]"
+      },
+      {
+        "text": "A combination of person-focused and organisation-focused prevention approaches has been advocated as the most promising for alleviation of job stress in the workplaces at sea.",
+        "entities": [],
+        "text_new": "[CLS] a combination of person-focused and organisation-focused prevention approaches has been advocated as the most promising for alleviation of job stress in the workplaces at sea. [SEP]"
+      }
+    ]
+  },
+  "33001200": {
+    "title": "Symptom Characterization and Outcomes of Sailors in Isolation After a COVID-19 Outbreak on a US Aircraft Carrier.",
+    "sentences": []
+  },
+  "33001198": {
+    "title": "USS Theodore Roosevelt, COVID-19, and Ships: Lessons Learned.",
+    "sentences": []
+  },
+  "33001051": {
+    "title": "Inflammation and thrombosis in patients with COVID-19: A prothrombotic and inflammatory disease caused by SARS coronavirus-2.",
+    "sentences": [
+      {
+        "text": "Coronavirus disease 2019 (COVID-19) caused by 'Severe Acute Respiratory Syndrome Coronavirus-2' (SARS-CoV-2) infection emerged in Wuhan, a city of China, and spread to the entire planet in early 2020.",
+        "entities": [],
+        "text_new": "[CLS] coronavirus disease 2019 (covid-19) caused by ' severe acute respiratory syndrome coronavirus-2 ' (sars-cov-2) infection emerged in wuhan, a city of china, and spread to the entire planet in early 2020. [SEP]"
+      },
+      {
+        "text": "The virus enters the respiratory tract cells and other tissues via ACE2 receptors.",
+        "entities": [],
+        "text_new": "[CLS] the virus enters the respiratory tract cells and other tissues via ace2 receptors. [SEP]"
+      },
+      {
+        "text": "Approximately 20% of infected subjects develop severe or critical disease.",
+        "entities": [],
+        "text_new": "[CLS] approximately 20 % of infected subjects develop severe or critical disease. [SEP]"
+      },
+      {
+        "text": "A cytokine storm leads to over inflammation and thrombotic events.",
+        "entities": [],
+        "text_new": "[CLS] a cytokine storm leads to over inflammation and thrombotic events. [SEP]"
+      },
+      {
+        "text": "The most common clinical presentation in COVID-19 is pneumonia, typically characterized by bilateral, peripheral, and patchy infiltrations in the lungs.",
+        "entities": [
+          "covid -"
+        ],
+        "text_new": "[CLS] the most common clinical presentation in covid-19 is pneumonia, typically characterized by bilateral, peripheral, and patchy infiltrations in the lungs. [SEP]"
+      },
+      {
+        "text": "However multi-systemic involvement including peripheral thromboembolic skin lesions, central nervous, gastrointestinal, circulatory, and urinary systems are reported.",
+        "entities": [],
+        "text_new": "[CLS] however multi-systemic involvement including peripheral thromboembolic skin lesions, central nervous, gastrointestinal, circulatory, and urinary systems are reported. [SEP]"
+      },
+      {
+        "text": "The disease has a higher mortality compared to other viral agents causing pneumonia and unfortunately, no approved specific therapy, nor vaccine has yet been discovered.",
+        "entities": [],
+        "text_new": "[CLS] the disease has a higher mortality compared to other viral agents causing pneumonia and unfortunately, no approved specific therapy, nor vaccine has yet been discovered. [SEP]"
+      },
+      {
+        "text": "Several clinical trials are ongoing with hydroxychloroquine, remdesivir, favipiravir, and low molecular weight heparins.",
+        "entities": [
+          "hydroxychloroquine",
+          "remdesivir",
+          "favipiravir",
+          "low molecular weight heparins"
+        ],
+        "text_new": "[CLS] several clinical trials are ongoing with hydroxychloroquine, remdesivir, favipiravir, and low molecular weight heparins. [SEP]"
+      },
+      {
+        "text": "This comprehensive review aimed to summarize coagulation abnormalities reported in COVID-19, discuss the thrombosis, and inflammation-driven background of the disease, emphasize the impact of thrombotic and inflammatory processes on the progression and prognosis of COVID-19, and to provide evidence-based therapeutic guidance, especially from antithrombotic and anti-inflammatory perspectives.",
+        "entities": [],
+        "text_new": "[CLS] this comprehensive review aimed to summarize coagulation abnormalities reported in covid-19, discuss the thrombosis, and inflammation-driven background of the disease, emphasize the impact of thrombotic and inflammatory processes on the progression and prognosis of covid-19, and to provide evidence-based therapeutic guidance, especially from antithrombotic and anti-inflammatory perspectives. [SEP]"
+      }
+    ]
+  },
+  "33000669": {
+    "title": "Lessons Learned From Producing Guidance Articles and Rapid Massive Open Online Courses During the Covid-19 Pandemic in Primary Care.",
+    "sentences": []
+  },
+  "33000019": {
+    "title": "A sentinel COVID-19 case in Houston, Texas: Informing frontline emergency department screening and preparedness.",
+    "sentences": [
+      {
+        "text": "In December 2019, a cluster of severe pneumonia cases of unknown cause was reported in Wuhan, Hubei province, China.",
+        "entities": [],
+        "text_new": "[CLS] in december 2019, a cluster of severe pneumonia cases of unknown cause was reported in wuhan, hubei province, china. [SEP]"
+      },
+      {
+        "text": "A novel strain of coronavirus belonging to the same family of viruses that cause severe acute respiratory syndrome (SARS) and Middle East respiratory syndrome (MERS) was identified.",
+        "entities": [],
+        "text_new": "[CLS] a novel strain of coronavirus belonging to the same family of viruses that cause severe acute respiratory syndrome (sars) and middle east respiratory syndrome (mers) was identified. [SEP]"
+      },
+      {
+        "text": "In February 2020, cases began being identified in the United States.",
+        "entities": [],
+        "text_new": "[CLS] in february 2020, cases began being identified in the united states. [SEP]"
+      },
+      {
+        "text": "We describe a sentinel COVID-19 patient in Houston, Texas, who first presented on March 1, 2020.",
+        "entities": [],
+        "text_new": "[CLS] we describe a sentinel covid-19 patient in houston, texas, who first presented on march 1, 2020. [SEP]"
+      },
+      {
+        "text": "The patient did not meet criteria for a Person Under Investigation (PUI) as recommended by the Centers for Disease Control and Prevention (CDC) at the time.",
+        "entities": [],
+        "text_new": "[CLS] the patient did not meet criteria for a person under investigation (pui) as recommended by the centers for disease control and prevention (cdc) at the time. [SEP]"
+      },
+      {
+        "text": "This case has broad implications for emergency department screening and preparedness for COVID-19 and other future infectious diseases.",
+        "entities": [
+          "covid-19"
+        ],
+        "text_new": "[CLS] this case has broad implications for emergency department screening and preparedness for covid-19 and other future infectious diseases. [SEP]"
+      }
+    ]
+  },
+  "33000018": {
+    "title": "COVID-19 in Seattle-Early lessons learned.",
+    "sentences": [
+      {
+        "text": "The coronavirus disease 2019 (COVID-19) pandemic has rapidly evolved and now dominates the attention and full efforts of the emergency medicine community, both domestic and abroad.",
+        "entities": [],
+        "text_new": "[CLS] the coronavirus disease 2019 (covid-19) pandemic has rapidly evolved and now dominates the attention and full efforts of the emergency medicine community, both domestic and abroad. [SEP]"
+      },
+      {
+        "text": "Seattle is the site of the initial diagnosed COVID-19 cases and fatalities in the United States.",
+        "entities": [
+          "covid"
+        ],
+        "text_new": "[CLS] seattle is the site of the initial diagnosed covid-19 cases and fatalities in the united states. [SEP]"
+      },
+      {
+        "text": "We provide an overview of the system-level response of 6 Seattle emergency departments and the Washington state chapter of the American College of Emergency Physicians (ACEP) to the COVID-19 pandemic.",
+        "entities": [],
+        "text_new": "[CLS] we provide an overview of the system-level response of 6 seattle emergency departments and the washington state chapter of the american college of emergency physicians (acep) to the covid-19 pandemic. [SEP]"
+      },
+      {
+        "text": "Local efforts involved the spectrum of emergency response including on- and off-site triage strategies, an approach to personal protective equipment, testing and reporting protocols, early treatments, communication strategies, the impact on front-line providers, and ongoing work.",
+        "entities": [],
+        "text_new": "[CLS] local efforts involved the spectrum of emergency response including on-and off-site triage strategies, an approach to personal protective equipment, testing and reporting protocols, early treatments, communication strategies, the impact on front-line providers, and ongoing work. [SEP]"
+      }
+    ]
+  },
+  "32999997": {
+    "title": "Atraumatic splenic rupture due to covid-19 infection.",
+    "sentences": [
+      {
+        "text": "Background Covid-19 is a novel disease caused by the severe acute respiratory coronavirus (SARS-CoV2).",
+        "entities": [],
+        "text_new": "[CLS] background covid-19 is a novel disease caused by the severe acute respiratory coronavirus (sars-cov2). [SEP]"
+      },
+      {
+        "text": "We discuss a gentleman who presented with an atraumatic rupture of the spleen secondary to this infection.",
+        "entities": [],
+        "text_new": "[CLS] we discuss a gentleman who presented with an atraumatic rupture of the spleen secondary to this infection. [SEP]"
+      },
+      {
+        "text": "Brief summary of presentation A 57-year-old service engineer was brought into the emergency department after having collapsed at home.",
+        "entities": [],
+        "text_new": "[CLS] brief summary of presentation a 57-year-old service engineer was brought into the emergency department after having collapsed at home. [SEP]"
+      },
+      {
+        "text": "RT-PCR was positive for covid-19 infection.",
+        "entities": [],
+        "text_new": "[CLS] rt-pcr was positive for covid-19 infection. [SEP]"
+      },
+      {
+        "text": "CT scan showed evidence of haemoperitoneum and splenic rupture.",
+        "entities": [],
+        "text_new": "[CLS] ct scan showed evidence of haemoperitoneum and splenic rupture. [SEP]"
+      },
+      {
+        "text": "He underwent splenic artery embolisation and required ventilatory and circulatory support on ITU.",
+        "entities": [],
+        "text_new": "[CLS] he underwent splenic artery embolisation and required ventilatory and circulatory support on itu. [SEP]"
+      },
+      {
+        "text": "He made a full recovery and was discharged home 3 weeks later.",
+        "entities": [],
+        "text_new": "[CLS] he made a full recovery and was discharged home 3 weeks later. [SEP]"
+      },
+      {
+        "text": "Discussion and relevance Atraumatic splenic rupture is a rare, potentially fatal condition which has been described as a complication of haematological and non-haematological malignancies, inflammatory disorders and infections.",
+        "entities": [],
+        "text_new": "[CLS] discussion and relevance atraumatic splenic rupture is a rare, potentially fatal condition which has been described as a complication of haematological and non-haematological malignancies, inflammatory disorders and infections. [SEP]"
+      },
+      {
+        "text": "There is emerging evidence to suggest that covid-19 has a direct destructive impact on the spleen, causing lymphoid follicle attrition and nodular atrophy in addition to microvascular thrombosis and necrosis.",
+        "entities": [
+          "covid-19"
+        ],
+        "text_new": "[CLS] there is emerging evidence to suggest that covid-19 has a direct destructive impact on the spleen, causing lymphoid follicle attrition and nodular atrophy in addition to microvascular thrombosis and necrosis. [SEP]"
+      },
+      {
+        "text": "This is the first report of atraumatic splenic rupture secondary to covid-19 infection, to our knowledge.",
+        "entities": [],
+        "text_new": "[CLS] this is the first report of atraumatic splenic rupture secondary to covid-19 infection, to our knowledge. [SEP]"
+      }
+    ]
+  },
+  "32999991": {
+    "title": "Orthoptic Services in the UK and Ireland During the COVID-19 Pandemic.",
+    "sentences": [
+      {
+        "text": "Aim COVID-19 has widely impacted hospital services.",
+        "entities": [],
+        "text_new": "[CLS] aim covid-19 has widely impacted hospital services. [SEP]"
+      },
+      {
+        "text": "The purpose of this study was to determine the impact of COVID-19 on Orthoptists and their clinical practice in the UK, Ireland, and Channel Islands.",
+        "entities": [
+          "covid-19"
+        ],
+        "text_new": "[CLS] the purpose of this study was to determine the impact of covid-19 on orthoptists and their clinical practice in the uk, ireland, and channel islands. [SEP]"
+      },
+      {
+        "text": "Methods We conducted a prospective survey-based cross-sectional study using an online survey aiming for coverage of orthoptic departments across the UK, Ireland, and Channel Islands.",
+        "entities": [],
+        "text_new": "[CLS] methods we conducted a prospective survey-based cross-sectional study using an online survey aiming for coverage of orthoptic departments across the uk, ireland, and channel islands. [SEP]"
+      },
+      {
+        "text": "We circulated the online survey through the British and Irish Orthoptic Society that reaches over 95% of UK and Irish orthoptic services, and through social media and orthoptic research networks.",
+        "entities": [],
+        "text_new": "[CLS] we circulated the online survey through the british and irish orthoptic society that reaches over 95 % of uk and irish orthoptic services, and through social media and orthoptic research networks. [SEP]"
+      },
+      {
+        "text": "Results The survey response rate was 79%.",
+        "entities": [],
+        "text_new": "[CLS] results the survey response rate was 79 %. [SEP]"
+      },
+      {
+        "text": "The survey was completed by orthoptic departments, on average 10 days post lockdown.",
+        "entities": [],
+        "text_new": "[CLS] the survey was completed by orthoptic departments, on average 10 days post lockdown. [SEP]"
+      },
+      {
+        "text": "Many orthoptic services were cancelled/paused with remaining services largely reserved for emergency cases and urgent care.",
+        "entities": [],
+        "text_new": "[CLS] many orthoptic services were cancelled / paused with remaining services largely reserved for emergency cases and urgent care. [SEP]"
+      },
+      {
+        "text": "A substantial rise in tele-consultations was reported by 94%, which largely consisted of telephone and video calls and which was regarded generally as working well.",
+        "entities": [],
+        "text_new": "[CLS] a substantial rise in tele-consultations was reported by 94 %, which largely consisted of telephone and video calls and which was regarded generally as working well. [SEP]"
+      },
+      {
+        "text": "Barriers to tele-consultations were mainly IT related but with concerns also raised regarding ethical and confidentiality issues.",
+        "entities": [],
+        "text_new": "[CLS] barriers to tele-consultations were mainly it related but with concerns also raised regarding ethical and confidentiality issues. [SEP]"
+      },
+      {
+        "text": "Shortage of personal protective equipment (PPE) was reported by one third of departments along with issues relating to conflicting information about the use of PPE.",
+        "entities": [],
+        "text_new": "[CLS] shortage of personal protective equipment (ppe) was reported by one third of departments along with issues relating to conflicting information about the use of ppe. [SEP]"
+      },
+      {
+        "text": "Conclusions We have reported information on the changing face of orthoptic clinical practice during the COVID-19 pandemic.",
+        "entities": [
+          "covid"
+        ],
+        "text_new": "[CLS] conclusions we have reported information on the changing face of orthoptic clinical practice during the covid-19 pandemic. [SEP]"
+      },
+      {
+        "text": "The survey has highlighted emerging tele-consultation practice and the importance of centralised profession-specific guidelines.",
+        "entities": [],
+        "text_new": "[CLS] the survey has highlighted emerging tele-consultation practice and the importance of centralised profession-specific guidelines. [SEP]"
+      }
+    ]
+  },
+  "32999950": {
+    "title": "We Need to Talk About Racism-In All of Its Forms-To Understand COVID-19 Disparities.",
+    "sentences": [
+      {
+        "text": "Purpose: Racism is an essential factor to understand racial health disparities in infection and mortality due to COVID-19 and must be thoroughly integrated into any successful public health response.",
+        "entities": [
+          "covid-19"
+        ],
+        "text_new": "[CLS] purpose: racism is an essential factor to understand racial health disparities in infection and mortality due to covid-19 and must be thoroughly integrated into any successful public health response. [SEP]"
+      },
+      {
+        "text": "But highlighting the effect of racism generally does not go far enough toward understanding racial/ethnic health disparities or advocating for change; we must interrogate the various forms of racism in the United States, including behaviors and practices that are not recognized by many as racism.",
+        "entities": [],
+        "text_new": "[CLS] but highlighting the effect of racism generally does not go far enough toward understanding racial / ethnic health disparities or advocating for change; we must interrogate the various forms of racism in the united states, including behaviors and practices that are not recognized by many as racism. [SEP]"
+      },
+      {
+        "text": "Methods: In this article, we explore the prevalence and demographic distribution of various forms of racism in the United States and how these diverse racial ideologies are potentially associated with racialized responses to the COVID-19 crisis.",
+        "entities": [],
+        "text_new": "[CLS] methods: in this article, we explore the prevalence and demographic distribution of various forms of racism in the united states and how these diverse racial ideologies are potentially associated with racialized responses to the covid-19 crisis. [SEP]"
+      },
+      {
+        "text": "Results: We find that among white Americans, more than a quarter express traditional racist attitudes, whereas more than half endorse more contemporary and implicit forms of racist ideology.",
+        "entities": [],
+        "text_new": "[CLS] results: we find that among white americans, more than a quarter express traditional racist attitudes, whereas more than half endorse more contemporary and implicit forms of racist ideology. [SEP]"
+      },
+      {
+        "text": "Each of these types of racism helps us explain profound disparities related to COVID-19.",
+        "entities": [
+          "covid-19"
+        ],
+        "text_new": "[CLS] each of these types of racism helps us explain profound disparities related to covid-19. [SEP]"
+      },
+      {
+        "text": "Conclusions: Despite a robust literature documenting persistent patterns of racial disparities in the United States, a focus on the role that various forms of racism play in perpetuating these disparities is absent.",
+        "entities": [],
+        "text_new": "[CLS] conclusions: despite a robust literature documenting persistent patterns of racial disparities in the united states, a focus on the role that various forms of racism play in perpetuating these disparities is absent. [SEP]"
+      },
+      {
+        "text": "These distinctions are essential to realizing health equity and countering disparities in COVID-19 and other health outcomes among people of color in the United States.",
+        "entities": [
+          "covid"
+        ],
+        "text_new": "[CLS] these distinctions are essential to realizing health equity and countering disparities in covid-19 and other health outcomes among people of color in the united states. [SEP]"
+      }
+    ]
+  },
+  "32999916": {
+    "title": "Remote cognitive and behavioral assessment: Report of the Alzheimer Society of Canada Task Force on dementia care best practices for COVID-19.",
+    "sentences": [
+      {
+        "text": "Introduction Despite the urgent need for remote neurobehavioral assessment of individuals with cognitive impairment, guidance is lacking.",
+        "entities": [],
+        "text_new": "[CLS] introduction despite the urgent need for remote neurobehavioral assessment of individuals with cognitive impairment, guidance is lacking. [SEP]"
+      },
+      {
+        "text": "Our goal is to provide a multi-dimensional framework for remotely assessing cognitive, functional, behavioral, and physical aspects of people with cognitive impairment, along with ethical and technical considerations.",
+        "entities": [],
+        "text_new": "[CLS] our goal is to provide a multi-dimensional framework for remotely assessing cognitive, functional, behavioral, and physical aspects of people with cognitive impairment, along with ethical and technical considerations. [SEP]"
+      },
+      {
+        "text": "Methods Literature review on remote cognitive assessment and multidisciplinary expert opinion from behavioral neurologists, neuropsychiatrists, neuropsychologists, and geriatricians was integrated under the auspices of the Alzheimer Society of Canada Task Force on Dementia Care Best Practices for COVID-19.",
+        "entities": [],
+        "text_new": "[CLS] methods literature review on remote cognitive assessment and multidisciplinary expert opinion from behavioral neurologists, neuropsychiatrists, neuropsychologists, and geriatricians was integrated under the auspices of the alzheimer society of canada task force on dementia care best practices for covid-19. [SEP]"
+      },
+      {
+        "text": "Telephone and video approaches to assessments were considered.",
+        "entities": [],
+        "text_new": "[CLS] telephone and video approaches to assessments were considered. [SEP]"
+      },
+      {
+        "text": "Results Remote assessment is shown to be acceptable to patients and caregivers.",
+        "entities": [],
+        "text_new": "[CLS] results remote assessment is shown to be acceptable to patients and caregivers. [SEP]"
+      },
+      {
+        "text": "Informed consent, informant history, and attention to privacy and autonomy are paramount.",
+        "entities": [],
+        "text_new": "[CLS] informed consent, informant history, and attention to privacy and autonomy are para ##mount. [SEP]"
+      },
+      {
+        "text": "A range of screening and domain-specific instruments are available for telephone or video assessment of cognition, function, and behavior.",
+        "entities": [],
+        "text_new": "[CLS] a range of screening and domain-specific instruments are available for telephone or video assessment of cognition, function, and behavior. [SEP]"
+      },
+      {
+        "text": "Some neuropsychological tests administered by videoconferencing show good agreement with in-person assessment but still lack validation and norms.",
+        "entities": [],
+        "text_new": "[CLS] some neuropsychological tests administered by videoconferencing show good agreement with in-person assessment but still lack validation and norms. [SEP]"
+      },
+      {
+        "text": "Aspects of the remote dementia-focused neurological examination can be performed reliably.",
+        "entities": [],
+        "text_new": "[CLS] aspects of the remote dementia-focused neurological examination can be performed reliably. [SEP]"
+      },
+      {
+        "text": "Discussion Despite challenges, current literature and practice support implementation of telemedicine assessments for patients with cognitive impairment.",
+        "entities": [],
+        "text_new": "[CLS] discussion despite challenges, current literature and practice support implementation of telemedicine assessments for patients with cognitive impairment. [SEP]"
+      },
+      {
+        "text": "Convergence of data across the clinical interview, reliable and brief remote cognitive tests, and remote neurological exam increase confidence in clinical interpretation and diagnosis.",
+        "entities": [],
+        "text_new": "[CLS] convergence of data across the clinical interview, reliable and brief remote cognitive tests, and remote neurological exam increase confidence in clinical interpretation and diagnosis. [SEP]"
+      }
+    ]
+  },
+  "32999913": {
+    "title": "Workplace health and safety training, employees' risk perceptions, behavioral safety compliance, and perceived job insecurity during COVID-19: Data of Vietnam.",
+    "sentences": [
+      {
+        "text": "This paper presents the dataset of a survey on workplace health and safety training, employees' risk perceptions, behavioral safety compliance, and perceived job insecurity in Vietnam during COVID-19 pandemic.",
+        "entities": [],
+        "text_new": "[CLS] this paper presents the dataset of a survey on workplace health and safety training, employees ' risk perceptions, behavioral safety compliance, and perceived job insecurity in vietnam during covid-19 pandemic. [SEP]"
+      },
+      {
+        "text": "The data were collected through an online questionnaire completed by Vietnamese full-time employees between April and June 2020.",
+        "entities": [],
+        "text_new": "[CLS] the data were collected through an online questionnaire completed by vietnamese full-time employees between april and june 2020. [SEP]"
+      },
+      {
+        "text": "Using E-mail, LinkedIn, and Facebook, the online questionnaire was sent to respondents who filled it out voluntarily.",
+        "entities": [],
+        "text_new": "[CLS] using e-mail, linkedin, and facebook, the online questionnaire was sent to respondents who filled it out voluntarily. [SEP]"
+      },
+      {
+        "text": "A two-wave survey was conducted in order to lessen the common method bias.",
+        "entities": [],
+        "text_new": "[CLS] a two-wave survey was conducted in order to lessen the common method bias. [SEP]"
+      },
+      {
+        "text": "Totally, we received complete matched data for 732 full-time employees.",
+        "entities": [],
+        "text_new": "[CLS] totally, we received complete matched data for 73 ##2 full-time employees. [SEP]"
+      },
+      {
+        "text": "All data were processed through SPSS 22.0, AMOS 23.0 and Smart PLS 3.0.",
+        "entities": [],
+        "text_new": "[CLS] all data were processed through spss 22. 0, amos 23. 0 and smart pls 3. 0. [SEP]"
+      },
+      {
+        "text": "Besides descriptive statistics, the results of the explanatory factor analysis and the confirmation factor analysis were included in this paper, which may serve as a good reference for future studies.",
+        "entities": [],
+        "text_new": "[CLS] besides descriptive statistics, the results of the explanatory factor analysis and the confirmation factor analysis were included in this paper, which may serve as a good reference for future studies. [SEP]"
+      }
+    ]
+  },
+  "32999889": {
+    "title": "Mild COVID-19 Symptoms in an Infliximab-Treated Ulcerative Colitis Patient: Can Ongoing Anti-TNF Therapy Protect against the Viral Hyperinflammatory Response and Avoid Aggravated Outcomes?",
+    "sentences": [
+      {
+        "text": "The ongoing coronavirus disease 2019 (COVID-19) pandemic, caused by severe acute respiratory syndrome coronavirus 2, represents a potentially major challenge to patients with immune-mediated inflammatory diseases who are treated with immunomodulatory therapies.",
+        "entities": [],
+        "text_new": "[CLS] the ongoing coronavirus disease 2019 (covid-19) pandemic, caused by severe acute respiratory syndrome coronavirus 2, represents a potentially major challenge to patients with immune-mediated inflammatory diseases who are treated with immunomodulatory therapies. [SEP]"
+      },
+      {
+        "text": "We report the case of an 18-year-old ulcerative colitis patient in sustained clinical remission who 4 days after application of her ongoing therapy with the anti-TNF antibody infliximab developed mild respiratory and abdominal symptoms.",
+        "entities": [],
+        "text_new": "[CLS] we report the case of an 18-year-old ulcerative colitis patient in sustained clinical remission who 4 days after application of her ongoing therapy with the anti-tnf antibody infliximab developed mild respiratory and abdominal symptoms. [SEP]"
+      },
+      {
+        "text": "The patient was subsequently diagnosed with COVID-19 but did not need hospitalization.",
+        "entities": [],
+        "text_new": "[CLS] the patient was subsequently diagnosed with covid-19 but did not need hospitalization. [SEP]"
+      },
+      {
+        "text": "The clinical symptoms completely resolved within 1 week after onset and there was no change in ulcerative colitis activity.",
+        "entities": [],
+        "text_new": "[CLS] the clinical symptoms completely resolved within 1 week after onset and there was no change in ulcerative colitis activity. [SEP]"
+      },
+      {
+        "text": "The recently applied anti-TNF therapy did not lead to exacerbation of the infectious symptoms.",
+        "entities": [],
+        "text_new": "[CLS] the recently applied anti-tnf therapy did not lead to exacerbation of the infectious symptoms. [SEP]"
+      },
+      {
+        "text": "Current recommendations strongly favor continuation of effective maintenance anti-TNF therapy in inflammatory bowel disease patients, as there is no evidence for aggravated CO-VID-19 upon infection.",
+        "entities": [],
+        "text_new": "[CLS] current recommendations strongly favor continuation of effective maintenance anti-tnf therapy in inflammatory bowel disease patients, as there is no evidence for aggravated co-vid-19 upon infection. [SEP]"
+      },
+      {
+        "text": "It is unclear whether anti-TNF treatment might even have assisted in preventing worsening of COVID-19 and improving outcome.",
+        "entities": [],
+        "text_new": "[CLS] it is unclear whether anti-tnf treatment might even have assisted in preventing worsening of covid-19 and improving outcome. [SEP]"
+      },
+      {
+        "text": "Further data in the group of immune-mediated inflammatory disease patients under anti-TNF therapy are urgently needed.",
+        "entities": [],
+        "text_new": "[CLS] further data in the group of immune-mediated inflammatory disease patients under anti-tnf therapy are urgently needed. [SEP]"
+      }
+    ]
+  },
+  "32999856": {
+    "title": "Clinical deterioration during neutropenia recovery after G-CSF therapy in patient with COVID-19.",
+    "sentences": [
+      {
+        "text": "Background Granulocyte colony stimulating factors (G-CSFs) induce neutrophils proliferation and cytokines production.",
+        "entities": [],
+        "text_new": "[CLS] background granulocyte colony stimulating factors (g-csfs) induce neutrophils proliferation and cytokines production. [SEP]"
+      },
+      {
+        "text": "It has often been used to treat neutropenia without solid evidence of efficacy.",
+        "entities": [],
+        "text_new": "[CLS] it has often been used to treat neutropenia without solid evidence of efficacy. [SEP]"
+      },
+      {
+        "text": "It has been demonstrated that respiratory distress is associated with neutropenia recovery but not with G-CSFs.",
+        "entities": [],
+        "text_new": "[CLS] it has been demonstrated that respiratory distress is associated with neutropenia recovery but not with g-csfs. [SEP]"
+      },
+      {
+        "text": "In general, G-CSFs are known to be safe and well tolerated in most clinical settings.",
+        "entities": [
+          "g-csfs"
+        ],
+        "text_new": "[CLS] in general, g-csfs are known to be safe and well tolerated in most clinical settings. [SEP]"
+      },
+      {
+        "text": "However, the safety of G-CSFs in an overwhelming inflammatory disease like coronavirus disease 2019 (COVID-19) is largely unknown.",
+        "entities": [
+          "g-csfs"
+        ],
+        "text_new": "[CLS] however, the safety of g-csfs in an overwhelming inflammatory disease like coronavirus disease 2019 (covid-19) is largely unknown. [SEP]"
+      },
+      {
+        "text": "Case summary We report a case with COVID-19 and neutropenia who rapidly deteriorated after administration of G-CSF.",
+        "entities": [
+          "covid-19",
+          "g-csf"
+        ],
+        "text_new": "[CLS] case summary we report a case with covid-19 and neutropenia who rapidly deteriorated after administration of g-csf. [SEP]"
+      },
+      {
+        "text": "Conclusion We observed a faster neutropenia recovery than previously known after administration of G-CSF in our case and in three similar cases previously reported in literature.",
+        "entities": [
+          "g-csf"
+        ],
+        "text_new": "[CLS] conclusion we observed a faster neutropenia recovery than previously known after administration of g-csf in our case and in three similar cases previously reported in literature. [SEP]"
+      },
+      {
+        "text": "This rapid neutropenia recovery and the robust inflammatory response in COVID-19 raise concerns about G-CSF safety in patients with COVID-19.",
+        "entities": [
+          "g-csf"
+        ],
+        "text_new": "[CLS] this rapid neutropenia recovery and the robust inflammatory response in covid-19 raise concerns about g-csf safety in patients with covid-19. [SEP]"
+      }
+    ]
+  },
+  "32999855": {
+    "title": "COVID-19 pneumonia complicated by bilateral pneumothorax: A case report.",
+    "sentences": [
+      {
+        "text": "Background Pneumothorax is a rare but life-threatening complication associated with pneumonia caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2).",
+        "entities": [],
+        "text_new": "[CLS] background pneumothorax is a rare but life-threatening complication associated with pneumonia caused by severe acute respiratory syndrome coronavirus 2 (sars-cov-2). [SEP]"
+      },
+      {
+        "text": "Case presentation Informed consent was obtained from the patient himself.",
+        "entities": [],
+        "text_new": "[CLS] case presentation informed consent was obtained from the patient himself. [SEP]"
+      },
+      {
+        "text": "A 50-year-old man presented with a 9-day history of fever, cough, and dyspnoea.",
+        "entities": [],
+        "text_new": "[CLS] a 50-year-old man presented with a 9-day history of fever, cough, and dyspnoea. [SEP]"
+      },
+      {
+        "text": "He was diagnosed with coronavirus disease 2019 (COVID-19) pneumonia and was admitted to the Medical Hospital, Tokyo Medical and Dental University.",
+        "entities": [],
+        "text_new": "[CLS] he was diagnosed with coronavirus disease 2019 (covid-19) pneumonia and was admitted to the medical hospital, tokyo medical and dental university. [SEP]"
+      },
+      {
+        "text": "Chest CT showed diffuse patchy ground-glass opacities (GGOs).",
+        "entities": [],
+        "text_new": "[CLS] chest ct showed diffuse patchy ground-glass opacities (ggos). [SEP]"
+      },
+      {
+        "text": "His state of oxygenation deteriorated, and mechanical ventilation was initiated on day 4 after admission (12th day from onset).",
+        "entities": [],
+        "text_new": "[CLS] his state of oxygenation deteriorated, and mechanical ventilation was initiated on day 4 after admission (12th day from onset). [SEP]"
+      },
+      {
+        "text": "He improved gradually and was weaned from ventilation on day 15.",
+        "entities": [],
+        "text_new": "[CLS] he improved gradually and was weaned from ventilation on day 15. [SEP]"
+      },
+      {
+        "text": "Sudden onset of bilateral pneumothorax occurred on day 21 with severe respiratory failure, and chest CT revealed pneumatocele formation on both lower lobes.",
+        "entities": [],
+        "text_new": "[CLS] sudden onset of bilateral pneumothorax occurred on day 21 with severe respiratory failure, and chest ct revealed pneumatocele formation on both lower lobes. [SEP]"
+      },
+      {
+        "text": "Conclusions Pneumothorax is a notable complication in cases of severe COVID-19 pneumonia, especially in those who require positive-pressure ventilation.",
+        "entities": [],
+        "text_new": "[CLS] conclusions pneumothorax is a notable complication in cases of severe covid-19 pneumonia, especially in those who require positive-pressure ventilation. [SEP]"
+      }
+    ]
+  },
+  "32999782": {
+    "title": "COVID-19 Resilience for Survival: Occurrence of Domestic Violence During Lockdown at a Rural American College of Surgeons Verified Level One Trauma Center.",
+    "sentences": [
+      {
+        "text": "Background As the early peak phase in the coronavirus outbreak has intensified, stay-at-home mandates requiring identified individuals as nonessential were advised to remain home to prevent community transmission of the disease.",
+        "entities": [],
+        "text_new": "[CLS] background as the early peak phase in the coronavirus outbreak has intensified, stay-at-home mandates requiring identified individuals as nonessential were advised to remain home to prevent community transmission of the disease. [SEP]"
+      },
+      {
+        "text": "Further mandates escalated isolated environments such as school closures, social distancing, travel restrictions, closure of public gathering spaces, and business closures.",
+        "entities": [],
+        "text_new": "[CLS] further mandates escalated isolated environments such as school closures, social distancing, travel restrictions, closure of public gathering spaces, and business closures. [SEP]"
+      },
+      {
+        "text": "As citizens were forced to stay home during the pandemic, the crisis created intensifying stressors and isolation, which fostered an environment for increased domestic violence.",
+        "entities": [],
+        "text_new": "[CLS] as citizens were forced to stay home during the pandemic, the crisis created intensifying stressors and isolation, which fostered an environment for increased domestic violence. [SEP]"
+      },
+      {
+        "text": "Methods A retrospective review of all emergency department (ED) patients that presented to an American College of Surgeons (ACS) verified rural level one trauma center with associated diagnostic coding for assault was conducted during the Coronavirus 2019 (COVID-19) lockdown, integral dates March 16, 2020 to April 30, 2020.",
+        "entities": [],
+        "text_new": "[CLS] methods a retrospective review of all emergency department (ed) patients that presented to an american college of surgeons (acs) verified rural level one trauma center with associated diagnostic coding for assault was conducted during the coronavirus 2019 (covid-19) lockdown, integral dates march 16, 2020 to april 30, 2020. [SEP]"
+      },
+      {
+        "text": "In particular the identification of proportional assaults that presented to the ED after school closures (March 16, 2020) was compared to the previous year (March 16, 2019 to April 30, 2019).",
+        "entities": [],
+        "text_new": "[CLS] in particular the identification of proportional assaults that presented to the ed after school closures (march 16, 2020) was compared to the previous year (march 16, 2019 to april 30, 2019). [SEP]"
+      },
+      {
+        "text": "The data collected included patient characteristics, grouping by mechanism, grouping by a specific mechanism, and domestic violence perpetrators.",
+        "entities": [],
+        "text_new": "[CLS] the data collected included patient characteristics, grouping by mechanism, grouping by a specific mechanism, and domestic violence perpetrators. [SEP]"
+      },
+      {
+        "text": "Results A statistically significant (p = 0.01) increase in assaults was found during the COVID-19 lockdown, particularly during the period after school closures.",
+        "entities": [],
+        "text_new": "[CLS] results a statistically significant (p = 0. 01) increase in assaults was found during the covid-19 lockdown, particularly during the period after school closures. [SEP]"
+      },
+      {
+        "text": "Conclusions Although overall trauma volume was reduced during the COVID-19 stay-at-home mandates, a significant increase in domestic violence assaults was observed.",
+        "entities": [],
+        "text_new": "[CLS] conclusions although overall trauma volume was reduced during the covid-19 stay-at-home mandates, a significant increase in domestic violence assaults was observed. [SEP]"
+      },
+      {
+        "text": "Largely the assaults were perpetrated against white men by partners and unspecified nonfamily members, which were predominantly penetrating injuries.",
+        "entities": [],
+        "text_new": "[CLS] largely the assaults were perpetrated against white men by partners and unspecified nonfamily members, which were predominantly penetrating injuries. [SEP]"
+      }
+    ]
+  },
+  "32999777": {
+    "title": "Role of Biochemical Markers in Invasive Ventilation of Coronavirus Disease 2019 Patients: Multinomial Regression and Survival Analysis.",
+    "sentences": [
+      {
+        "text": "Background and objectives Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) is the pathogen responsible for the coronavirus disease 2019 (COVID-19) pandemic.",
+        "entities": [],
+        "text_new": "[CLS] background and objectives severe acute respiratory syndrome coronavirus 2 (sars-cov-2) is the pathogen responsible for the coronavirus disease 2019 (covid-19) pandemic. [SEP]"
+      },
+      {
+        "text": "The disease mainly affects the respiratory system of the patient, in particular, the lungs, which leads to patients presenting with acute respiratory distress syndrome and acute respiratory failure, with 5-15% of patients requiring observation in the intensive care unit (ICU) with respiratory support in the form of ventilation.",
+        "entities": [],
+        "text_new": "[CLS] the disease mainly affects the respiratory system of the patient, in particular, the lungs, which leads to patients presenting with acute respiratory distress syndrome and acute respiratory failure, with 5-15 % of patients requiring observation in the intensive care unit (icu) with respiratory support in the form of ventilation. [SEP]"
+      },
+      {
+        "text": "This study was aimed at identifying the role of biochemical markers in the risk stratification of invasive and non-invasive ventilation of hospitalized COVID-19 patients.",
+        "entities": [
+          "covid"
+        ],
+        "text_new": "[CLS] this study was aimed at identifying the role of biochemical markers in the risk stratification of invasive and non-invasive ventilation of hospitalized covid-19 patients. [SEP]"
+      },
+      {
+        "text": "Materials and methods The study was conducted as a prospective, observational study of all admitted COVID-19 patients.",
+        "entities": [
+          "covid"
+        ],
+        "text_new": "[CLS] materials and methods the study was conducted as a prospective, observational study of all admitted covid-19 patients. [SEP]"
+      },
+      {
+        "text": "A comparative analysis was performed of the survivors who were on invasive versus (vs) non-invasive ventilation and the non-survivors similarly.",
+        "entities": [],
+        "text_new": "[CLS] a comparative analysis was performed of the survivors who were on invasive versus (vs) non-invasive ventilation and the non-survivors similarly. [SEP]"
+      },
+      {
+        "text": "After computing the descriptive statistics, a multinomial logistic regression model was applied to obtain an unadjusted odds ratio (OR) at 95% confidence interval (CI), with Hosmer-Lemeshow (HL) goodness-of-fit test used to predict the fitness of the data.",
+        "entities": [],
+        "text_new": "[CLS] after computing the descriptive statistics, a multinomial logistic regression model was applied to obtain an unadjusted odds ratio (or) at 95 % confidence interval (ci), with hosmer-lemeshow (hl) goodness-of-fit test used to predict the fitness of the data. [SEP]"
+      },
+      {
+        "text": "Kaplan-Meier survival curves were obtained for each of the laboratory investigations predicting survival along with the intensive care stay and invasive ventilation.",
+        "entities": [],
+        "text_new": "[CLS] kaplan-meier survival curves were obtained for each of the laboratory investigations predicting survival along with the intensive care stay and invasive ventilation. [SEP]"
+      },
+      {
+        "text": "A log-rank test was carried out to compare the survival distributions.",
+        "entities": [],
+        "text_new": "[CLS] a log-rank test was carried out to compare the survival distributions. [SEP]"
+      },
+      {
+        "text": "Results A total of 373 included patients in the study had a mean age of 52.78 ± 15.76 years with females younger than males, and indifference amongst invasive vs non-invasively ventilated (p=0.821).",
+        "entities": [],
+        "text_new": "[CLS] results a total of 373 included patients in the study had a mean age of 52. 78 ± 15. 76 years with females younger than males, and indifference amongst invasive vs non-invasively ventilated (p = 0. 821). [SEP]"
+      },
+      {
+        "text": "Females were slightly more prone to invasive ventilation (p=0.097).",
+        "entities": [],
+        "text_new": "[CLS] females were slightly more prone to invasive ventilation (p = 0. 097). [SEP]"
+      },
+      {
+        "text": "Overall, 39% of the subjects did not need respiratory support, while 13% were on a ventilator, 16% on bilevel positive airway pressure/continuous positive airway pressure (BiPAP/CPAP), and 31% on supplemental oxygen therapy.",
+        "entities": [
+          "oxygen"
+        ],
+        "text_new": "[CLS] overall, 39 % of the subjects did not need respiratory support, while 13 % were on a ventilator, 16 % on bilevel positive airway pressure / continuous positive airway pressure (bipap / cpap), and 31 % on supplemental oxygen therapy. [SEP]"
+      },
+      {
+        "text": "Among the laboratory markers, mean hemoglobin was evidently lower in the invasive group, leukocytosis and thrombocytopenia were present in both invasively ventilated and non-surviving patients, while neutrophilia and lymphocytopenia were statistically indifferent among the mode of ventilation.",
+        "entities": [],
+        "text_new": "[CLS] among the laboratory markers, mean hemoglobin was evidently lower in the invasive group, leukocytosis and thrombocytopenia were present in both invasively ventilated and non-surviving patients, while neutrophilia and lymphocytopenia were statistically indifferent among the mode of ventilation. [SEP]"
+      },
+      {
+        "text": "Elevated urea, creatinine, and sodium were also significantly deranged laboratory markers amongst the invasively ventilated group.",
+        "entities": [
+          "urea",
+          "creatinine",
+          "sodium"
+        ],
+        "text_new": "[CLS] elevated urea, creatinine, and sodium were also significantly deranged laboratory markers amongst the invasively ventilated group. [SEP]"
+      },
+      {
+        "text": "C-reactive protein (CRP) and lactate dehydrogenase (LDH) were elevated significantly in the invasive group, while serum ferritin was more frequently raised in the non-invasively ventilated group.",
+        "entities": [
+          "lactate"
+        ],
+        "text_new": "[CLS] c-reactive protein (crp) and lactate dehydrogenase (ldh) were elevated significantly in the invasive group, while serum ferritin was more frequently raised in the non-invasively ventilated group. [SEP]"
+      },
+      {
+        "text": "Procalcitonin (PCT) was significantly associated with invasive ventilation as opposed to the non-invasive group.",
+        "entities": [],
+        "text_new": "[CLS] procalcitonin (pct) was significantly associated with invasive ventilation as opposed to the non-invasive group. [SEP]"
+      },
+      {
+        "text": "D-dimer was equally raised in both the groups at admission but significantly elevated in the invasive group at discharge.",
+        "entities": [],
+        "text_new": "[CLS] d-dimer was equally raised in both the groups at admission but significantly elevated in the invasive group at discharge. [SEP]"
+      },
+      {
+        "text": "A multinomial regression model signified D-dimer (OR: 16.301), hypernatremia (OR: 12.738), creatinine (OR: 12.589), urea (OR: 12.576), and LDH (OR: 12.245) most significantly associated with death, while those for invasive ventilation were D-dimer (OR: 8.744), hypernatremia (OR: 4.532), PCT (OR: 3.829), neutrophilia (OR: 3.804), leukocytosis (OR: 3.330), and serum urea (OR: 3.312).",
+        "entities": [
+          "creatinine",
+          "urea"
+        ],
+        "text_new": "[CLS] a multinomial regression model signified d-dimer (or: 16. 301), hypernatremia (or: 12. 738), creatinine (or: 12. 589), urea (or: 12. 576), and ldh (or: 12. 245) most significantly associated with death, while those for invasive ventilation were d-dimer (or: 8. 744), hypernatremia (or: 4. 532), pct (or: 3. 829), neutrophilia ([SEP]"
+      },
+      {
+        "text": "Kaplan-Meier curves conclude total leucocyte count (TLC), neutrophils, lymphocytes, urea, creatinine, sodium, CRP, LDH, PCT, and D-dimer all significantly contributing to an early death.",
+        "entities": [
+          "urea",
+          "creatinine",
+          "sodium"
+        ],
+        "text_new": "[CLS] kaplan-meier curves conclude total leucocyte count (tlc), neutrophils, lymphocytes, urea, creatinine, sodium, crp, ldh, pct, and d-dimer all significantly contributing to an early death. [SEP]"
+      },
+      {
+        "text": "Conclusion The most significant marker for mortality was D-dimer, followed by serum sodium, urea/creatinine, LDH, ICU stay, and invasive ventilation.",
+        "entities": [
+          "sodium",
+          "urea",
+          "creatinine"
+        ],
+        "text_new": "[CLS] conclusion the most significant marker for mortality was d-dimer, followed by serum sodium, urea / creatinine, ldh, icu stay, and invasive ventilation. [SEP]"
+      }
+    ]
+  },
+  "32999774": {
+    "title": "Impact of COVID-19 on the Mental Health of Children and Adolescents.",
+    "sentences": [
+      {
+        "text": "The coronavirus disease 2019 (COVID-19) outbreak was first reported in Wuhan, China, and was later reported to have spread throughout the world to create a global pandemic.",
+        "entities": [],
+        "text_new": "[CLS] the coronavirus disease 2019 (covid-19) outbreak was first reported in wuhan, china, and was later reported to have spread throughout the world to create a global pandemic. [SEP]"
+      },
+      {
+        "text": "As of August 18th, 2020, the coronavirus had spread to more than 216 countries with at least 21,756,357 confirmed cases, resulting in 771,635 deaths globally.",
+        "entities": [],
+        "text_new": "[CLS] as of august 18th, 2020, the coronavirus had spread to more than 216 countries with at least 21, 756, 357 confirmed cases, resulting in 771, 635 deaths globally. [SEP]"
+      },
+      {
+        "text": "Several countries declared this pandemic as a national emergency, forcing millions of people to go into lockdown.",
+        "entities": [],
+        "text_new": "[CLS] several countries declared this pandemic as a national emergency, forcing millions of people to go into lockdown. [SEP]"
+      },
+      {
+        "text": "This unexpected imposed social isolation has caused enormous disruption of daily routines for the global community, especially children.",
+        "entities": [],
+        "text_new": "[CLS] this unexpected imposed social isolation has caused enormous disruption of daily routines for the global community, especially children. [SEP]"
+      },
+      {
+        "text": "Among the measures intended to reduce the spread of the virus, most schools closed, canceled classes, and moved it to home-based or online learning to encourage and adhere to social distancing guidelines.",
+        "entities": [],
+        "text_new": "[CLS] among the measures intended to reduce the spread of the virus, most schools closed, canceled classes, and moved it to home-based or online learning to encourage and adhere to social distancing guidelines. [SEP]"
+      },
+      {
+        "text": "Education and learnings of 67.6% of students are impacted globally due to coronavirus in 143 countries.",
+        "entities": [],
+        "text_new": "[CLS] education and learnings of 67. 6 % of students are impacted globally due to coronavirus in 143 countries. [SEP]"
+      },
+      {
+        "text": "The transition away from physical classes has significantly disrupted the lives of students and their families, posing a potential risk to the mental well-being of children.",
+        "entities": [],
+        "text_new": "[CLS] the transition away from physical classes has significantly disrupted the lives of students and their families, posing a potential risk to the mental well-being of children. [SEP]"
+      },
+      {
+        "text": "An abrupt change in the learning environment and limited social interactions and activities posed an unusual situation for children's developing brains.",
+        "entities": [],
+        "text_new": "[CLS] an abrupt change in the learning environment and limited social interactions and activities posed an unusual situation for children ' s developing brains. [SEP]"
+      },
+      {
+        "text": "It is essential and obligatory for the scientific community and healthcare workers to assess and analyze the psychological impact caused by the coronavirus pandemic on children and adolescents, as several mental health disorders begin during childhood.",
+        "entities": [],
+        "text_new": "[CLS] it is essential and obligatory for the scientific community and healthcare workers to assess and analyze the psychological impact caused by the coronavirus pandemic on children and adolescents, as several mental health disorders begin during childhood. [SEP]"
+      },
+      {
+        "text": "Countries across the globe, including the United States, are in the dilemma of determining appropriate strategies for children to minimize the psychological impact of coronavirus.",
+        "entities": [],
+        "text_new": "[CLS] countries across the globe, including the united states, are in the dilemma of determining appropriate strategies for children to minimize the psychological impact of coronavirus. [SEP]"
+      },
+      {
+        "text": "The design of this review is to investigate and identify the risk factors to mental health and propose possible solutions to avoid the detrimental consequence of this crisis on the psychology of our future adult generations.",
+        "entities": [],
+        "text_new": "[CLS] the design of this review is to investigate and identify the risk factors to mental health and propose possible solutions to avoid the detrimental consequence of this crisis on the psychology of our future adult generations. [SEP]"
+      }
+    ]
+  },
+  "32999768": {
+    "title": "Potential COVID-19 papain-like protease PLpro inhibitors: repurposing FDA-approved drugs.",
+    "sentences": [
+      {
+        "text": "Using the crystal structure of SARS-CoV-2 papain-like protease (PLpro) as a template, we developed a pharmacophore model of functional centers of the PLpro inhibitor-binding pocket.",
+        "entities": [],
+        "text_new": "[CLS] using the crystal structure of sars-cov-2 papain-like protease (plpro) as a template, we developed a pharmacophore model of functional centers of the plpro inhibitor-binding pocket. [SEP]"
+      },
+      {
+        "text": "With this model, we conducted data mining of the conformational database of FDA-approved drugs.",
+        "entities": [
+          "fda"
+        ],
+        "text_new": "[CLS] with this model, we conducted data mining of the conformational database of fda-approved drugs. [SEP]"
+      },
+      {
+        "text": "This search identified 147 compounds that can be potential inhibitors of SARS-CoV-2 PLpro.",
+        "entities": [],
+        "text_new": "[CLS] this search identified 147 compounds that can be potential inhibitors of sars-cov-2 plpro. [SEP]"
+      },
+      {
+        "text": "The conformations of these compounds underwent 3D fingerprint similarity clusterization, followed by docking of possible conformers to the binding pocket of PLpro.",
+        "entities": [],
+        "text_new": "[CLS] the conformations of these compounds underwent 3d fingerprint similarity clusterization, followed by docking of possible conformers to the binding pocket of plpro. [SEP]"
+      },
+      {
+        "text": "Docking of random compounds to the binding pocket of protease was also done for comparison.",
+        "entities": [],
+        "text_new": "[CLS] docking of random compounds to the binding pocket of protease was also done for comparison. [SEP]"
+      },
+      {
+        "text": "Free energies of the docking interaction for the selected compounds were lower than for random compounds.",
+        "entities": [],
+        "text_new": "[CLS] free energies of the docking interaction for the selected compounds were lower than for random compounds. [SEP]"
+      },
+      {
+        "text": "The drug list obtained includes inhibitors of HIV, hepatitis C, and cytomegalovirus (CMV), as well as a set of drugs that have demonstrated some activity in MERS, SARS-CoV, and SARS-CoV-2 therapy.",
+        "entities": [],
+        "text_new": "[CLS] the drug list obtained includes inhibitors of hiv, hepatitis c, and cytomegalovirus (cmv), as well as a set of drugs that have demonstrated some activity in mers, sars-cov, and sars-cov-2 therapy. [SEP]"
+      },
+      {
+        "text": "We recommend testing of the selected compounds for treatment of COVID-19.",
+        "entities": [],
+        "text_new": "[CLS] we recommend testing of the selected compounds for treatment of covid-19. [SEP]"
+      }
+    ]
+  },
+  "32999738": {
+    "title": "The sim must go on: adapting resident education to the COVID-19 pandemic using telesimulation.",
+    "sentences": [
+      {
+        "text": "The COVID-19 pandemic and social distancing rules necessitated the suspension of all in-person learning activities at our institution.",
+        "entities": [],
+        "text_new": "[CLS] the covid-19 pandemic and social distancing rules necessitated the suspension of all in-person learning activities at our institution. [SEP]"
+      },
+      {
+        "text": "Consequently, distance learning became essential.",
+        "entities": [],
+        "text_new": "[CLS] consequently, distance learning became essential. [SEP]"
+      },
+      {
+        "text": "We adapted a high-fidelity immersive case-based simulation scenario for telesimulation by using the virtual meeting platform Zoom® to meet our curricular needs.",
+        "entities": [],
+        "text_new": "[CLS] we adapted a high-fidelity immersive case-based simulation scenario for telesimulation by using the virtual meeting platform zoom ##® to meet our curricular needs. [SEP]"
+      },
+      {
+        "text": "The use of telesimulation to teach a complex case-based scenario is novel.",
+        "entities": [],
+        "text_new": "[CLS] the use of telesimulation to teach a complex case-based scenario is novel. [SEP]"
+      },
+      {
+        "text": "Two cohorts of anesthesiology residents participated 2 weeks apart.",
+        "entities": [],
+        "text_new": "[CLS] two cohorts of anesthesiology residents participated 2 weeks apart. [SEP]"
+      },
+      {
+        "text": "All learners were located at home.",
+        "entities": [],
+        "text_new": "[CLS] all learners were located at home. [SEP]"
+      },
+      {
+        "text": "Four faculty members conducted the telesimulation from different locations within our simulation center in the roles of director, simulation operator, confederate anesthesiologist, and confederate surgeon.",
+        "entities": [],
+        "text_new": "[CLS] four faculty members conducted the telesimulation from different locations within our simulation center in the roles of director, simulation operator, confederate anesthesiologist, and confederate surgeon. [SEP]"
+      },
+      {
+        "text": "The anesthesiologist performed tasks as directed by learners.",
+        "entities": [],
+        "text_new": "[CLS] the anesthesiologist performed tasks as directed by learners. [SEP]"
+      },
+      {
+        "text": "The scenario was divided into four scenes to permit reflection on interventions/actions by the participants based on the clinical events as the scenario progressed, to facilitate intermittent debriefing and learner engagement.",
+        "entities": [],
+        "text_new": "[CLS] the scenario was divided into four scenes to permit reflection on interventions / actions by the participants based on the clinical events as the scenario progressed, to facilitate intermittent debriefing and learner engagement. [SEP]"
+      },
+      {
+        "text": "All residents were given a medical knowledge pretest before the telesimulation and a posttest and learner satisfaction survey at the conclusion.",
+        "entities": [],
+        "text_new": "[CLS] all residents were given a medical knowledge pretest before the telesimulation and a posttest and learner satisfaction survey at the conclusion. [SEP]"
+      },
+      {
+        "text": "The scenario was authentic and immersive, represented an actual case, and provided the opportunity to practice lessons that could be applied in the clinical setting.",
+        "entities": [],
+        "text_new": "[CLS] the scenario was authentic and immersive, represented an actual case, and provided the opportunity to practice lessons that could be applied in the clinical setting. [SEP]"
+      },
+      {
+        "text": "Participants rated telesimulation a reasonable substitution for in-person learning and expressed gratitude for continuation of their simulation-based education in this format during the pandemic.",
+        "entities": [],
+        "text_new": "[CLS] participants rated telesimulation a reasonable substitution for in-person learning and expressed gratitude for continuation of their simulation-based education in this format during the pandemic. [SEP]"
+      },
+      {
+        "text": "Participants in the second cohort reported feeling more engaged (p = 0.008) and stimulated to think critically (p = 0.003).",
+        "entities": [],
+        "text_new": "[CLS] participants in the second cohort reported feeling more engaged (p = 0. 008) and stimulated to think critically (p = 0. 003). [SEP]"
+      },
+      {
+        "text": "Audio quality was the most frequently noted limitation.",
+        "entities": [],
+        "text_new": "[CLS] audio quality was the most frequently noted limitation. [SEP]"
+      },
+      {
+        "text": "Fifty-three residents completed both pre- and posttests.",
+        "entities": [],
+        "text_new": "[CLS] fifty-three residents completed both pre-and posttests. [SEP]"
+      },
+      {
+        "text": "The two cohorts did not differ in knowledge pretest scores (62% vs 60%, p = 0.80) or posttest scores (78% vs.",
+        "entities": [],
+        "text_new": "[CLS] the two cohorts did not differ in knowledge pretest scores (62 % vs 60 %, p = 0. 80) or posttest scores (78 % vs. [SEP]"
+      },
+      {
+        "text": "77%, p = 0.87).",
+        "entities": [],
+        "text_new": "[CLS] 77 %, p = 0. 87). [SEP]"
+      },
+      {
+        "text": "Overall, knowledge scores improved with the telesimulation intervention (pretest mean = 61% [SD = 14%]; posttest mean = 78% [SD = 12%]; t (41) = - 7.89, p < 0.001).",
+        "entities": [],
+        "text_new": "[CLS] overall, knowledge scores improved with the telesimulation intervention (pretest mean = 61 % [ sd = 14 % ]; posttest mean = 78 % [ sd = 12 % ]; t (41) =-7. 89, p < 0. 001). [SEP]"
+      },
+      {
+        "text": "Thus, using a Zoom format, we demonstrated the feasibility of adapting a complex case for telesimulation and effective knowledge gain.",
+        "entities": [],
+        "text_new": "[CLS] thus, using a zoom format, we demonstrated the feasibility of adapting a complex case for telesimulation and effective knowledge gain. [SEP]"
+      },
+      {
+        "text": "Furthermore, we improved our process in real time based on participant feedback.",
+        "entities": [],
+        "text_new": "[CLS] further ##more, we improved our process in real time based on participant feedback. [SEP]"
+      },
+      {
+        "text": "Participants were satisfied with their learning experience, suggesting that this format may be used in other distance learning situations.",
+        "entities": [],
+        "text_new": "[CLS] participants were satisfied with their learning experience, suggesting that this format may be used in other distance learning situations. [SEP]"
+      }
+    ]
+  },
+  "32999636": {
+    "title": "Preparing for the Unprecedented: The Association of Biomolecular Resource Facilities (ABRF) Community Coronavirus Disease 2019 (COVID-19) Pandemic Response Part 1: Efforts to Sustainably Ramp Down Core Facility Activities.",
+    "sentences": [
+      {
+        "text": "The coronavirus disease 2019 (COVID-19) pandemic has curtailed all but the most critical laboratory research in many institutions around the world.",
+        "entities": [],
+        "text_new": "[CLS] the coronavirus disease 2019 (covid-19) pandemic has curtailed all but the most critical laboratory research in many institutions around the world. [SEP]"
+      },
+      {
+        "text": "These unplanned and unprecedented operational changes have put considerable stress on every aspect of the research enterprise, from funding agencies to research institutes, individual and core laboratories, researchers, and research administrators, with drastic changes in demands and deliverables.",
+        "entities": [],
+        "text_new": "[CLS] these unplanned and unprecedented operational changes have put considerable stress on every aspect of the research enterprise, from funding agencies to research institutes, individual and core laboratories, researchers, and research administrators, with drastic changes in demands and deliverables. [SEP]"
+      },
+      {
+        "text": "The Association of Biomolecular Resource Facilities Core Administrators Network Coordinating Committee initiated a forum-wide discussion followed by a global survey to gain information on how institutions and, specifically, shared resource core facilities were responding to the COVID-19 pandemic.",
+        "entities": [],
+        "text_new": "[CLS] the association of biomolecular resource facilities core administrators network coordinating committee initiated a forum-wide discussion followed by a global survey to gain information on how institutions and, specifically, shared resource core facilities were responding to the covid-19 pandemic. [SEP]"
+      },
+      {
+        "text": "The survey aimed to identify shared resource core facility challenges and opportunities related to operational ramp downs, shutdowns, or research \"pauses\" during the COVID-19 pandemic, as well as new practices and resources needed to ensure business continuity.",
+        "entities": [],
+        "text_new": "[CLS] the survey aimed to identify shared resource core facility challenges and opportunities related to operational ramp downs, shutdowns, or research \" pauses \" during the covid-19 pandemic, as well as new practices and resources needed to ensure business continuity. [SEP]"
+      },
+      {
+        "text": "Although a number of positive outcomes from remote work hold promise for improved core operations, the survey results revealed a surprising level of unfamiliarity with business continuity planning for cores and limited coordination within institutions.",
+        "entities": [],
+        "text_new": "[CLS] although a number of positive outcomes from remote work hold promise for improved core operations, the survey results revealed a surprising level of unfamiliarity with business continuity planning for cores and limited coordination within institutions. [SEP]"
+      },
+      {
+        "text": "Recommendations for business continuity planning include key stakeholders working together to assess risk, prioritize work, and promote transparency across campus.",
+        "entities": [],
+        "text_new": "[CLS] recommendations for business continuity planning include key stakeholders working together to assess risk, prioritize work, and promote transparency across campus. [SEP]"
+      }
+    ]
+  },
+  "32999505": {
+    "title": "A new approach for classifying coronavirus COVID-19 based on its manifestation on chest X-rays using texture features and neural networks.",
+    "sentences": [
+      {
+        "text": "Since the recent challenge that humanity is facing against COVID-19, several initiatives have been put forward with the goal of creating measures to help control the spread of the pandemic.",
+        "entities": [
+          "covid -"
+        ],
+        "text_new": "[CLS] since the recent challenge that humanity is facing against covid-19, several initiatives have been put forward with the goal of creating measures to help control the spread of the pandemic. [SEP]"
+      },
+      {
+        "text": "In this paper we present a series of experiments using supervised learning models in order to perform an accurate classification on datasets consisting of medical images from COVID-19 patients and medical images of several other related diseases affecting the lungs.",
+        "entities": [],
+        "text_new": "[CLS] in this paper we present a series of experiments using supervised learning models in order to perform an accurate classification on datasets consisting of medical images from covid-19 patients and medical images of several other related diseases affecting the lungs. [SEP]"
+      },
+      {
+        "text": "This work represents an initial experimentation using image texture feature descriptors, feed-forward and convolutional neural networks on newly created databases with COVID-19 images.",
+        "entities": [],
+        "text_new": "[CLS] this work represents an initial experimentation using image texture feature descriptors, feed-forward and convolutional neural networks on newly created databases with covid-19 images. [SEP]"
+      },
+      {
+        "text": "The goal was setting a baseline for the future development of a system capable of automatically detecting the COVID-19 disease based on its manifestation on chest X-rays and computerized tomography images of the lungs.",
+        "entities": [],
+        "text_new": "[CLS] the goal was setting a baseline for the future development of a system capable of automatically detecting the covid-19 disease based on its manifestation on chest x-rays and computerized tomography images of the lungs. [SEP]"
+      }
+    ]
+  },
+  "32999436": {
+    "title": "Correction: COVID-19 risk and outcomes in patients with substance use disorders: analyses from electronic health records in the United States.",
+    "sentences": [
+      {
+        "text": "An amendment to this paper has been published and can be accessed via a link at the top of the paper.",
+        "entities": [],
+        "text_new": "[CLS] an amendment to this paper has been published and can be accessed via a link at the top of the paper. [SEP]"
+      }
+    ]
+  },
+  "32999432": {
+    "title": "Imatinib is not a potent anti-SARS-CoV-2 drug.",
+    "sentences": []
+  },
+  "32999425": {
+    "title": "Response to \"the role of the exposome in promoting resilience or susceptibility after SARS-CoV-2 infection\".",
+    "sentences": []
+  },
+  "32999356": {
+    "title": "Ultrastructural analysis of SARS-CoV-2 interactions with the host cell via high resolution scanning electron microscopy.",
+    "sentences": [
+      {
+        "text": "SARS-CoV-2 is the cause of the ongoing COVID-19 pandemic.",
+        "entities": [],
+        "text_new": "[CLS] sars-cov-2 is the cause of the ongoing covid-19 pandemic. [SEP]"
+      },
+      {
+        "text": "Here, we investigated the interaction of this new coronavirus with Vero cells using high resolution scanning electron microscopy.",
+        "entities": [],
+        "text_new": "[CLS] here, we investigated the interaction of this new coronavirus with vero cells using high resolution scanning electron microscopy. [SEP]"
+      },
+      {
+        "text": "Surface morphology, the interior of infected cells and the distribution of viral particles in both environments were observed 2 and 48 h after infection.",
+        "entities": [],
+        "text_new": "[CLS] surface morphology, the interior of infected cells and the distribution of viral particles in both environments were observed 2 and 48 h after infection. [SEP]"
+      },
+      {
+        "text": "We showed areas of viral processing, details of vacuole contents, and viral interactions with the cell surface.",
+        "entities": [],
+        "text_new": "[CLS] we showed areas of viral processing, details of vacuole contents, and viral interactions with the cell surface. [SEP]"
+      },
+      {
+        "text": "Intercellular connections were also approached, and viral particles were adhered to these extensions suggesting direct cell-to-cell transmission of SARS-CoV-2.",
+        "entities": [],
+        "text_new": "[CLS] intercellular connections were also approached, and viral particles were adhered to these extensions suggesting direct cell-to-cell transmission of sars-cov-2. [SEP]"
+      }
+    ]
+  },
+  "32999084": {
+    "title": "mSphere Highlights Black In Microbiology Week.",
+    "sentences": [
+      {
+        "text": "The inaugural Black In Microbiology Week (#BlackInMicro) is 28 September 2020 through 4 October 2020.",
+        "entities": [],
+        "text_new": "[CLS] the inaugural black in microbiology week (# blackinmicro) is 28 september 2020 through 4 october 2020. [SEP]"
+      },
+      {
+        "text": "Its mission is to \"showcase the presence and accomplishments of Black microbiologists from around the globe, connect Black microbiologists with one another and foster a sense of community among them, and provide a forum for the discussion of racial disparities in microbiology and its subfields\".",
+        "entities": [],
+        "text_new": "[CLS] its mission is to \" showcase the presence and accomplishments of black microbiologists from around the globe, connect black microbiologists with one another and foster a sense of community among them, and provide a forum for the discussion of racial disparities in microbiology and its subfields \". [SEP]"
+      },
+      {
+        "text": "Participation in this event will happen primarily over Twitter through the hashtag #BlackInMicro and over Zoom through registration on the website https://blackinmicrobiology.org/ An additional mission of Black In Microbiology Week is to amplify black scientists.",
+        "entities": [],
+        "text_new": "[CLS] participation in this event will happen primarily over twitter through the hashtag # blackinmicro and over zoom through registration on the website https: / / blackinmicrobiology. org / an additional mission of black in microbiology week is to amplify black scientists. [SEP]"
+      },
+      {
+        "text": "Today, mSphere does this by presenting two mSphere of Influence commentaries from Black In Microbiology co-lead organizers Ariangela J. Kozik (\"mSphere of Influence: frameshift-a vision for human microbiome research\" [mSphere 5:e00944-20, 2020, https://doi.org/10.1128/mSphere.",
+        "entities": [],
+        "text_new": "[CLS] today, msphere does this by presenting two msphere of influence commentaries from black in microbiology co-lead organizers ariangela j. kozik (\" msphere of influence: frameshift-a vision for human microbiome research \" [ msphere 5: e00944-20, 2020, https: / / doi. org / 10. 1128 / msphere. [SEP]"
+      },
+      {
+        "text": "00944-20]) and Kishana Taylor (\"mSphere of Influence: that's racist-COVID-19, biological determinism, and the limits of hypotheses\" [mSphere 5:e00945-20, 2020, https://doi.org/10.1128/mSphere.",
+        "entities": [],
+        "text_new": "[CLS] 00944-20 ]) and kishana taylor (\" msphere of influence: that ' s racist-covid-19, biological determinism, and the limits of hypotheses \" [ msphere 5: e00945-20, 2020, https: / / doi. org / 10. 1128 / msphere. [SEP]"
+      },
+      {
+        "text": "00945-20]).",
+        "entities": [],
+        "text_new": "[CLS] 00945-20 ]). [SEP]"
+      }
+    ]
+  },
+  "32998872": {
+    "title": "In-hospital cardiac arrest in critically ill patients with covid-19: multicenter cohort study.",
+    "sentences": [
+      {
+        "text": "OBJECTIVES To estimate the incidence, risk factors, and outcomes associated with in-hospital cardiac arrest and cardiopulmonary resuscitation in critically ill adults with coronavirus disease 2019 (covid-19).",
+        "entities": [],
+        "text_new": "[CLS] objectives to estimate the incidence, risk factors, and outcomes associated with in-hospital cardiac arrest and cardiopulmonary resuscitation in critically ill adults with coronavirus disease 2019 (covid-19). [SEP]"
+      },
+      {
+        "text": "DESIGN Multicenter cohort study.",
+        "entities": [],
+        "text_new": "[CLS] design multicenter cohort study. [SEP]"
+      },
+      {
+        "text": "SETTING Intensive care units at 68 geographically diverse hospitals across the United States.",
+        "entities": [],
+        "text_new": "[CLS] setting intensive care units at 68 geographically diverse hospitals across the united states. [SEP]"
+      },
+      {
+        "text": "PARTICIPANTS Critically ill adults (age ≥18 years) with laboratory confirmed covid-19.",
+        "entities": [],
+        "text_new": "[CLS] participants critically ill adults (age ≥18 years) with laboratory confirmed covid-19. [SEP]"
+      },
+      {
+        "text": "MAIN OUTCOME MEASURES In-hospital cardiac arrest within 14 days of admission to an intensive care unit and in-hospital mortality.",
+        "entities": [],
+        "text_new": "[CLS] main outcome measures in-hospital cardiac arrest within 14 days of admission to an intensive care unit and in-hospital mortality. [SEP]"
+      },
+      {
+        "text": "RESULTS Among 5019 critically ill patients with covid-19, 14.0% (701/5019) had in-hospital cardiac arrest, 57.1% (400/701) of whom received cardiopulmonary resuscitation.",
+        "entities": [
+          "covid"
+        ],
+        "text_new": "[CLS] results among 5019 critically ill patients with covid-19, 14. 0 % (701 / 5019) had in-hospital cardiac arrest, 57. 1 % (400 / 701) of whom received cardiopulmonary resuscitation. [SEP]"
+      },
+      {
+        "text": "Patients who had in-hospital cardiac arrest were older (mean age 63 (standard deviation 14) v 60 (15) years), had more comorbidities, and were more likely to be admitted to a hospital with a smaller number of intensive care unit beds compared with those who did not have in-hospital cardiac arrest.",
+        "entities": [],
+        "text_new": "[CLS] patients who had in-hospital cardiac arrest were older (mean age 63 (standard deviation 14) v 60 (15) years), had more comorbidities, and were more likely to be admitted to a hospital with a smaller number of intensive care unit beds compared with those who did not have in-hospital cardiac arrest. [SEP]"
+      },
+      {
+        "text": "Patients who received cardiopulmonary resuscitation were younger than those who did not (mean age 61 (standard deviation 14) v 67 (14) years).",
+        "entities": [],
+        "text_new": "[CLS] patients who received cardiopulmonary resuscitation were younger than those who did not (mean age 61 (standard deviation 14) v 67 (14) years). [SEP]"
+      },
+      {
+        "text": "The most common rhythms at the time of cardiopulmonary resuscitation were pulseless electrical activity (49.8%, 199/400) and asystole (23.8%, 95/400).",
+        "entities": [],
+        "text_new": "[CLS] the most common rhythms at the time of cardiopulmonary resuscitation were pulseless electrical activity (49. 8 %, 199 / 400) and asystole (23. 8 %, 95 / 400). [SEP]"
+      },
+      {
+        "text": "48 of the 400 patients (12.0%) who received cardiopulmonary resuscitation survived to hospital discharge, and only 7.0% (28/400) survived to hospital discharge with normal or mildly impaired neurological status.",
+        "entities": [],
+        "text_new": "[CLS] 48 of the 400 patients (12. 0 %) who received cardiopulmonary resuscitation survived to hospital discharge, and only 7. 0 % (28 / 400) survived to hospital discharge with normal or mildly impaired neurological status. [SEP]"
+      },
+      {
+        "text": "Survival to hospital discharge differed by age, with 21.2% (11/52) of patients younger than 45 years surviving compared with 2.9% (1/34) of those aged 80 or older.",
+        "entities": [],
+        "text_new": "[CLS] survival to hospital discharge differed by age, with 21. 2 % (11 / 52) of patients younger than 45 years surviving compared with 2. 9 % (1 / 34) of those aged 80 or older. [SEP]"
+      },
+      {
+        "text": "CONCLUSIONS Cardiac arrest is common in critically ill patients with covid-19 and is associated with poor survival, particularly among older patients.",
+        "entities": [
+          "covid-19"
+        ],
+        "text_new": "[CLS] conclusions cardiac arrest is common in critically ill patients with covid-19 and is associated with poor survival, particularly among older patients. [SEP]"
+      }
+    ]
+  },
+  "32998763": {
+    "title": "Neurological consequences of COVID-19: what have we learned and where do we go from here?",
+    "sentences": [
+      {
+        "text": "The coronavirus disease-19 (COVID-19) pandemic is an unprecedented worldwide health crisis.",
+        "entities": [],
+        "text_new": "[CLS] the coronavirus disease-19 (covid-19) pandemic is an unprecedented worldwide health crisis. [SEP]"
+      },
+      {
+        "text": "COVID-19 is caused by SARS-CoV-2, a highly infectious pathogen that is genetically similar to SARS-CoV.",
+        "entities": [],
+        "text_new": "[CLS] covid-19 is caused by sars-cov-2, a highly infectious pathogen that is genetically similar to sars-cov. [SEP]"
+      },
+      {
+        "text": "Similar to other recent coronavirus outbreaks, including SARS and MERS, SARS-CoV-2 infected patients typically present with fever, dry cough, fatigue, and lower respiratory system dysfunction, including high rates of pneumonia and acute respiratory distress syndrome (ARDS); however, a rapidly accumulating set of clinical studies revealed atypical symptoms of COVID-19 that involve neurological signs, including headaches, anosmia, nausea, dysgeusia, damage to respiratory centers, and cerebral infarction.",
+        "entities": [],
+        "text_new": "[CLS] similar to other recent coronavirus outbreaks, including sars and mers, sars-cov-2 infected patients typically present with fever, dry cough, fatigue, and lower respiratory system dysfunction, including high rates of pneumonia and acute respiratory distress syndrome (a ##rds); however, a rapidly accumulating set of clinical studies revealed atypical symptoms of covid-19 that involve neurological signs, including headaches, anosmia, nausea, dysgeusia, damage to respiratory centers, and cerebral infarction. [SEP]"
+      },
+      {
+        "text": "These unexpected findings may provide important clues regarding the pathological sequela of SARS-CoV-2 infection.",
+        "entities": [],
+        "text_new": "[CLS] these unexpected findings may provide important clues regarding the pathological sequela of sars-cov-2 infection. [SEP]"
+      },
+      {
+        "text": "Moreover, no efficacious therapies or vaccines are currently available, complicating the clinical management of COVID-19 patients and emphasizing the public health need for controlled, hypothesis-driven experimental studies to provide a framework for therapeutic development.",
+        "entities": [],
+        "text_new": "[CLS] moreover, no efficacious therapies or vaccines are currently available, complicating the clinical management of covid-19 patients and emphasizing the public health need for controlled, hypothesis-driven experimental studies to provide a framework for therapeutic development. [SEP]"
+      },
+      {
+        "text": "In this mini-review, we summarize the current body of literature regarding the central nervous system (CNS) effects of SARS-CoV-2 and discuss several potential targets for therapeutic development to reduce neurological consequences in COVID-19 patients.",
+        "entities": [],
+        "text_new": "[CLS] in this mini-review, we summarize the current body of literature regarding the central nervous system (cns) effects of sars-cov-2 and discuss several potential targets for therapeutic development to reduce neurological consequences in covid-19 patients. [SEP]"
+      }
+    ]
+  },
+  "32998757": {
+    "title": "Challenges for the care delivery for critically ill COVID-19 patients in developing countries: the Brazilian perspective.",
+    "sentences": []
+  },
+  "32998719": {
+    "title": "Propensity for COVID-19 severe epidemic among the populations of the neighborhoods of Fortaleza, Brazil, in 2020.",
+    "sentences": [
+      {
+        "text": "BACKGROUND The state of Ceará (Northeast Brazil) has shown a high incidence of coronavirus disease (COVID-19), and most of the cases that were diagnosed during the epidemic originated from the capital Fortaleza.",
+        "entities": [],
+        "text_new": "[CLS] background the state of ceara (northeast brazil) has shown a high incidence of coronavirus disease (covid-19), and most of the cases that were diagnosed during the epidemic originated from the capital fortaleza. [SEP]"
+      },
+      {
+        "text": "Monitoring the dynamics of the COVID-19 epidemic is of strategic importance and requires the use of sensitive tools for epidemiological surveillance, including consistent analyses that allow the recognition of areas with a greater propensity for increased severity throughout the cycle of the epidemic.",
+        "entities": [
+          "covid"
+        ],
+        "text_new": "[CLS] monitoring the dynamics of the covid-19 epidemic is of strategic importance and requires the use of sensitive tools for epidemiological surveillance, including consistent analyses that allow the recognition of areas with a greater propensity for increased severity throughout the cycle of the epidemic. [SEP]"
+      },
+      {
+        "text": "This study aims to classify neighborhoods in the city of Fortaleza according to their propensity for a severe epidemic of COVID-19 in 2020.",
+        "entities": [],
+        "text_new": "[CLS] this study aims to classify neighborhoods in the city of fortaleza according to their propensity for a severe epidemic of covid-19 in 2020. [SEP]"
+      },
+      {
+        "text": "METHODS We conducted an ecological study within the geographical area of the 119 neighborhoods located in the city of Fortaleza.",
+        "entities": [],
+        "text_new": "[CLS] methods we conducted an ecological study within the geographical area of the 119 neighborhoods located in the city of fortaleza. [SEP]"
+      },
+      {
+        "text": "To define the main transmission networks (infection chains), we assumed that the spatial diffusion of the COVID-19 epidemic was influenced by population mobility.",
+        "entities": [],
+        "text_new": "[CLS] to define the main transmission networks (infection chains), we assumed that the spatial diffusion of the covid-19 epidemic was influenced by population mobility. [SEP]"
+      },
+      {
+        "text": "To measure the propensity for a severe epidemic, we calculated the infectivity burden (ItyB), infection burden (IonB), and population epidemic vulnerability index (PEVI).",
+        "entities": [],
+        "text_new": "[CLS] to measure the propensity for a severe epidemic, we calculated the infectivity burden (ityb), infection burden (ionb), and population epidemic vulnerability index (pevi). [SEP]"
+      },
+      {
+        "text": "The propensity score for a severe epidemic in the neighborhoods of the city of Fortaleza was estimated by combining the IonB and PEVI.",
+        "entities": [],
+        "text_new": "[CLS] the propensity score for a severe epidemic in the neighborhoods of the city of fortaleza was estimated by combining the ionb and pevi. [SEP]"
+      },
+      {
+        "text": "RESULTS The neighborhoods with the highest propensity for a severe COVID-19 epidemic were Aldeota, Cais do Porto, Centro, Edson Queiroz, Vicente Pinzon, Jose de Alencar, Presidente Kennedy, Papicu, Vila Velha, Antonio Bezerra, and Cambeba.",
+        "entities": [],
+        "text_new": "[CLS] results the neighborhoods with the highest propensity for a severe covid-19 epidemic were aldeota, cais do porto, centro, edson queiroz, vicente pinzon, jose de alencar, presidente kennedy, papicu, vila velha, antonio bezerra, and cambeba. [SEP]"
+      },
+      {
+        "text": "Importantly, we found that the propensity for a COVID-19 epidemic was high in areas with differing socioeconomic profiles.",
+        "entities": [],
+        "text_new": "[CLS] importantly, we found that the propensity for a covid-19 epidemic was high in areas with differing socioeconomic profiles. [SEP]"
+      },
+      {
+        "text": "These areas include a very poor neighborhood situated on the western border of the city (Vila Velha), neighborhoods characterized by a large number of subnormal agglomerates in the Cais do Porto region (Vicente Pinzon), and those located in the oldest central area of the city, where despite the wealth, low-income groups have remained (Aldeota and the adjacent Edson Queiroz).",
+        "entities": [
+          "queiroz"
+        ],
+        "text_new": "[CLS] these areas include a very poor neighborhood situated on the western border of the city (vila velha), neighborhoods characterized by a large number of subnormal agglomerates in the cais do porto region (vicente pinzon), and those located in the oldest central area of the city, where despite the wealth, low-income groups have remained (aldeota and the adjacent edson queiroz). [SEP]"
+      },
+      {
+        "text": "CONCLUSION Although measures against COVID-19 should be applied to the entire municipality of Fortaleza, the classification of neighborhoods generated through this study can help improve the specificity and efficiency of these measures.",
+        "entities": [
+          "covid -"
+        ],
+        "text_new": "[CLS] conclusion although measures against covid-19 should be applied to the entire municipality of fortaleza, the classification of neighborhoods generated through this study can help improve the specificity and efficiency of these measures. [SEP]"
+      }
+    ]
+  },
+  "32998491": {
+    "title": "Underlying conditions in adults with COVID-19.",
+    "sentences": [
+      {
+        "text": "BACKGROUND Cardiovascular diseases, cancer, type-2 diabetes and chronic obstructive pulmonary disease (COPD) were initially noted as the most common diseases among individuals who were hospitalised for COVID-19.",
+        "entities": [],
+        "text_new": "[CLS] background cardiovascular diseases, cancer, type-2 diabetes and chronic obstructive pulmonary disease (copd) were initially noted as the most common diseases among individuals who were hospitalised for covid-19. [SEP]"
+      },
+      {
+        "text": "However, the evidence base is weak.",
+        "entities": [],
+        "text_new": "[CLS] however, the evidence base is weak. [SEP]"
+      },
+      {
+        "text": "The objective of this study is to describe how selected diseases were distributed among adults with confirmed COVID-19 (COVID-19 positive tests) and among those hospitalised for COVID-19 compared to the general population.",
+        "entities": [],
+        "text_new": "[CLS] the objective of this study is to describe how selected diseases were distributed among adults with confirmed covid-19 (covid-19 positive tests) and among those hospitalised for covid-19 compared to the general population. [SEP]"
+      },
+      {
+        "text": "MATERIAL AND METHOD We used data from the Norwegian Patient Registry, the Norwegian Registry for Primary Health Care and the Norwegian Surveillance System for Communicable Diseases for adults from the age of 20 and older for the period 1 March 2020-13 May 2020.",
+        "entities": [],
+        "text_new": "[CLS] material and method we used data from the norwegian patient registry, the norwegian registry for primary health care and the norwegian surveillance system for communicable diseases for adults from the age of 20 and older for the period 1 march 2020-13 may 2020. [SEP]"
+      },
+      {
+        "text": "RESULTS Of all those who tested positive for COVID-19, 7 632 (94 %) were aged 20 years or older, and 1 025 (13.4 %) of these had been hospitalised.",
+        "entities": [],
+        "text_new": "[CLS] results of all those who tested positive for covid-19, 7 632 (94 %) were aged 20 years or older, and 1 025 (13. 4 %) of these had been hospitalised. [SEP]"
+      },
+      {
+        "text": "Among those hospitalised with COVID-19, there was a higher proportion of individuals with cardiovascular diseases (18.3 % versus 15.6 %), cancer (6.9 % versus 5.4 %), type-2 diabetes (8.6 % versus 5.2 %) and COPD (3.8 % versus 2.7 %) than in the general population as a whole after adjusting for age.",
+        "entities": [],
+        "text_new": "[CLS] among those hospitalised with covid-19, there was a higher proportion of individuals with cardiovascular diseases (18. 3 % versus 15. 6 %), cancer (6. 9 % versus 5. 4 %), type-2 diabetes (8. 6 % versus 5. 2 %) and copd (3. 8 % versus 2. 7 %) than in the general population as a whole after adjusting for age. [SEP]"
+      },
+      {
+        "text": "The proportion of hospitalised patients with asthma, other chronic respiratory disease, cardiovascular disease, ongoing cancer treatment, complications related to hypertension, obesity and overweight, neurological disorders and cardiac and renal failure was also higher than in the general population.",
+        "entities": [],
+        "text_new": "[CLS] the proportion of hospitalised patients with asthma, other chronic respiratory disease, cardiovascular disease, ongoing cancer treatment, complications related to hypertension, obesity and overweight, neurological disorders and cardiac and renal failure was also higher than in the general population. [SEP]"
+      },
+      {
+        "text": "There were few differences between persons who had tested positive for COVID-19 and the general population in terms of underlying conditions.",
+        "entities": [
+          "covid-19"
+        ],
+        "text_new": "[CLS] there were few differences between persons who had tested positive for covid-19 and the general population in terms of underlying conditions. [SEP]"
+      },
+      {
+        "text": "INTERPRETATION Among those hospitalised for COVID-19, there was a higher proportion of patients with underlying illnesses than in the general population.",
+        "entities": [
+          "covid-19"
+        ],
+        "text_new": "[CLS] interpretation among those hospitalised for covid-19, there was a higher proportion of patients with underlying illnesses than in the general population. [SEP]"
+      },
+      {
+        "text": "This may indicate that these patients tend to have a more severe course of disease or that they are more likely to be hospitalised compared to healthy individuals.",
+        "entities": [],
+        "text_new": "[CLS] this may indicate that these patients tend to have a more severe course of disease or that they are more likely to be hospitalised compared to healthy individuals. [SEP]"
+      },
+      {
+        "text": "The results must be interpreted with caution, since the sample of COVID-19 individuals is non-random.",
+        "entities": [],
+        "text_new": "[CLS] the results must be interpreted with caution, since the sample of covid-19 individuals is non-random. [SEP]"
+      }
+    ]
+  },
+  "32998488": {
+    "title": "Status of COVID-19 vaccine development.",
+    "sentences": []
+  }
+}
