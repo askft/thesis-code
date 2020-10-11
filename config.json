@@ -2,8 +2,8 @@
   "ignore": {
     "downloader": true,
     "sentencer": true,
-    "ner": false,
-    "re": false,
+    "ner": true,
+    "re": true,
     "analysis": false
   },
   "downloader": {

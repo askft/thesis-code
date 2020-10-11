@@ -159,6 +159,7 @@ def run(articles: dict):
     cocount: Dict[Tuple[str, str], int] = defaultdict(int)  # Co-occurrence count
 
     for entity_list in entity_lists:
+        entity_list.sort()
         for x, y in it.combinations(entity_list, 2):
             cocount[(x, y)] += 1
         for w in entity_list:
