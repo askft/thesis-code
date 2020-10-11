@@ -93,7 +93,7 @@ def run_ner(ner_config: dict, ignore: bool):
 
     # Becuase we want to save the result periodically.
     batch_index = 0
-    batch_size = 30
+    batch_size = 10
 
     # Run prediction on each sentence in each article.
     for pmid in articles:
