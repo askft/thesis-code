@@ -2,7 +2,7 @@
   "ignore": {
     "downloader": true,
     "sentencer": true,
-    "ner": true,
+    "ner": false,
     "re": true,
     "analysis": false
   },
@@ -23,7 +23,7 @@
     "model_vocab": "vocab.txt",
     "labels": ["[PAD]", "B", "I", "O", "X", "[CLS]", "[SEP]"],
     "clear_old_results": true,
-    "article_limit": 50
+    "article_limit": 1000
   },
   "re": {
     "input_path": "data/pmid-covid-set-ner-done.json",
