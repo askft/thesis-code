@@ -6,6 +6,8 @@ from torch.optim import Adam
 from torchtext.data import Field, BucketIterator
 from torchtext.datasets import SequenceTaggingDataset
 from spacy.lang.en import English
+from collections import defaultdict
+from collections import Counter
 
 class Corpus(object):
 
@@ -178,13 +180,13 @@ class NER(object):
     # print inferred tags
     max_len_token = max([len(token) for token in tokens] + [len("word")])
     max_len_tag = max([len(tag) for tag in predicted_tags] + [len("pred")])
-    print(
+    '''print(
         f"{'word'.ljust(max_len_token)}\t{'unk'.ljust(max_len_token)}\t{'pred tag'.ljust(max_len_tag)}"
         + ("\ttrue tag" if true_tags else "")
         )
     for i, token in enumerate(tokens):
       is_unk = "✓" if token in unks else ""
-      '''print(
+      print(
           f"{token.ljust(max_len_token)}\t{is_unk.ljust(max_len_token)}\t{predicted_tags[i].ljust(max_len_tag)}"
           + (f"\t{true_tags[i]}" if true_tags else "")
           )'''
@@ -225,28 +227,98 @@ ner = NER(
 
 ner.train(10)
 
+def sentence_metrics(pred_labels, gs_labels):
+
+    # Treating B = I
+    confusion_matrix = defaultdict(int)
+    for pred, gs in zip(pred_labels, gs_labels):
+        if pred == "B" or pred == "I":
+            if gs == "B" or gs == "I":
+                confusion_matrix["true_positive"] += 1
+            else:
+                confusion_matrix["false_negative"] += 1
+        else:
+            if gs == "O":
+                confusion_matrix["true_negative"] += 1
+            else:
+                confusion_matrix["false_positive"] += 1
+
+
+
+    # Treating B=/=I
+    token_matrix = defaultdict(lambda: defaultdict(int))
+
+    for pred, gs in zip(pred_labels, gs_labels):
+        token_matrix[gs][pred] += 1
+
+
+
+    # Entity Level Perfect. Naive way of taking the metrics
+    in_entity = False
+    entity_matrix = defaultdict(int)
+    num_entities = 0
+
+    for pred, gs in zip(pred_labels, gs_labels):
+
+        if gs == "B":
+            num_entities += 1
+
+        if pred == "O" and gs == "O":
+            entity_matrix["true_negative"] += 1
+
+        if in_entity:
+            if pred == "I" and gs == "I":
+                continue
+            elif pred == "O" and gs == "O":
+                entity_matrix["true_positive"] += 1
+            elif pred == "O" and gs != "O":
+                entity_matrix["false_negative"] += 1
+            elif pred != "O" and gs == "O":
+                entity_matrix["false_positive"] += 1
+
+            in_entity = False
+
+        if pred == "B" and gs == "B":
+            in_entity = True
+        elif pred == "B" and gs != "B":
+            entity_matrix["false_positive"] += 1
+        elif pred != "B" and gs == "B":
+            entity_matrix["false_negative"] += 1
+        elif pred == "O" and gs != "O":
+            entity_matrix["false_negative"] += 1
+
+
+    return confusion_matrix, token_matrix, entity_matrix
 
 with open("./BC5CDR-chem/parsed_data.txt", "r") as f:
     data = list(json.load(f))
 
-confusion_matrix = {"true_positive": 0, "false_positive": 0, "true_negative": 0, "false_negative": 0}
+confusion_matrix = defaultdict(int)
+token_matrix = defaultdict(lambda: defaultdict(int))
+entity_matrix = defaultdict(int)
 
 for item in data:
     words, infer_tags, unknown_tokens = ner.infer(sentence=item["sentence"], true_tags=item["labels"])
 
-    for (word, pred_label, gold_label) in zip(words, infer_tags, item["labels"]):
-        if pred_label == '<pad>':
+    cm, tm, em = sentence_metrics(infer_tags, item["labels"])
 
-            if pred_label == 'O':
-                if pred_label == gold_label:
-                    confusion_matrix["true_negative"] +=1
-                else:
-                    confusion_matrix["false_negative"] += 1
-            elif pred_label == 'I' or pred_label == 'B':
-                if gold_label == 'I' or gold_label == 'B':
-                    confusion_matrix["true_positive"] += 1
-                else:
-                    confusion_matrix["false_positive"] += 1
+    confusion_matrix = Counter(confusion_matrix) + Counter(cm)
+    for gs_label in tm:
+        for pred_label in tm[gs_label]:
+            token_matrix[gs_label][pred_label] += tm[gs_label][pred_label]
+
+    entity_matrix = Counter(entity_matrix) + Counter(em)
+
+print("CM")
+print(confusion_matrix)
+print()
+
+print("TM")
+print(token_matrix)
+print()
+
+print("EM")
+print(entity_matrix)
 
 
 #True Positive: 4734

@@ -2,9 +2,10 @@
   "ignore": {
     "downloader": true,
     "sentencer": true,
-    "ner": false,
+    "ner": true,
     "re": true,
-    "analysis": false
+    "analysis": true,
+    "metrics": false
   },
   "downloader": {
     "input_path": "data/example_pmid_list.txt",
@@ -34,5 +35,13 @@
   },
   "analysis": {
     "input_path": "data/pmid-covid-set-ner-done.json"
+  },
+  "metrics": {
+    "gold-standard_path": "data/gold-standard/BC4CHEMD/",
+    "output_path": "data/metrics.json",
+    "biobert_path": "models/biobert",
+    "biobert_metrics": true,
+    "bilstm_metrics": true,
+    "co-occurrence_metrics": true
   }
 }

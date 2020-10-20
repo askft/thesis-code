@@ -7,6 +7,7 @@ from scripts import downloader
 from scripts import splitter
 from scripts import analysis
 from scripts import util
+from scripts import metrics
 from scripts.ner_inference import NERInferenceSession
 from scripts.entity_parser import co_occurrence_extractor, detokenize
 
@@ -137,6 +138,30 @@ def run_analysis(analysis_config: dict, ignore: bool):
 
     print("Finished running analysis script.")
 
+def run_metrics(config: dict, ignore: bool):
+
+    metrics_config = config["metrics"]
+    ner_config = config["ner"]
+
+    ner_session = NERInferenceSession(
+        model_dir=ner_config["model_dir"],
+        model_name=ner_config["model_name"],
+        model_vocab=ner_config["model_vocab"],
+        labels=ner_config["labels"],
+    )
+
+    if ignore:
+        print("Ignoring script: metrics.")
+        return
+
+    print("Logging metrics")
+    dir = metrics_config["gold-standard_path"]
+
+    files = [f for f in os.listdir(dir) if os.path.isfile(os.path.join(dir, f))]
+    for file in files:
+        metrics.gs_metrics(dir + file)
+        metrics.biobert_metrics(ner_session, dir + file)
+
 
 if __name__ == "__main__":
     print("Please see config.json for configuration!")
@@ -151,6 +176,10 @@ if __name__ == "__main__":
     os.makedirs("data", exist_ok=True)
 
     ignore = config["ignore"]
+
+    # Run metrics on models and gold-standard set
+    run_metrics(config, ignore=ignore["metrics"])
+    print()
 
     # Download articles from the PubMed API.
     run_download(config["downloader"], ignore=ignore["downloader"])
