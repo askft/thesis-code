@@ -151,7 +151,7 @@ def create_matrix(ppmis: Dict[Tuple[Any, Any], float], labels: List[Any]):
     return df
 
 
-def run(articles: dict):
+def run(articles: dict, output_path: str):
     entity_lists = create_entity_lists(articles)
     num_words = sum(len(entity_list) for entity_list in entity_lists)
 
@@ -169,7 +169,7 @@ def run(articles: dict):
     entries.sort(key=lambda entry: entry.pmixy, reverse=True)
     # entries = list(filter(lambda entry: entry.nxy > 50, entries))
 
-    write_to_html("data/covid-analysis-results.html", entries)
+    write_to_html(output_path, entries)
 
 
 if __name__ == "__main__":

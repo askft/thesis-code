@@ -134,11 +134,17 @@ def run_analysis(analysis_config: dict, ignore: bool):
     with open(analysis_config["input_path"], "r") as f:
         articles = json.loads(f.read())
 
-    analysis.run(articles)
+    analysis.run(articles, analysis_config["output_path"])
 
     print("Finished running analysis script.")
 
+
 def run_metrics(config: dict, ignore: bool):
+    if ignore:
+        print("Ignoring script: metrics.")
+        return
+
+    print("Running metrics script.")
 
     metrics_config = config["metrics"]
     ner_config = config["ner"]
@@ -150,17 +156,14 @@ def run_metrics(config: dict, ignore: bool):
         labels=ner_config["labels"],
     )
 
-    if ignore:
-        print("Ignoring script: metrics.")
-        return
-
-    print("Logging metrics")
     dir = metrics_config["gold-standard_path"]
 
     files = [f for f in os.listdir(dir) if os.path.isfile(os.path.join(dir, f))]
     for file in files:
         metrics.gs_metrics(dir + file)
         metrics.biobert_metrics(ner_session, dir + file)
+
+    print("Finished running metrics script.")
 
 
 if __name__ == "__main__":

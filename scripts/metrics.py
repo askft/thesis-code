@@ -1,32 +1,34 @@
-from collections import defaultdict
-from collections import Counter
+from collections import defaultdict, Counter
+from typing import DefaultDict, List, Counter as CounterT
 from scripts.ner_inference import NERInferenceSession
 
-def gs_metrics(file):
-    with open(file, "r") as f:
+
+def gs_metrics(input_path: str):
+    with open(input_path, "r") as f:
         data = f.readlines()
 
-        count = defaultdict(int)
-        occurrences = 0
+    count = defaultdict(int)  # TODO it's used both as int -> int and str -> int
+    occurrences = 0
 
-        for line in data:
-            entity_occurrence = False
-            line = line.strip()
+    for line in data:
+        entity_occurrence = False
+        line = line.strip()
 
-            if line:
-                line = line.split()[1]
-                count[line] +=1
-                if line == 'B':
-                    occurrences +=1
-                    if occurrences > 1:
-                        count[occurrences] += 1
+        if line:
+            line = line.split()[1]
+            count[line] += 1                  # TODO str -> int here?
+            if line == 'B':
+                occurrences += 1
+                if occurrences > 1:
+                    count[occurrences] += 1   # TODO int -> int here?
 
-                elif line == 'O':
-                    occurrences = 0
+            elif line == 'O':
+                occurrences = 0
 
-        print(count)
+    print(count)
 
-def sentence_metrics(pred_labels, gs_labels):
+
+def sentence_metrics(pred_labels: List[str], gs_labels: List[str]):
 
     # Treating B = I
     confusion_matrix = defaultdict(int)
@@ -42,15 +44,11 @@ def sentence_metrics(pred_labels, gs_labels):
             else:
                 confusion_matrix["false_positive"] += 1
 
-
-
     # Treating B=/=I
     token_matrix = defaultdict(lambda: defaultdict(int))
 
     for pred, gs in zip(pred_labels, gs_labels):
         token_matrix[gs][pred] += 1
-
-
 
     # Entity Level Perfect. Naive way of taking the metrics
     in_entity = False
@@ -86,70 +84,71 @@ def sentence_metrics(pred_labels, gs_labels):
         elif pred == "O" and gs != "O":
             entity_matrix["false_negative"] += 1
 
-
     return confusion_matrix, token_matrix, entity_matrix
 
     # Entity Level Relaxed. The way it will be used in the program
     # TODO
-    
 
-def biobert_metrics(model: NERInferenceSession, file):
-    with open(file, "r") as f:
+
+def biobert_metrics(model: NERInferenceSession, input_path: str):
+    with open(input_path, "r") as f:
         data = f.readlines()
 
-        counter = 0
-        for i in data:
-            if i == "\n":
-                counter += 1
+    counter = 0
+    for i in data:
+        if i == "\n":
+            counter += 1
 
-        print("Running over " + str(counter) + " sentences")
+    print("Running over " + str(counter) + " sentences")
 
-        confusion_matrix = defaultdict(int)
-        token_matrix = defaultdict(lambda: defaultdict(int))
-        entity_matrix = defaultdict(int)
+    confusion_matrix: CounterT[str] = Counter()
+    token_matrix: DefaultDict[str, DefaultDict[str, int]] = defaultdict(lambda: defaultdict(int))
+    entity_matrix: CounterT[str] = Counter()
 
-        gs_labels = list()
-        sequence = ""
+    gs_labels: List[str] = []
+    sequence = ""
 
-        counter_2 = 0
+    counter_2 = 0
 
-        for line in data:
+    for line in data:
 
-            if line == "\n":
-                counter_2 += 1
-                if counter_2 % 200 == 0:
-                    print(str(counter_2) + " / " + str(counter))
+        if line == "\n":
+            counter_2 += 1
+            if counter_2 % 200 == 0:
+                print(str(counter_2) + " / " + str(counter))
 
-                pred_pairs = model.predict(sequence.strip())
+            pred_pairs = model.predict(sequence.strip())
 
-                # The tokenization label X and special labels hold no more value
-                pred_labels = [label[1] for label in pred_pairs if label[1] != 'X' and label[0] != '[CLS]' and label[0] != '[SEP]']
-                cm, tm, em = sentence_metrics(pred_labels, gs_labels)
+            # The tokenization label X and special labels hold no more value
+            pred_labels = [label[1] for label in pred_pairs if label[1]
+                           != 'X' and label[0] != '[CLS]' and label[0] != '[SEP]']
 
-                confusion_matrix = Counter(confusion_matrix) + Counter(cm)
-                for gs_label in tm:
-                    for pred_label in tm[gs_label]:
-                        token_matrix[gs_label][pred_label] += tm[gs_label][pred_label]
+            cm, tm, em = sentence_metrics(pred_labels, gs_labels)
 
-                entity_matrix = Counter(entity_matrix) + Counter(em)
+            confusion_matrix.update(cm)
 
-                gs_labels = list()
-                sequence = ""
-                continue
+            for gs_label in tm:
+                for pred_label in tm[gs_label]:
+                    token_matrix[gs_label][pred_label] += tm[gs_label][pred_label]
 
-            columns = line.split("\t")
-            sequence += columns[0] + " "
-            gs_labels.append(columns[1].strip())
+            entity_matrix.update(em)
 
+            gs_labels = []
+            sequence = ""
+            continue
 
-        print("Confusion matrix:")
-        print({**confusion_matrix})
-        print()
+        columns = line.split("\t")
+        sequence += columns[0] + " "
+        gs_labels.append(columns[1].strip())
 
-        print("Token matrix:")
-        print({**token_matrix})
-        print()
+    print("Confusion matrix:")
+    print({**confusion_matrix})
+    print()
 
-        print("Entity matrix:")
-        print({**entity_matrix})
-        print()
+    print("Token matrix:")
+    print({**token_matrix})
+    print()
+
+    print("Entity matrix:")
+    print({**entity_matrix})
+    print()
