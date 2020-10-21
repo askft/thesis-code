@@ -7,25 +7,36 @@ def gs_metrics(input_path: str):
     with open(input_path, "r") as f:
         data = f.readlines()
 
-    count = defaultdict(int)  # TODO it's used both as int -> int and str -> int
+    label_count = defaultdict(int)
+    occurrence_count = defaultdict(int)
     occurrences = 0
 
     for line in data:
-        entity_occurrence = False
         line = line.strip()
 
         if line:
             line = line.split()[1]
-            count[line] += 1                  # TODO str -> int here?
-            if line == 'B':
+            label_count[line] += 1
+
+            if line == "B":
                 occurrences += 1
-                if occurrences > 1:
-                    count[occurrences] += 1   # TODO int -> int here?
 
-            elif line == 'O':
-                occurrences = 0
+        else:
+            occurrence_count[occurrences] += 1
+            occurrences = 0
 
-    print(count)
+    print(" - - - Gold standard metrics - - -")
+
+    print("Label count:")
+    for key in label_count:
+        print("\t" + key + " label count: " + str(label_count[key]))
+
+    print("\nOccurrence count:")
+    for key in sorted(occurrence_count):
+        print("\t" + str(key) + "_occurrence count: " + str(occurrence_count[key]))
+
+    print(" - - - - - - - - - - - - - - - - - \n")
+
 
 
 def sentence_metrics(pred_labels: List[str], gs_labels: List[str]):
