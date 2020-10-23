@@ -37,23 +37,47 @@ def gs_metrics(input_path: str):
 
     print(" - - - - - - - - - - - - - - - - - \n")
 
+# Gets the index-range-tuples from a list of labels
+def  get_indices(labels):
+    indices = list()
+    start = 0
+    counter = 0
+    in_entity = False
 
+    for label in labels:
+        counter += 1
+
+        if in_entity:
+            if label == "O":
+                indices.append((start, counter - 1))
+                in_entity = False
+
+            elif label == "B":
+                indices.append((start, start))
+                start = counter
+
+        elif label == "B":
+            start = counter
+            in_entity = True
+
+    return indices
 
 def sentence_metrics(pred_labels: List[str], gs_labels: List[str]):
 
     # Treating B = I
     confusion_matrix = defaultdict(int)
     for pred, gs in zip(pred_labels, gs_labels):
+
         if pred == "B" or pred == "I":
             if gs == "B" or gs == "I":
                 confusion_matrix["true_positive"] += 1
-            else:
-                confusion_matrix["false_negative"] += 1
-        else:
+            elif gs == "O":
+                confusion_matrix["false_positive"] += 1
+        elif pred == "O":
             if gs == "O":
                 confusion_matrix["true_negative"] += 1
-            else:
-                confusion_matrix["false_positive"] += 1
+            elif gs == "B" or gs == "I":
+                confusion_matrix["false_negative"] += 1
 
     # Treating B=/=I
     token_matrix = defaultdict(lambda: defaultdict(int))
@@ -62,43 +86,44 @@ def sentence_metrics(pred_labels: List[str], gs_labels: List[str]):
         token_matrix[gs][pred] += 1
 
     # Entity Level Perfect. Naive way of taking the metrics
-    in_entity = False
     entity_matrix = defaultdict(int)
-    num_entities = 0
+    pred_indices = get_indices(pred_labels)
+    gs_indices = get_indices(gs_labels)
 
-    for pred, gs in zip(pred_labels, gs_labels):
+    while pred_indices and gs_indices:
+        pred = pred_indices.pop(0)
+        gs = gs_indices.pop(0)
 
-        if gs == "B":
-            num_entities += 1
+        pred_set = set(range(pred[0], pred[1] + 1 ))
+        gs_set = set(range(gs[0], gs[1] + 1 ))
 
-        if pred == "O" and gs == "O":
-            entity_matrix["true_negative"] += 1
-
-        if in_entity:
-            if pred == "I" and gs == "I":
-                continue
-            elif pred == "O" and gs == "O":
+        if pred_set & gs_set:
+            if not pred_set.difference(gs_set):
                 entity_matrix["true_positive"] += 1
-            elif pred == "O" and gs != "O":
-                entity_matrix["false_negative"] += 1
-            elif pred != "O" and gs == "O":
+
+            # there is some overlap so the entity has been mispredicted
+            # there are no strict rules for this, but it should make some sense
+            elif not pred[0] in gs_set or not pred[1] in gs_set:
                 entity_matrix["false_positive"] += 1
 
-            in_entity = False
+            else:
+                entity_matrix["false_negative"] += 1
 
-        if pred == "B" and gs == "B":
-            in_entity = True
-        elif pred == "B" and gs != "B":
-            entity_matrix["false_positive"] += 1
-        elif pred != "B" and gs == "B":
-            entity_matrix["false_negative"] += 1
-        elif pred == "O" and gs != "O":
-            entity_matrix["false_negative"] += 1
+        # one tuple will have to be returned to its list
+        else:
+            if pred[0] > gs[0]:
+                entity_matrix["false_negative"] += 1
+                pred_indices.insert(0, pred)
+
+            else:
+                entity_matrix["false_positive"] += 1
+                gs_indices.insert(0, gs)
+
+    entity_matrix["false_positive"] += len(pred_indices)
+    entity_matrix["false_negative"] += len(gs_indices)
+    entity_matrix["true_negative"] = confusion_matrix["true_negative"]
 
     return confusion_matrix, token_matrix, entity_matrix
-
-    # Entity Level Relaxed. The way it will be used in the program
-    # TODO
 
 
 def biobert_metrics(model: NERInferenceSession, input_path: str):
@@ -125,7 +150,7 @@ def biobert_metrics(model: NERInferenceSession, input_path: str):
 
         if line == "\n":
             counter_2 += 1
-            if counter_2 % 200 == 0:
+            if counter_2 % 20 == 0:
                 print(str(counter_2) + " / " + str(counter))
 
             pred_pairs = model.predict(sequence.strip())
@@ -152,8 +177,13 @@ def biobert_metrics(model: NERInferenceSession, input_path: str):
         sequence += columns[0] + " "
         gs_labels.append(columns[1].strip())
 
+        #if counter_2 == 100:
+            #break
+
     print("Confusion matrix:")
     print({**confusion_matrix})
+    print("Recall: " + str(confusion_matrix["true_positive"]/(confusion_matrix["true_positive"] + confusion_matrix["false_negative"])))
+    print("Precision: " + str(confusion_matrix["true_positive"]/(confusion_matrix["true_positive"] + confusion_matrix["false_positive"])))
     print()
 
     print("Token matrix:")
@@ -162,4 +192,6 @@ def biobert_metrics(model: NERInferenceSession, input_path: str):
 
     print("Entity matrix:")
     print({**entity_matrix})
+    print("Recall: " + str(entity_matrix["true_positive"]/(entity_matrix["true_positive"] + entity_matrix["false_negative"])))
+    print("Precision: " + str(entity_matrix["true_positive"]/(entity_matrix["true_positive"] + entity_matrix["false_positive"])))
     print()
