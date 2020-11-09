@@ -27,20 +27,46 @@ def chemprot(corpus_dir: str, s: str):
         for line in lines:
             f.write(line+"\n")
 
+    def create_latex_table(rows):
+        for row in rows:
+            cols = row.split(",")
+            entry = f"{cols[0]:<24}  &  {cols[1]:>8}  &  {cols[2]:>8} \\%" + "  \\\\"
+            print(entry)
+
     # Print out LaTeX table rows, just for convenience
     print(s)
     create_latex_table(lines)
     print()
 
 
-def create_latex_table(rows):
-    for row in rows:
-        cols = row.split(",")
-        entry = f"{cols[0]:<24}  &  {cols[1]:>8}  &  {cols[2]:>8} %" + "  \\\\"
-        print(entry)
+# work in progress
+def bc5cdr(input_dir: str, s: str):
+    with open(input_dir, "r") as f:
+        lines = f.readlines()
+
+    results = []
+    sentence = ""
+    labels = []
+    for line in lines:
+        if not line == "\n":
+            l, r = line.split("\t")
+            sentence += " " + l
+            labels.append(r.strip())
+        else:
+            results.append({"sentence": sentence[1:], "labels": labels})
+            labels = []
+            sentence = ""
+
+    with open("./parsed_data.txt", "w") as f:
+        f.write(json.dumps(results))
 
 
 if __name__ == "__main__":
     chemprot("data/chemprot/", "dev")
     chemprot("data/chemprot/", "test")
     chemprot("data/chemprot/", "train")
+
+    # bc5cdr("bilstm/BC5CDR-chem/temp/", "devel")
+    # bc5cdr("bilstm/BC5CDR-chem/temp/", "test")
+    # bc5cdr("bilstm/BC5CDR-chem/temp/", "train_dev")
+    # bc5cdr("bilstm/BC5CDR-chem/temp/", "train")
