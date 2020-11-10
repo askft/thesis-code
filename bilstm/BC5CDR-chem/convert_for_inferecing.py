@@ -2,6 +2,7 @@ import json
 
 with open("./temp/devel.tsv", "r") as f:
     lines = f.readlines()
+
 listan = list()
 sentence = ""
 labels = []
