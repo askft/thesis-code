@@ -39,7 +39,6 @@ class NERInferenceSession:
             return_tensors="pt",
         )
 
-        # Cleanest way I could think of
         tokens = self.tokenizer.convert_ids_to_tokens(encoded["input_ids"][0])
         for i, token in enumerate(tokens):
             if token == self.tokenizer.convert_ids_to_tokens(0):

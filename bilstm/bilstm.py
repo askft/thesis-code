@@ -1,6 +1,10 @@
 import time
 import torch
 import json
+import conlleval
+import sys
+from collections import defaultdict, Counter
+from typing import DefaultDict, List, Counter as CounterT
 from torch import nn
 from torch.optim import Adam
 from torchtext.data import Field, BucketIterator
@@ -8,6 +12,7 @@ from torchtext.datasets import SequenceTaggingDataset
 from spacy.lang.en import English
 from collections import defaultdict
 from collections import Counter
+
 
 class Corpus(object):
 
@@ -225,25 +230,47 @@ ner = NER(
     loss_fn_cls=nn.CrossEntropyLoss
 )
 
-ner.train(10)
+def  get_indices(labels):
+    indices = list()
+    start = 0
+    counter = 0
+    in_entity = False
 
-def sentence_metrics(pred_labels, gs_labels):
+    for label in labels:
+        counter += 1
+
+        if in_entity:
+            if label == "O":
+                indices.append((start, counter - 1))
+                in_entity = False
+
+            elif label == "B":
+                indices.append((start, start))
+                start = counter
+
+        elif label == "B":
+            start = counter
+            in_entity = True
+
+    return indices
+
+
+def sentence_metrics(pred_labels: List[str], gs_labels: List[str]):
 
     # Treating B = I
     confusion_matrix = defaultdict(int)
     for pred, gs in zip(pred_labels, gs_labels):
+
         if pred == "B" or pred == "I":
             if gs == "B" or gs == "I":
                 confusion_matrix["true_positive"] += 1
-            else:
-                confusion_matrix["false_negative"] += 1
-        else:
+            elif gs == "O":
+                confusion_matrix["false_positive"] += 1
+        elif pred == "O":
             if gs == "O":
                 confusion_matrix["true_negative"] += 1
-            else:
-                confusion_matrix["false_positive"] += 1
-
-
+            elif gs == "B" or gs == "I":
+                confusion_matrix["false_negative"] += 1
 
     # Treating B=/=I
     token_matrix = defaultdict(lambda: defaultdict(int))
@@ -251,87 +278,154 @@ def sentence_metrics(pred_labels, gs_labels):
     for pred, gs in zip(pred_labels, gs_labels):
         token_matrix[gs][pred] += 1
 
-
-
     # Entity Level Perfect. Naive way of taking the metrics
-    in_entity = False
     entity_matrix = defaultdict(int)
-    num_entities = 0
+    pred_indices = get_indices(pred_labels)
+    gs_indices = get_indices(gs_labels)
 
-    for pred, gs in zip(pred_labels, gs_labels):
+    while pred_indices and gs_indices:
+        pred = pred_indices.pop(0)
+        gs = gs_indices.pop(0)
 
-        if gs == "B":
-            num_entities += 1
+        pred_set = set(range(pred[0], pred[1] + 1 ))
+        gs_set = set(range(gs[0], gs[1] + 1 ))
 
-        if pred == "O" and gs == "O":
-            entity_matrix["true_negative"] += 1
-
-        if in_entity:
-            if pred == "I" and gs == "I":
-                continue
-            elif pred == "O" and gs == "O":
+        if pred_set & gs_set:
+            if not pred_set.symmetric_difference(gs_set):
                 entity_matrix["true_positive"] += 1
-            elif pred == "O" and gs != "O":
-                entity_matrix["false_negative"] += 1
-            elif pred != "O" and gs == "O":
+
+            # there is some overlap so the entity has been mispredicted
+            # there are no strict rules for this, but it should make some sense
+            elif not pred[0] in gs_set:
                 entity_matrix["false_positive"] += 1
 
-            in_entity = False
+            #else:
+                #entity_matrix["false_negative"] += 1
 
-        if pred == "B" and gs == "B":
-            in_entity = True
-        elif pred == "B" and gs != "B":
-            entity_matrix["false_positive"] += 1
-        elif pred != "B" and gs == "B":
-            entity_matrix["false_negative"] += 1
-        elif pred == "O" and gs != "O":
-            entity_matrix["false_negative"] += 1
+        # one tuple will have to be returned to its list
+        else:
+            if pred[0] > gs[0]:
+                entity_matrix["false_negative"] += 1
+                pred_indices.insert(0, pred)
 
+            else:
+                entity_matrix["false_positive"] += 1
+                gs_indices.insert(0, gs)
+
+    entity_matrix["false_positive"] += len(pred_indices)
+    entity_matrix["false_negative"] += len(gs_indices)
+    entity_matrix["true_negative"] = confusion_matrix["true_negative"]
 
     return confusion_matrix, token_matrix, entity_matrix
+
+
+ner.train(10)
 
 with open("./BC5CDR-chem/parsed_data.txt", "r") as f:
     data = list(json.load(f))
 
-confusion_matrix = defaultdict(int)
-token_matrix = defaultdict(lambda: defaultdict(int))
-entity_matrix = defaultdict(int)
+confusion_matrix: CounterT[str] = Counter()
+token_matrix: DefaultDict[str, DefaultDict[str, int]] = defaultdict(lambda: defaultdict(int))
+entity_matrix: CounterT[str] = Counter()
+
+line_list = list()
+
+total = len(data)
+counter = 0
 
 for item in data:
-    words, infer_tags, unknown_tokens = ner.infer(sentence=item["sentence"], true_tags=item["labels"])
+    counter += 1
+    sys.stdout.write("Predicted {}/{} sentences so far.\r".format(counter, total))
+    sys.stdout.flush()
 
+    words, infer_tags, unknown_tokens = ner.infer(sentence=item["sentence"], true_tags=item["labels"])
     cm, tm, em = sentence_metrics(infer_tags, item["labels"])
 
-    confusion_matrix = Counter(confusion_matrix) + Counter(cm)
+    confusion_matrix.update(cm)
+    entity_matrix.update(em)
+
     for gs_label in tm:
         for pred_label in tm[gs_label]:
             token_matrix[gs_label][pred_label] += tm[gs_label][pred_label]
 
-    entity_matrix = Counter(entity_matrix) + Counter(em)
+    line_list = line_list + list(map(lambda token, gs, pred: token + " TK " + gs + " " + pred, item["sentence"].split(), item["labels"], infer_tags))
 
-print("CM")
-print(confusion_matrix)
+conlleval_res = conlleval.report(conlleval.evaluate(line_list))
+print(conlleval_res)
+
+# CM
+cm_r = confusion_matrix["true_positive"]/(confusion_matrix["true_positive"] + confusion_matrix["false_negative"])
+cm_p = confusion_matrix["true_positive"]/(confusion_matrix["true_positive"] + confusion_matrix["false_positive"])
+cm_f1 = 2*cm_r*cm_p / (cm_r + cm_p)
+
+# EM
+em_r = entity_matrix["true_positive"]/(entity_matrix["true_positive"] + entity_matrix["false_negative"])
+em_p = entity_matrix["true_positive"]/(entity_matrix["true_positive"] + entity_matrix["false_positive"])
+em_f1 = 2*em_r*em_p / (em_r + em_p)
+
+# TM
+b_r = token_matrix["B"]["B"] / (token_matrix["B"]["B"] + token_matrix["B"]["I"] + token_matrix["B"]["O"])
+b_p = token_matrix["B"]["B"] / (token_matrix["B"]["B"] + token_matrix["I"]["B"] + token_matrix["O"]["B"])
+b_f1 = 2*b_r*b_p / (b_r + b_p)
+
+i_r = token_matrix["I"]["I"] / (token_matrix["I"]["B"] + token_matrix["I"]["I"] + token_matrix["I"]["O"])
+i_p = token_matrix["I"]["I"] / (token_matrix["B"]["I"] + token_matrix["I"]["I"] + token_matrix["O"]["I"])
+i_f1 = 2*i_r*i_p / (i_r + i_p)
+
+o_r = token_matrix["O"]["O"] / (token_matrix["O"]["B"] + token_matrix["O"]["I"] + token_matrix["O"]["O"])
+o_p = token_matrix["O"]["O"] / (token_matrix["B"]["O"] + token_matrix["I"]["O"] + token_matrix["O"]["O"])
+o_f1 = 2*o_r*o_p / (o_r + o_p)
+
+with open("./bilstm_metrics.json", "a+") as out_f:
+    out_f.write("\nConlleval results:\n" + conlleval_res)
+    out_f.write("\nToken-Level Confusion Matrix:\n"
+                + "True Positive:\t" + str(confusion_matrix["true_positive"])
+                + "\nTrue Negative:\t" + str(confusion_matrix["true_negative"])
+                + "\nFalse Positive:\t" + str(confusion_matrix["false_positive"])
+                + "\nFalse Negative:\t" + str(confusion_matrix["false_negative"])
+                + "\nRecall:\t\t" + str(cm_r)
+                + "\nPrecision:\t" + str(cm_p)
+                + "\nF1-score:\t" + str(cm_f1))
+
+    out_f.write("\n\nEntity-Level Confusion Matrix:\n"
+                + "True Positive:\t" + str(entity_matrix["true_positive"])
+                + "\nTrue Negative:\t" + str(entity_matrix["true_negative"])
+                + "\nFalse Positive:\t" + str(entity_matrix["false_positive"])
+                + "\nFalse Negative:\t" + str(entity_matrix["false_negative"])
+                + "\nRecall:\t\t" + str(em_r)
+                + "\nPrecision:\t" + str(em_p)
+                + "\nF1-score:\t" + str(em_f1))
+
+    out_f.write("\n\nToken Matrix (true\predicted):\n\tB\tI\tO\n"
+                + "B\t" + str(token_matrix["B"]["B"]) + "\t" + str(token_matrix["B"]["I"]) + "\t" + str(token_matrix["B"]["O"])
+                + "\nI\t" + str(token_matrix["I"]["B"]) + "\t" + str(token_matrix["I"]["I"]) + "\t" + str(token_matrix["I"]["O"])
+                + "\nO\t" + str(token_matrix["O"]["B"]) + "\t" + str(token_matrix["O"]["I"]) + "\t" + str(token_matrix["O"]["O"])
+                + "\nB_Recall:\t" + str(b_r)
+                + "\nB_Precision:\t" + str(b_p)
+                + "\nB_F1:\t\t" + str(b_f1)
+                + "\nI_Recall:\t" + str(i_r)
+                + "\nI_Precision:\t" + str(i_p)
+                + "\nI_F1:\t\t" + str(i_f1)
+                + "\nO_Recall:\t" + str(o_r)
+                + "\nO_Precision:\t" + str(o_p)
+                + "\nO_F1:\t\t" + str(o_f1) + "\n")
+
+
+
+print("Confusion matrix:")
+print({**confusion_matrix})
+print("Recall: " + str(cm_r))
+print("Precision: " + str(cm_p))
 print()
 
-print("TM")
-print(token_matrix)
+print("Token matrix:")
+print({**token_matrix})
 print()
 
-print("EM")
-print(entity_matrix)
-
-
-#True Positive: 4734
-#False Positive: 826
-#True Negative: 116911
-#False Negative: 2279
-
-# Precision =   TP / (TP + FP)      = 0.85
-# Recall =      TP /(TP + FN)       = 0.67
-# Accuracy =    (TP + TN) / Tot     = 0.97
-# F1 =          2*(p * r / (p + r)) = 0.75
-
-
-print(confusion_matrix)
+print("Entity matrix:")
+print({**entity_matrix})
+print("Recall: " + str(em_r))
+print("Precision: " + str(em_p))
+print()
 
 

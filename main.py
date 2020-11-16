@@ -158,10 +158,14 @@ def run_metrics(config: dict, ignore: bool):
 
     dir = metrics_config["gold-standard_path"]
 
+    open(metrics_config["output_path"], "w").close()
+
     files = [f for f in os.listdir(dir) if os.path.isfile(os.path.join(dir, f))]
     for file in files:
+        with open(metrics_config["output_path"], "a+") as out_f:
+            out_f.write("\n\n" + "-"*10 + file + "-"*10)
         metrics.gs_metrics(dir + file)
-        metrics.biobert_metrics(ner_session, dir + file)
+        metrics.biobert_metrics(ner_session, dir + file, metrics_config["output_path"])
 
     print("Finished running metrics script.")
 

@@ -1,0 +1,156 @@
+
+
+----------devel.tsv----------
+Conlleval results:
+processed 116800 tokens with 5332 phrases; found: 4626 phrases; correct: 4399.
+accuracy:  99.02%; precision:  95.09%; recall:  82.50%; FB1:  88.35
+
+Token-Level Confusion Matrix:
+True Positive:	6057
+True Negative:	109617
+False Positive:	134
+False Negative:	974
+Recall:		0.8614706300668469
+Precision:	0.9783556775965111
+F1-score:	0.9162002722734837
+
+Entity-Level Confusion Matrix:
+True Positive:	4389
+True Negative:	109617
+False Positive:	113
+False Negative:	914
+Recall:		0.8276447293984537
+Precision:	0.9749000444247001
+F1-score:	0.8952575216726161
+
+Token Matrix (true\predicted):
+	B	I	O
+B	4431	7	894
+I	7	1612	80
+O	113	21	109617
+B_Recall:	0.831020255063766
+B_Precision:	0.97363216875412
+B_F1:		0.8966912880704239
+I_Recall:	0.9487934078869924
+I_Precision:	0.9829268292682927
+I_F1:		0.9655585504642108
+O_Recall:	0.9987790544049713
+O_Precision:	0.9911927733721551
+O_F1:		0.994971453467791
+
+
+----------test.tsv----------
+Conlleval results:
+processed 124584 tokens with 5380 phrases; found: 4512 phrases; correct: 4041.
+accuracy:  98.35%; precision:  89.56%; recall:  75.11%; FB1:  81.70
+
+Token-Level Confusion Matrix:
+True Positive:	5512
+True Negative:	117096
+False Positive:	463
+False Negative:	1496
+Recall:		0.7865296803652968
+Precision:	0.922510460251046
+F1-score:	0.8491103751059076
+
+Entity-Level Confusion Matrix:
+True Positive:	4033
+True Negative:	117096
+False Positive:	282
+False Negative:	1225
+Recall:		0.7670216812476227
+Precision:	0.9346465816917728
+F1-score:	0.8425780841951321
+
+Token Matrix (true\predicted):
+	B	I	O
+B	4125	40	1215
+I	35	1312	281
+O	266	197	117096
+B_Recall:	0.766728624535316
+B_Precision:	0.9319927699954812
+B_F1:		0.8413216398123597
+I_Recall:	0.8058968058968059
+I_Precision:	0.8469980632666236
+I_F1:		0.8259364180044066
+O_Recall:	0.9960615520717256
+O_Precision:	0.9873853211009175
+O_F1:		0.9917044602817688
+
+
+----------train.tsv----------
+Conlleval results:
+processed 117696 tokens with 5184 phrases; found: 4587 phrases; correct: 4293.
+accuracy:  99.03%; precision:  93.59%; recall:  82.81%; FB1:  87.87
+
+Token-Level Confusion Matrix:
+True Positive:	6111
+True Negative:	110463
+False Positive:	188
+False Negative:	918
+Recall:		0.8693982074263764
+Precision:	0.9701539926972536
+F1-score:	0.917016806722689
+
+Entity-Level Confusion Matrix:
+True Positive:	4280
+True Negative:	110463
+False Positive:	143
+False Negative:	845
+Recall:		0.8351219512195122
+Precision:	0.9676690029391816
+F1-score:	0.8965228320067029
+
+Token Matrix (true\predicted):
+	B	I	O
+B	4357	11	816
+I	6	1737	102
+O	142	46	110463
+B_Recall:	0.8404706790123457
+B_Precision:	0.9671476137624861
+B_F1:		0.8993704200639902
+I_Recall:	0.9414634146341463
+I_Precision:	0.9682274247491639
+I_F1:		0.9546578730420444
+O_Recall:	0.9983009642931379
+O_Precision:	0.9917580197699787
+O_F1:		0.9950187360380485
+
+
+----------train_dev.tsv----------
+Conlleval results:
+processed 234496 tokens with 10516 phrases; found: 9213 phrases; correct: 8692.
+accuracy:  99.03%; precision:  94.34%; recall:  82.66%; FB1:  88.11
+
+Token-Level Confusion Matrix:
+True Positive:	12168
+True Negative:	220080
+False Positive:	322
+False Negative:	1892
+Recall:		0.8654338549075391
+Precision:	0.9742193755004003
+F1-score:	0.9166101694915254
+
+Entity-Level Confusion Matrix:
+True Positive:	8669
+True Negative:	220080
+False Positive:	256
+False Negative:	1759
+Recall:		0.831319524357499
+Precision:	0.9713165266106443
+F1-score:	0.8958817754353331
+
+Token Matrix (true\predicted):
+	B	I	O
+B	8788	18	1710
+I	13	3349	182
+O	255	67	220080
+B_Recall:	0.8356789653860783
+B_Precision:	0.9704063604240283
+B_F1:		0.8980175761291641
+I_Recall:	0.9449774266365688
+I_Precision:	0.9752475247524752
+I_F1:		0.9598738893665806
+O_Recall:	0.9985390332211141
+O_Precision:	0.9914764024291352
+O_F1:		0.9949951850696469

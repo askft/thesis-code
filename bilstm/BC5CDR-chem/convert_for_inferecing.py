@@ -3,7 +3,7 @@ import json
 with open("./temp/devel.tsv", "r") as f:
     lines = f.readlines()
 
-listan = list()
+parsed = list()
 sentence = ""
 labels = []
 for line in lines:
@@ -13,9 +13,9 @@ for line in lines:
         labels.append(r.strip())
     else:
         print(labels)
-        listan.append({"sentence": sentence[1:], "labels": labels})
+        parsed.append({"sentence": sentence[1:], "labels": labels})
         labels = []
         sentence = ""
 
 with open("./parsed_data.txt", "w") as f:
-    f.write(json.dumps(listan))
+    f.write(json.dumps(parsed))

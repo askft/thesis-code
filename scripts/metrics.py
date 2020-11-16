@@ -1,6 +1,8 @@
 from collections import defaultdict, Counter
 from typing import DefaultDict, List, Counter as CounterT
 from scripts.ner_inference import NERInferenceSession
+import conlleval
+import sys
 
 
 def gs_metrics(input_path: str):
@@ -37,31 +39,6 @@ def gs_metrics(input_path: str):
 
     print(" - - - - - - - - - - - - - - - - - \n")
 
-# Gets the index-range-tuples from a list of labels
-def  get_indices(labels):
-    indices = list()
-    start = 0
-    counter = 0
-    in_entity = False
-
-    for label in labels:
-        counter += 1
-
-        if in_entity:
-            if label == "O":
-                indices.append((start, counter - 1))
-                in_entity = False
-
-            elif label == "B":
-                indices.append((start, start))
-                start = counter
-
-        elif label == "B":
-            start = counter
-            in_entity = True
-
-    return indices
-
 def sentence_metrics(pred_labels: List[str], gs_labels: List[str]):
 
     # Treating B = I
@@ -85,81 +62,46 @@ def sentence_metrics(pred_labels: List[str], gs_labels: List[str]):
     for pred, gs in zip(pred_labels, gs_labels):
         token_matrix[gs][pred] += 1
 
-    # Entity Level Perfect. Naive way of taking the metrics
-    entity_matrix = defaultdict(int)
-    pred_indices = get_indices(pred_labels)
-    gs_indices = get_indices(gs_labels)
-
-    while pred_indices and gs_indices:
-        pred = pred_indices.pop(0)
-        gs = gs_indices.pop(0)
-
-        pred_set = set(range(pred[0], pred[1] + 1 ))
-        gs_set = set(range(gs[0], gs[1] + 1 ))
-
-        if pred_set & gs_set:
-            if not pred_set.difference(gs_set):
-                entity_matrix["true_positive"] += 1
-
-            # there is some overlap so the entity has been mispredicted
-            # there are no strict rules for this, but it should make some sense
-            elif not pred[0] in gs_set or not pred[1] in gs_set:
-                entity_matrix["false_positive"] += 1
-
-            else:
-                entity_matrix["false_negative"] += 1
-
-        # one tuple will have to be returned to its list
-        else:
-            if pred[0] > gs[0]:
-                entity_matrix["false_negative"] += 1
-                pred_indices.insert(0, pred)
-
-            else:
-                entity_matrix["false_positive"] += 1
-                gs_indices.insert(0, gs)
-
-    entity_matrix["false_positive"] += len(pred_indices)
-    entity_matrix["false_negative"] += len(gs_indices)
-    entity_matrix["true_negative"] = confusion_matrix["true_negative"]
-
-    return confusion_matrix, token_matrix, entity_matrix
+    return confusion_matrix, token_matrix
 
 
-def biobert_metrics(model: NERInferenceSession, input_path: str):
+def biobert_metrics(model: NERInferenceSession, input_path: str, output_path: str):
     with open(input_path, "r") as f:
         data = f.readlines()
 
-    counter = 0
+    total = 0
     for i in data:
         if i == "\n":
-            counter += 1
+            total += 1
 
     print("Running over " + str(counter) + " sentences")
 
     confusion_matrix: CounterT[str] = Counter()
     token_matrix: DefaultDict[str, DefaultDict[str, int]] = defaultdict(lambda: defaultdict(int))
-    entity_matrix: CounterT[str] = Counter()
 
     gs_labels: List[str] = []
     sequence = ""
+    line_list = list()
 
-    counter_2 = 0
+    counter = 0
 
     for line in data:
 
         if line == "\n":
-            counter_2 += 1
-            if counter_2 % 20 == 0:
-                print(str(counter_2) + " / " + str(counter))
+            counter += 1
+
+            sys.stdout.write("Predicted {}/{} sentences so far.\r".format(counter_2, total))
+            sys.stdout.flush()
 
             pred_pairs = model.predict(sequence.strip())
+
+            tokens = sequence.strip().split()
 
             # The tokenization label X and special labels hold no more value
             pred_labels = [label[1] for label in pred_pairs if label[1]
                            != 'X' and label[0] != '[CLS]' and label[0] != '[SEP]']
 
-            cm, tm, em = sentence_metrics(pred_labels, gs_labels)
+            cm, tm = sentence_metrics(pred_labels, gs_labels)
 
             confusion_matrix.update(cm)
 
@@ -167,7 +109,8 @@ def biobert_metrics(model: NERInferenceSession, input_path: str):
                 for pred_label in tm[gs_label]:
                     token_matrix[gs_label][pred_label] += tm[gs_label][pred_label]
 
-            entity_matrix.update(em)
+
+            line_list = line_list + list(map(lambda token, gs, pred: token + " TK " + gs + " " + pred, tokens, gs_labels, pred_labels))
 
             gs_labels = []
             sequence = ""
@@ -177,21 +120,64 @@ def biobert_metrics(model: NERInferenceSession, input_path: str):
         sequence += columns[0] + " "
         gs_labels.append(columns[1].strip())
 
-        #if counter_2 == 100:
+        #if counter_2 == 1000:
             #break
+
+    conlleval_res = conlleval.report(conlleval.evaluate(line_list))
+    print(conlleval_res)
+
+    # CM
+    cm_r = confusion_matrix["true_positive"]/(confusion_matrix["true_positive"] + confusion_matrix["false_negative"])
+    cm_p = confusion_matrix["true_positive"]/(confusion_matrix["true_positive"] + confusion_matrix["false_positive"])
+    cm_f1 = 2*cm_r*cm_p / (cm_r + cm_p)
+
+    # TM
+    b_r = token_matrix["B"]["B"] / (token_matrix["B"]["B"] + token_matrix["B"]["I"] + token_matrix["B"]["O"])
+    b_p = token_matrix["B"]["B"] / (token_matrix["B"]["B"] + token_matrix["I"]["B"] + token_matrix["O"]["B"])
+    b_f1 = 2*b_r*b_p / (b_r + b_p)
+
+    i_r = token_matrix["I"]["I"] / (token_matrix["I"]["B"] + token_matrix["I"]["I"] + token_matrix["I"]["O"])
+    i_p = token_matrix["I"]["I"] / (token_matrix["B"]["I"] + token_matrix["I"]["I"] + token_matrix["O"]["I"])
+    i_f1 = 2*i_r*i_p / (i_r + i_p)
+
+    o_r = token_matrix["O"]["O"] / (token_matrix["O"]["B"] + token_matrix["O"]["I"] + token_matrix["O"]["O"])
+    o_p = token_matrix["O"]["O"] / (token_matrix["B"]["O"] + token_matrix["I"]["O"] + token_matrix["O"]["O"])
+    o_f1 = 2*o_r*o_p / (o_r + o_p)
+
+    with open(output_path, "a+") as out_f:
+        out_f.write("\nConlleval results:\n" + conlleval_res)
+
+        out_f.write("\nToken-Level Confusion Matrix:\n"
+                    + "True Positive:\t" + str(confusion_matrix["true_positive"])
+                    + "\nTrue Negative:\t" + str(confusion_matrix["true_negative"])
+                    + "\nFalse Positive:\t" + str(confusion_matrix["false_positive"])
+                    + "\nFalse Negative:\t" + str(confusion_matrix["false_negative"])
+                    + "\nRecall:\t\t" + str(cm_r)
+                    + "\nPrecision:\t" + str(cm_p)
+                    + "\nF1-score:\t" + str(cm_f1))
+
+        out_f.write("\n\nToken Matrix (true\predicted):\n\tB\tI\tO\n"
+                    + "B\t" + str(token_matrix["B"]["B"]) + "\t" + str(token_matrix["B"]["I"]) + "\t" + str(token_matrix["B"]["O"])
+                    + "\nI\t" + str(token_matrix["I"]["B"]) + "\t" + str(token_matrix["I"]["I"]) + "\t" + str(token_matrix["I"]["O"])
+                    + "\nO\t" + str(token_matrix["O"]["B"]) + "\t" + str(token_matrix["O"]["I"]) + "\t" + str(token_matrix["O"]["O"])
+                    + "\nB_Recall:\t" + str(b_r)
+                    + "\nB_Precision:\t" + str(b_p)
+                    + "\nB_F1:\t\t" + str(b_f1)
+                    + "\nI_Recall:\t" + str(i_r)
+                    + "\nI_Precision:\t" + str(i_p)
+                    + "\nI_F1:\t\t" + str(i_f1)
+                    + "\nO_Recall:\t" + str(o_r)
+                    + "\nO_Precision:\t" + str(o_p)
+                    + "\nO_F1:\t\t" + str(o_f1) + "\n")
+
+
 
     print("Confusion matrix:")
     print({**confusion_matrix})
-    print("Recall: " + str(confusion_matrix["true_positive"]/(confusion_matrix["true_positive"] + confusion_matrix["false_negative"])))
-    print("Precision: " + str(confusion_matrix["true_positive"]/(confusion_matrix["true_positive"] + confusion_matrix["false_positive"])))
+    print("Recall: " + str(cm_r))
+    print("Precision: " + str(cm_p))
     print()
 
     print("Token matrix:")
     print({**token_matrix})
-    print()
-
-    print("Entity matrix:")
-    print({**entity_matrix})
-    print("Recall: " + str(entity_matrix["true_positive"]/(entity_matrix["true_positive"] + entity_matrix["false_negative"])))
-    print("Precision: " + str(entity_matrix["true_positive"]/(entity_matrix["true_positive"] + entity_matrix["false_positive"])))
     print()

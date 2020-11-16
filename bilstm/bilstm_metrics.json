@@ -1,0 +1,37 @@
+
+Conlleval results:
+processed 117453 tokens with 5347 phrases; found: 4351 phrases; correct: 3533.
+accuracy:  97.36%; precision:  81.20%; recall:  66.07%; FB1:  72.86
+
+Token-Level Confusion Matrix:
+True Positive:	5007
+True Negative:	109481
+False Positive:	877
+False Negative:	2088
+Recall:		0.7057082452431289
+Precision:	0.850951733514616
+F1-score:	0.7715540488481393
+
+Entity-Level Confusion Matrix:
+True Positive:	3529
+True Negative:	109481
+False Positive:	480
+False Negative:	1571
+Recall:		0.6919607843137255
+Precision:	0.8802693938638064
+F1-score:	0.7748380722362499
+
+Token Matrix (true\predicted):
+	B	I	O
+B	3710	62	1575
+I	73	1162	513
+O	449	428	109481
+B_Recall:	0.6938470170188891
+B_Precision:	0.8766540642722117
+B_F1:		0.7746111285102829
+I_Recall:	0.6647597254004577
+I_Precision:	0.7033898305084746
+I_F1:		0.6835294117647059
+O_Recall:	0.9920531361568713
+O_Precision:	0.9812851240039796
+O_F1:		0.9866397509090827
