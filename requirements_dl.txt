@@ -1,2 +1,0 @@
-pubmed-parser
-requests

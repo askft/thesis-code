@@ -1,30 +1,43 @@
 {
   "ignore": {
+    "cord_loader": false,
     "downloader": true,
-    "sentencer": true,
-    "ner": true,
+    "sentencer": false,
+    "ner": false,
     "re": true,
     "analysis": true,
-    "metrics": false
+    "metrics": true
   },
   "downloader": {
     "input_path": "data/example_pmid_list.txt",
     "output_path": "data/example_pmid_list.json",
     "batch_size": 4
   },
+  "cord_loader": {
+    "input_path": "data/cord/metadata.csv",
+    "output_path": "data/cord/metadata.json"
+  },
   "sentencer": {
-    "input_path": "data/pmid-covid-set.json",
-    "output_path": "data/pmid-covid-set-sentences.json"
+    "input_path": "data/cord/metadata.json",
+    "output_path": "data/cord/metadata-sentences.json"
   },
   "ner": {
-    "input_path": "data/pmid-covid-set-sentences.json",
-    "output_path": "data/pmid-covid-set-ner-done.json",
+    "input_path": "data/cord/metadata-sentences.json",
+    "output_path": "data/cord/metadata-sentences-ner-done.json",
     "model_dir": "models/biobert/",
     "model_name": "biobert_ner.onnx",
     "model_vocab": "vocab.txt",
-    "labels": ["[PAD]", "B", "I", "O", "X", "[CLS]", "[SEP]"],
+    "labels": [
+      "[PAD]",
+      "B",
+      "I",
+      "O",
+      "X",
+      "[CLS]",
+      "[SEP]"
+    ],
     "clear_old_results": true,
-    "article_limit": 1000
+    "article_limit": 15
   },
   "re": {
     "input_path": "data/pmid-covid-set-ner-done.json",

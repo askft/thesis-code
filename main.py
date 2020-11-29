@@ -3,6 +3,7 @@
 import json
 import os
 
+from scripts import cord_loader
 from scripts import downloader
 from scripts import splitter
 from scripts import analysis
@@ -10,6 +11,19 @@ from scripts import util
 from scripts import metrics
 from scripts.ner_inference import NERInferenceSession
 from scripts.entity_parser import co_occurrence_extractor, detokenize
+
+
+def run_cord_loader(cord_loader_config: dict, ignore: bool):
+    if ignore:
+        print("Ignoring script: cord_loader.")
+        return
+
+    print("Running cord_loader script.")
+    cord_loader.run(
+        input_file=cord_loader_config["input_path"],
+        output_file=cord_loader_config["output_path"],
+    )
+    print("Finished running cord_loader script.")
 
 
 def run_download(dl_config: dict, ignore: bool):
@@ -82,15 +96,18 @@ def run_ner(ner_config: dict, ignore: bool):
         print(f"Limiting NER to {limit} articles.")
         a = {}
         i = 0
-        for pmid in articles:
+        for id in articles:
             if i >= limit:
                 break
-            a[pmid] = articles[pmid]
+            a[id] = articles[id]
             i += 1
         articles = a
 
     if ner_config.get("clear_old_results", True):
-        os.remove(ner_config["output_path"])
+        try:
+            os.remove(ner_config["output_path"])
+        except OSError:
+            pass
 
     # Becuase we want to save the result periodically.
     batch_index = 0
@@ -186,6 +203,10 @@ if __name__ == "__main__":
 
     # Run metrics on models and gold-standard set
     run_metrics(config, ignore=ignore["metrics"])
+    print()
+
+    # Load abstracts from the CORD dataset.
+    run_cord_loader(config["cord_loader"], ignore=ignore["cord_loader"])
     print()
 
     # Download articles from the PubMed API.
