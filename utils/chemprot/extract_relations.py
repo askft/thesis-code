@@ -8,7 +8,7 @@ from nltk import tokenize
 p_dev = "chemprot_development/chemprot_development_"
 p_sample = "chemprot_sample/chemprot_sample_"
 p_test = "chemprot_test_gs/chemprot_test_"
-p_training = "chemprot_training/chemprot_training_"
+p_train = "chemprot_training/chemprot_training_"
 
 # test "_gs", else ""
 extra = "_gs"
@@ -47,6 +47,14 @@ def read_relations(relations):
     return relations_data
 
 def add_entity_markers(text, arg1_so, arg1_eo, arg2_so, arg2_eo):
+
+    if arg1_so > arg2_so:
+        tmp_arg_so = arg1_so
+        tmp_arg_eo = arg1_eo
+        arg1_so = arg2_so
+        arg1_eo = arg2_eo
+        arg2_so = tmp_arg_so
+        arg2_eo = tmp_arg_eo
 
     text_with_entity_markers = text[:arg1_so] + "<< " + text[arg1_so:arg1_eo] + " >>" \
                                    + text[arg1_eo:arg2_so] + "[[ " + text[arg2_so:arg2_eo] \
