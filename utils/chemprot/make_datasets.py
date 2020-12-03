@@ -19,7 +19,7 @@ def make_data_dict():
     entry_set: DefaultDict[str, list()] = defaultdict(lambda: list())
 
     for filename in os.listdir(directory):
-        with open(directory + filename, "r") as f:
+        with open(directory + filename, "r", encoding='utf8') as f:
             data_list = f.readlines()
 
             for line in data_list:
@@ -212,19 +212,19 @@ def make_datasets(entry_set):
     dev_set     = format_dataset(dev_set, 1.0, False)
     test_set    = format_dataset(test_set, 1.0, False)
 
-    with open(directory_out + "train.txt", "w") as train, \
-        open(directory_out + "dev.txt", "w") as dev, \
-        open(directory_out + "test.txt", "w") as test, \
-        open(directory_out + "statistics.txt", "w") as stats:
+    with open(directory_out + "train.txt", "w", encoding='utf8') as train, \
+        open(directory_out + "dev.txt", "w", encoding='utf8') as dev, \
+        open(directory_out + "test.txt", "w", encoding='utf8') as test, \
+        open(directory_out + "statistics.txt", "w", encoding='utf8') as stats:
 
         for entry in train_set:
-            train.write(json.dumps(entry) + "\n")
+            train.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
         for entry in dev_set:
-            dev.write(json.dumps(entry) + "\n")
+            dev.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
         for entry in test_set:
-            test.write(json.dumps(entry) + "\n")
+            test.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
         for set in statistics:
             stats.write(set + "_set\n" + "-"*50 + "\n")

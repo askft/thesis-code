@@ -11,8 +11,8 @@ p_test = "chemprot_test_gs/chemprot_test_"
 p_train = "chemprot_training/chemprot_training_"
 
 # test "_gs", else ""
-extra = "_gs"
-p = "chemprot/" + p_test
+extra = ""
+p = "chemprot/" + p_train
 
 
 entity_markers = True
@@ -100,9 +100,9 @@ def extract_relevant_sentence(text, a_o, b_o):
 
 
 
-with open(p + "abstracts" + extra + ".tsv", "r") as f_abs,\
-        open(p + "entities" + extra + ".tsv", "r") as f_ent,\
-        open(p + "relations" + extra + ".tsv") as f_rel:
+with open(p + "abstracts" + extra + ".tsv", "r", encoding='utf8') as f_abs,\
+        open(p + "entities" + extra + ".tsv", "r", encoding='utf8') as f_ent,\
+        open(p + "relations" + extra + ".tsv", encoding='utf8') as f_rel:
 
     abstracts = f_abs.readlines()
     entities = f_ent.readlines()
@@ -155,6 +155,6 @@ with open(p + "abstracts" + extra + ".tsv", "r") as f_abs,\
             else:
                 formatted_data.append({"text": text, "metadata": [], "label": relation["label"], "cpr": relation["cpr"]})
 
-        with open("./processed/" + p.split("/")[2] + "processed.txt", "w") as out:
+        with open("./processed/" + p.split("/")[2] + "processed.txt", "w", encoding="utf8") as out:
             for item in formatted_data:
-                out.write(json.dumps(item) + "\n")
+                out.write(json.dumps(item, ensure_ascii=False) + "\n")
