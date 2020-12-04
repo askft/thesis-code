@@ -56,6 +56,7 @@ As many of the ChemProt labels do not have many occurrences, and since many of t
     2   INTERACTOR                      2       REGULATOR
                                         2       DIRECT-REGULATOR
                                         2       INDIRECT-REGULATOR
+                                        5       AGONIST
                                         7       MODULATOR
                                         8       CO-FACTOR
                                         9       SUBSTRATE
@@ -63,7 +64,6 @@ As many of the ChemProt labels do not have many occurrences, and since many of t
     3   REGULATOR-POSITIVE              3       UPREGULATOR
                                         3       ACTIVATOR
                                         3       INDIRECT-UPREGULATOR
-                                        5       AGONIST
                                         5       AGONIST-ACTIVATOR
                                         7       MODULATOR-ACTIVATOR
 
@@ -72,6 +72,7 @@ As many of the ChemProt labels do not have many occurrences, and since many of t
                                         4       INDIRECT-DOWNREGULATOR
                                         6       ANTAGONIST
                                         7       MODULATOR-INHIBITOR
+                                        5       AGONIST-INHIBITOR
 
     5   OTHER                                   all labels not included above
     '''
