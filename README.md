@@ -30,7 +30,7 @@ The pipeline consists of several steps, which need not all be rerun every time.
 - Step 1 is to fetch and save the data: for this purpose _either_
   `downloader` or `cord_loader` is used.
   - For `downloader`, the input is a list of newline-separated PubMed IDs.
-  - For `cord_loader`, the input is the `metadata.csv` file from on of the
+  - For `cord_loader`, the input is the `metadata.csv` file from inside the
     `.tar.gz` files in the [CORD-19 Historical Releases](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html) (this seems unavailable for early releases).
 - Step 2 is `sentencer` which processes the data further for use by the models.
 - Step 3 is `ner`, named-entity recognition.
