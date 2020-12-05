@@ -46,11 +46,11 @@ file names align. Here's a nice little chart to help you understand (A-H are
 file names).
 
 ```
-(A)———[downloader]———.                                       .——[analysis]——>(E)
+(A)———[downloader]———.                                       .——[analysis]———(E)
                       |———(C)———[sentencer]———(D)———[ner]———|
-(B)———[cord_loader]——'                                       '—————[re]—————>(F)
+(B)———[cord_loader]——'                                       '—————[re]——————(F)
 
-(G)——>[metrics]——>(H)  (independent)
+(G)———[metrics]———(H)  (independent)
 ```
 
 Then run the script by doing: `python main.py`
