@@ -23,31 +23,23 @@
   },
   "ner": {
     "input_path": "data/cord/metadata-sentences.json",
-    "output_path": "data/cord/metadata-sentences-ner-done.json",
+    "output_path": "data/cord/metadata-ner-done.json",
     "model_dir": "models/biobert/",
     "model_name": "biobert_ner.onnx",
     "model_vocab": "vocab.txt",
-    "labels": [
-      "[PAD]",
-      "B",
-      "I",
-      "O",
-      "X",
-      "[CLS]",
-      "[SEP]"
-    ],
+    "labels": ["[PAD]", "B", "I", "O", "X", "[CLS]", "[SEP]"],
     "clear_old_results": true,
     "article_limit": 15
   },
   "re": {
-    "input_path": "data/pmid-covid-set-ner-done.json",
-    "output_path": "data/pmid-covid-set-re-done.json",
+    "input_path": "data/metadata-ner-done.json",
+    "output_path": "data/metadata-re-done.json",
     "model_dir": "models/scibert/",
     "model_name": "pytorch_model.bin",
     "model_vocab": "vocab.txt"
   },
   "analysis": {
-    "input_path": "data/pmid-covid-set-ner-done.json"
+    "input_path": "data/metadata-ner-done.json"
   },
   "metrics": {
     "gold-standard_path": "data/gold-standard/BC4CHEMD/",
