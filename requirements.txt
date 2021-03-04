@@ -15,7 +15,6 @@ onnxruntime==1.4.0
 protobuf>=3.12.3
 numpy>=1.19
 
-
 # export_scibert.py
 transformers
 torch
@@ -24,3 +23,4 @@ tqdm
 
 # metrics.py
 conlleval==0.2
+
