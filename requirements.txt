@@ -9,7 +9,7 @@ pubmed_parser
 requests~=2.24
 
 # ner.py
-tensorflow==1.15.0
+tensorflow==2.6.4
 onnx==1.7.0
 onnxruntime==1.4.0
 protobuf>=3.12.3
