@@ -10,7 +10,7 @@ requests~=2.24
 
 # ner.py
 tensorflow==1.15.0
-onnx==1.7.0
+onnx==1.13.0
 onnxruntime==1.4.0
 protobuf>=3.12.3
 numpy>=1.19
